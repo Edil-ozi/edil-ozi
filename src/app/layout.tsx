@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "../globals.css";
-import { ThemeProvider } from "../_providers";
+import "../../styles/globals.css";
+import { ThemeProvider } from "./_providers";
 import { cn } from "@/lib/utils";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,12 +16,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning >
-      <body
-        className={cn(
-          "dark min-h-screen bg-background font-sans antialiased",
-        )}
-      >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange >
+      <head />
+      {/* remove dark as default */}
+      <body className={cn("dark min-h-screen bg-background font-sans antialiased")}>
+        <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange >
           <div className="relative flex min-h-screen flex-col bg-background">
             {children}
           </div>
