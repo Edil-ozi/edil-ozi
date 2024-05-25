@@ -18,7 +18,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning >
       <head />
       {/* remove dark as default */}
-      <body className={cn("dark min-h-screen bg-background font-sans antialiased")}>
+      <body className={cn("min-h-screen bg-background font-sans antialiased")}>
         <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange >
           <div className="relative flex min-h-screen flex-col bg-background">
             {children}
