@@ -155,7 +155,7 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/magic-card-demo.tsx"],
     component: React.lazy(
-      () => import("@/registry/components/example/magic-card-demo"),
+      () => import("@/registry/components/example/magic-card-demo")
     ),
   },
   "magic-card-gradient": {

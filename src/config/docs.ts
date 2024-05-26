@@ -103,6 +103,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/alert-dialog",
           items: [],
         },
+        {
+          title: "Magic-card",
+          href: "/docs/components/magic-card",
+          items: [],
+        },
         // {
         //   title: "Aspect Ratio",
         //   href: "/docs/components/aspect-ratio",

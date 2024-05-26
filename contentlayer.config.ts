@@ -8,7 +8,7 @@ import remarkGfm from "remark-gfm";
 import { BlogPosting, WithContext } from "schema-dts";
 import { visit } from "unist-util-visit";
 import { env } from "./env.mjs";
-import { rehypeComponent } from "@/lib/rehype-component";
+import { rehypeComponent } from "./src/lib/rehype-component";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -48,23 +48,6 @@ const computedFields = {
       } as WithContext<BlogPosting>),
   },
 };
-
-export const Page = defineDocumentType(() => ({
-  name: "Page",
-  filePathPattern: `pages/**/*.mdx`,
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-  },
-  // @ts-ignore
-  computedFields,
-}));
 
 const LinksProperties = defineNestedType(() => ({
   name: "LinksProperties",
@@ -114,8 +97,8 @@ export const Doc = defineDocumentType(() => ({
 }));
 
 export default makeSource({
-  contentDirPath: "./content",
-  documentTypes: [Page, Doc],
+  contentDirPath: "./src/content",
+  documentTypes: [Doc],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
