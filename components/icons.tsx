@@ -1,4 +1,4 @@
-import { Check, Copy } from "lucide-react";
+import { AlertTriangle, Check, ChevronLeft, Copy } from "lucide-react";
 type IconProps = React.HTMLAttributes<SVGElement>
 
 export const Icons = {
@@ -148,4 +148,6 @@ export const Icons = {
   ),
   check: Check,
   copy: Copy,
+  warning: AlertTriangle,
+  chevronLeft: ChevronLeft,
 }
