@@ -108,6 +108,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/magic-card",
           items: [],
         },
+        {
+          title: "last element?",
+          href: "/docs/components/",
+          items: [],
+        },
         // {
         //   title: "Aspect Ratio",
         //   href: "/docs/components/aspect-ratio",

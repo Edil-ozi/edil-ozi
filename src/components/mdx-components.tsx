@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/accordion";
 import { Event } from "@/lib/events";
 import { cn } from "@/lib/utils";
-// import TweetCard from "@/registry/components/magicui/tweet-card";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Image from "next/image";
 import Link from "next/link";
@@ -100,9 +99,7 @@ const components = {
     />
   ),
   Image,
-  // Tweet: ({ id }: { id: string }) => (
-  //   <TweetCard id={id} className="not-prose mx-auto" />
-  // ),
+
   ComponentPreview,
   ComponentSource: (props: any) => <ComponentSource {...props} />,
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (

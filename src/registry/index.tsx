@@ -5,7 +5,7 @@ const ui: Registry = {
   "magic-card": {
     name: "magic-card",
     type: "components:ui",
-    files: ["registry/components/magicui/magic-card.tsx"],
+    files: ["registry/components/edil-ozi/magic-card.tsx"],
   },
   // "linear-gradient": {
   //   name: "linear-gradient",

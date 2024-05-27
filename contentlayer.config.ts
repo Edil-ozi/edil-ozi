@@ -39,14 +39,26 @@ const computedFields = {
         dateModified: doc.date,
         description: doc.summary,
         image: doc.image,
-        author: {
-          "@type": "Person",
-          name: doc.author,
-          url: `https://twitter.com/${doc.author}`,
-        },
       } as WithContext<BlogPosting>),
   },
 };
+
+export const Page = defineDocumentType(() => ({
+  name: "Page",
+  filePathPattern: `pages/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+  },
+  // @ts-ignore
+  computedFields,
+}));
 
 const LinksProperties = defineNestedType(() => ({
   name: "LinksProperties",
@@ -88,8 +100,6 @@ export const Doc = defineDocumentType(() => ({
       required: false,
     },
     toc: { type: "boolean", default: false, required: false },
-    author: { type: "string", required: false },
-    video: { type: "string", required: false },
   },
   // @ts-ignore
   computedFields,
@@ -97,7 +107,7 @@ export const Doc = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [Doc],
+  documentTypes: [Doc, Page],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -131,7 +141,6 @@ export default makeSource({
         // @ts-ignore
         rehypePrettyCode,
         {
-          theme: "material-theme-palenight",
           //   light: "material-theme-lighter",
           // },
           onVisitLine(node: any) {

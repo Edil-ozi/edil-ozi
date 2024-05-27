@@ -12,6 +12,9 @@ import { getTableOfContents } from "@/lib/toc"
 import { cn } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
 import { Mdx } from "@/components/mdx-components"
+import { DocPager } from "@/components/pager"
+import { ScrollArea } from "@/components/scroll-area"
+import { DashboardTableOfContents } from "@/components/toc"
 
 interface DocPageProps {
   params: {
@@ -40,9 +43,11 @@ export async function generateStaticParams(): Promise<
 
 export default async function DocPage({ params }: DocPageProps) {
   const doc = await getDocFromParams({ params })
+  console.log('doc', doc)
 
 
   if (!doc) {
+    console.log('hello world')
     notFound()
   }
 
@@ -99,7 +104,17 @@ export default async function DocPage({ params }: DocPageProps) {
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
         </div>
+        <DocPager doc={doc} />
+
       </div>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(doc.structuredData),
+        }}
+      />
     </main>
   )
 }
+
