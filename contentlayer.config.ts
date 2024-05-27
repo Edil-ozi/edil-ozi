@@ -18,7 +18,7 @@ const computedFields = {
   },
   image: {
     type: "string",
-    resolve: (post: any) => `${env.NEXT_PUBLIC_APP_URL}/api/og?title=${encodeURI(post.title)}`,
+    resolve: (post: any) => `/api/og?title=${encodeURI(post.title)}`,
   },
   slug: {
     type: "string",
@@ -39,7 +39,6 @@ const computedFields = {
         dateModified: doc.date,
         description: doc.summary,
         image: doc.image,
-        url: `https://magicui.design/${doc._raw.flattenedPath}`,
         author: {
           "@type": "Person",
           name: doc.author,
