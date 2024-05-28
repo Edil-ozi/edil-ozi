@@ -2,12 +2,10 @@ import { notFound } from "next/navigation"
 import { allDocs } from "contentlayer/generated"
 
 import "@/styles/mdx.css"
-import type { Metadata } from "next"
 import Link from "next/link"
 import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
 import Balancer from "react-wrap-balancer"
 
-import { siteConfig } from "@/config/site"
 import { getTableOfContents } from "@/lib/toc"
 import { cn } from "@/lib/utils"
 import { badgeVariants } from "@/components/ui/badge"
@@ -43,17 +41,13 @@ export async function generateStaticParams(): Promise<
 
 export default async function DocPage({ params }: DocPageProps) {
   const doc = await getDocFromParams({ params })
-  console.log('doc', doc)
-
+  console.log('HELLLLLLLLLLLO', doc)
 
   if (!doc) {
-    console.log('hello world')
     notFound()
   }
 
   const toc = await getTableOfContents(doc.body.raw)
-
-  console.log('doc.links ', doc.links)
 
   return (
     <main className="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
@@ -105,8 +99,18 @@ export default async function DocPage({ params }: DocPageProps) {
           <Mdx code={doc.body.code} />
         </div>
         <DocPager doc={doc} />
-
       </div>
+      {doc.toc && (
+        <div className="hidden text-sm xl:block">
+          <div className="sticky top-16 -mt-10 pt-4">
+            <ScrollArea className="pb-10">
+              <div className="sticky top-16 -mt-10 h-[calc(100vh-3.5rem)] py-12">
+                <DashboardTableOfContents toc={toc} />
+              </div>
+            </ScrollArea>
+          </div>
+        </div>
+      )}
 
       <script
         type="application/ld+json"

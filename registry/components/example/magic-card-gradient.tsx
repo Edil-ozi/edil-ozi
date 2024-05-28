@@ -11,7 +11,7 @@ export default function MagicCardGradient() {
       }
     >
       <MagicCard
-        borderWidth={3}
+        borderwidth={3}
         className="flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#9c40ff_50%,transparent_100%)] p-20 shadow-2xl"
       >
         <p className="z-10 whitespace-nowrap text-4xl font-medium text-gray-800 dark:text-gray-200">
