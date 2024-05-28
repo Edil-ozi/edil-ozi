@@ -8,21 +8,21 @@ interface DocsConfig {
 export const docsConfig: DocsConfig = {
   mainNav: [
     {
-      title: "Докементация",
+      title: "Docs",
       href: "/docs",
     },
     {
-      title: "Компоненты",
+      title: "Components",
       href: "/docs/components/accordion",
     },
-    {
-      title: "Themes",
-      href: "/themes",
-    },
-    {
-      title: "Examples",
-      href: "/examples",
-    },
+    // {
+    //   title: "Themes",
+    //   href: "/themes",
+    // },
+    // {
+    //   title: "Examples",
+    //   href: "/examples",
+    // },
   ],
   sidebarNav: [
     {
@@ -33,12 +33,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs",
           items: [],
         },
-        {
-          title: "Community?",
-          href: "https://github.com",
-          external: true,
-          items: [],
-        },
+        // {
+        //   title: "Community?",
+        //   href: "https://github.com",
+        //   external: true,
+        //   items: [],
+        // },
         // {
         //   title: "Installation",
         //   href: "/docs/installation",

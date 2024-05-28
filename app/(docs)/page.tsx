@@ -4,7 +4,6 @@ import { buttonVariants } from "@/components/ui/button";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
     <div className="container relative">
       <PageHeader>
         {/* <Announcement /> */}
-        <PageHeaderHeading>Embrace efficiency in development.</PageHeaderHeading>
+        <PageHeaderHeading className="text-balance bg-gradient-to-br from-black from-30% to-black/60 bg-clip-text py-6 font-semibold leading-none tracking-tighter text-transparent dark:from-white dark:to-white/40">Embrace efficiency in development.</PageHeaderHeading>
         <PageHeaderDescription>
           Beautifully designed components that you can copy and paste into your
           apps. Accessible. Customizable. Open Source.
@@ -32,22 +31,6 @@ export default function Home() {
           </Link>
         </PageActions>
       </PageHeader>
-      <section className="overflow-hidden rounded-lg border bg-background shadow-md md:hidden md:shadow-xl">
-        <Image
-          src="/examples/mail-dark.png"
-          width={1280}
-          height={727}
-          alt="Mail"
-          className="hidden dark:block"
-        />
-        <Image
-          src="/examples/mail-light.png"
-          width={1280}
-          height={727}
-          alt="Mail"
-          className="block dark:hidden"
-        />
-      </section>
     </div>
   );
 }

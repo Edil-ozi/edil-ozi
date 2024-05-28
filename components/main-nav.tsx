@@ -7,6 +7,7 @@ import { Icons } from "@/components/icons"
 
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import { Badge } from "./ui/badge";
 
 export default function MainNav() {
   const pathname = usePathname()
@@ -18,6 +19,7 @@ export default function MainNav() {
         <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
         </span>
+        <Badge variant="secondary">Beta</Badge>
       </Link>
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <Link
@@ -41,40 +43,8 @@ export default function MainNav() {
           Components
         </Link>
         <Link
-          href="/themes"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/themes")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Themes
-        </Link>
-        <Link
-          href="/examples"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/examples")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Examples
-        </Link>
-        <Link
-          href="/blocks"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname?.startsWith("/blocks")
-              ? "text-foreground"
-              : "text-foreground/60"
-          )}
-        >
-          Blocks
-        </Link>
-        <Link
           href={siteConfig.links.github}
+          target="_blank"
           className={cn(
             "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
           )}
