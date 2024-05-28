@@ -27,7 +27,7 @@ export default function Home() {
             className={cn(buttonVariants({ variant: "outline" }))}
           >
             <Icons.gitHub className="mr-2 h-4 w-4" />
-            GitHub
+            Star on Github
           </Link>
         </PageActions>
       </PageHeader>
