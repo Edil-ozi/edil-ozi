@@ -7,6 +7,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/magic-card.tsx"],
   },
+  "login-form": {
+    name: "login-form",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/login-form.tsx"],
+  },
   // "linear-gradient": {
   //   name: "linear-gradient",
   //   type: "components:ui",
@@ -164,6 +169,14 @@ const example: Registry = {
     files: ["registry/components/example/magic-card-gradient.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/magic-card-gradient"),
+    ),
+  },
+  "login-form-demo": {
+    name: "login-form-demo",
+    type: "components:example",
+    files: ["registry/components/example/login-form-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/login-form-demo"),
     ),
   },
   // "linear-gradient-demo": {

@@ -82,31 +82,18 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Components",
+      title: "Clean Components",
       items: [
         {
-          title: "Accordion",
-          href: "/docs/components/accordion",
+          title: "Login Form",
+          href: "/docs/components/login-form",
           items: [],
+          label: "New",
         },
-        {
-          title: "Alert",
-          href: "/docs/components/alert",
-          items: [],
-        },
-        {
-          title: "Alert Dialog",
-          href: "/docs/components/alert-dialog",
-          items: [],
-        },
+
         {
           title: "Magic-card",
           href: "/docs/components/magic-card",
-          items: [],
-        },
-        {
-          title: "last element?",
-          href: "/docs/components/",
           items: [],
         },
         // {
@@ -336,6 +323,27 @@ export const docsConfig: DocsConfig = {
         //   href: "/docs/components/tooltip",
         //   items: [],
         // },
+      ],
+    },
+    {
+      title: "Animation Components",
+
+      items: [
+        {
+          title: "Magic-card3",
+          href: "/docs/components/magic-card",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Hooks",
+      items: [
+        {
+          title: "Magic-card2",
+          href: "/docs/components/magic-card",
+          items: [],
+        },
       ],
     },
   ],
