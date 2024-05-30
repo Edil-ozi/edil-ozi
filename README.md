@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Contributing Guidelines
 
-## Getting Started
+Welcome to the project! We appreciate your interest in contributing. Please read the following guidelines carefully to ensure a smooth and consistent development process.
 
-First, run the development server:
+### 1. Color Usage in New Components
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+When creating new components, it is essential to adhere to the specific color palette provided below to maintain a consistent design throughout the application. All colors are build in tailwind 3.3+ versions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Light Mode Colors
+- **Primary Color:** green palette
+- **Background Color:** slate-600+
+- **Text Color:** black
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### Dark Mode Colors
+- **Primary Color:** green palette
+- **Background Color:** slate-100-500+
+- **Text Color:** white
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Please use it as starting point. If the provided colors does not fit your requirements, consider using other tailwind colors as well. Ensure that you use these colors to create a cohesive and visually appealing interface.
 
-## Learn More
+### 2. Mobile-First Responsive Design
 
-To learn more about Next.js, take a look at the following resources:
+All components must be designed with a mobile-first approach. This means starting with the mobile design and then scaling up to larger screens. Ensure that your components:
+- Are fully functional and visually optimized for mobile devices.
+- Adapt smoothly to different screen sizes and orientations.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Code Efficiency and User Experience
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Each component should:
+- Contain the minimal amount of code necessary to provide full user experience functionality.
+- Be as efficient as possible without compromising on the user experience for 'n' users.
+- Follow best practices for code reusability, readability and maintainability.
 
-## Deploy on Vercel
+### 4. Allowed Hooks
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+When creating new component, only built-in React hooks are allowed in this project. No external hooks should be used.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+By following these guidelines, you help maintain a high standard of quality and consistency across the project. Thank you for your contributions!
+
+---
+
+If you have any questions or need further clarification, please refer to the project's [contribution guidelines](CONTRIBUTING.md) or reach out to the maintainers.
+
+Happy coding!
