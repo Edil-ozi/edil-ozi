@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 import { withContentlayer } from "next-contentlayer";
 const nextConfig = {
+  images: {
+    domains: ["images.unsplash.com"],
+  },
   async redirects() {
     return [
       {

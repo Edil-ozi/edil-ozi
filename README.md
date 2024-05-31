@@ -2,6 +2,19 @@
 
 Welcome to the project! We appreciate your interest in contributing. Please read the following guidelines carefully to ensure a smooth and consistent development process.
 
+### 0. How to add new components
+
+#### You need only 5 files to be changed in the following order
+`config/docs.ts` - add new sidebar field
+
+`registry/components/edil-ozi` - add your brand new component
+
+`registry/components/example/` - add your new component as demo
+
+`content/docs/components/` - add your new `.mdx` file with descriptions and components provided
+
+`registry/index.tsx` - register your all new components
+
 ### 1. Color Usage in New Components
 
 When creating new components, it is essential to adhere to the specific color palette provided below to maintain a consistent design throughout the application. All colors are build in tailwind 3.3+ versions.
