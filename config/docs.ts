@@ -114,16 +114,16 @@ export const docsConfig: DocsConfig = {
       ],
     },
 
-    {
-      title: "Fancy animations",
-      items: [
-        {
-          title: "Magic-card",
-          href: "/docs/components/magi2c-card",
-          items: [],
-        },
-      ],
-    },
+    // {
+    //   title: "Fancy animations",
+    //   items: [
+    //     {
+    //       title: "Magic-card",
+    //       href: "/docs/components/magi2c-card",
+    //       items: [],
+    //     },
+    //   ],
+    // },
 
     {
       title: "Text animations",
@@ -136,15 +136,15 @@ export const docsConfig: DocsConfig = {
       ],
     },
 
-    {
-      title: "React Hooks",
-      items: [
-        {
-          title: "Magic-card",
-          href: "/docs/components/mag2ic-card",
-          items: [],
-        },
-      ],
-    },
+    // {
+    //   title: "React Hooks",
+    //   items: [
+    //     {
+    //       title: "Magic-card",
+    //       href: "/docs/components/mag2ic-card",
+    //       items: [],
+    //     },
+    //   ],
+    // },
   ],
 };

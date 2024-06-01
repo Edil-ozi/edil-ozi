@@ -15,18 +15,21 @@ Copy and paste the following code into your project.
 ```text
 components/edil-ozi/infinite-text.tsx
 ```
+</Steps>
 
 <ComponentSource name="infinite-text" />
 
-</Steps>
-
-### MagicContainer
+## Props
 
 | Prop name | Type          | Default | Description                             |
 | --------- | ---------     | ------- | --------------------------------------- |
 | text      | string        | -       | Infinite text to render                 |
-| speed     | number (0.1-1)| 0.1     | The speed of infinite text              |
+| speed     | number        | 0.1     | The speed of infinite text              |
 
+### Note 
+
+  Make sure your text length fits screen width to work as expected. In case if dont, you may try to increase font-size
+  
 ## Credits
 
 This component is inspired by [Olivier Larose](https://blog.olivierlarose.com/tutorials/infinite-text-move-on-scroll)
