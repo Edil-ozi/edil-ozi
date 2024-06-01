@@ -44,13 +44,13 @@ const InfiniteText: FC<Props> = ({ text, speed = 0.1 }) => {
     requestAnimationFrame(animation);
   }, []);
   return (
-    <div className="h-[320px] w-full z-[10]">
-      <div className="flex items-center  overflow-hidden relative h-full">
+    <div className="h-[320px] w-full z-[10] ">
+      <div className="flex items-center rounded-lg overflow-hidden relative h-full">
         <Image src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029" objectFit="cover" fill={true} alt="bg" />
         <div className="absolute">
           <div ref={slider} className="relative whitespace-nowrap flex m-0">
-            <p ref={firstText} className="text-6xl font-medium m-0 text-white">{text}</p>
-            <p ref={secondText} className="text-6xl font-medium m-0 text-white">{text}</p>
+            <p ref={firstText} className="text-4xl md:text-5xl lg:text-6xl font-medium m-0 text-white mr-3">{text}</p>
+            <p ref={secondText} className="text-4xl md:text-5xl lg:text-6xl font-medium m-0 text-white">{text}</p>
           </div>
         </div>
       </div>

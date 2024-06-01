@@ -227,7 +227,7 @@ export function Mdx({ code }: MDXProps) {
   return (
     <article
       className={cn(
-        "max-w-[120ch]",
+        "w-full",
         `leading-tighter prose prose-gray tracking-tighter dark:prose-invert`,
         `prose-pre:mb-4 prose-pre:mt-6 prose-pre:max-h-[650px] prose-pre:overflow-x-auto prose-pre:rounded-lg prose-pre:border prose-pre:px-0 prose-pre:py-4 prose-pre:text-xs prose-pre:tracking-tighter md:prose-pre:text-sm`,
       )}

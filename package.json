@@ -24,6 +24,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "contentlayer": "^0.3.4",
+    "framer-motion": "^11.2.10",
     "gsap": "^3.12.5",
     "jotai": "^2.8.1",
     "lucide-react": "^0.379.0",

@@ -57,16 +57,16 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
-    {
-      title: "Animation Components",
-      items: [
-        {
-          title: "Magic-card",
-          href: "/docs/components/magi2c-card",
-          items: [],
-        },
-      ],
-    },
+    // {
+    //   title: "Animation Components",
+    //   items: [
+    //     {
+    //       title: "Magic-card",
+    //       href: "/docs/components/magi2c-card",
+    //       items: [],
+    //     },
+    //   ],
+    // },
 
     // {
     //   title: "Fancy animations",
@@ -85,6 +85,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Infinite text",
           href: "/docs/components/infinite-text",
+          items: [],
+        },
+        {
+          title: "Text reveal",
+          href: "/docs/components/text-reveal",
           items: [],
         },
       ],

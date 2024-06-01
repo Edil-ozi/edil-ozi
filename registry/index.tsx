@@ -17,6 +17,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/infinite-text.tsx"],
   },
+  "text-reveal": {
+    name: "text-reveal",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/text-reveal.tsx"],
+  },
 };
 
 const example: Registry = {
@@ -50,6 +55,14 @@ const example: Registry = {
     files: ["registry/components/example/infinite-text-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/infinite-text-demo"),
+    ),
+  },
+  "text-reveal-demo": {
+    name: "text-reveal-demo",
+    type: "components:example",
+    files: ["registry/components/example/text-reveal-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/text-reveal-demo"),
     ),
   },
 };
