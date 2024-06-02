@@ -9,7 +9,7 @@ Welcome to the project! We appreciate your interest in contributing. Please read
 
 `registry/components/edil-ozi` - add your brand new component
 
-`registry/components/example/` - add your new component as demo
+`registry/components/example/` - add your new component as demo (optional)
 
 `content/docs/components/` - add your new `.mdx` file with descriptions and components provided
 

@@ -4,12 +4,12 @@ import { cn } from "@/lib/utils";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import { FC, ReactNode, useRef } from "react";
 
-interface TextRevealByWordProps {
+interface Props {
   paragraph: string;
   className?: string;
 }
 
-export const TextRevealByWord: FC<TextRevealByWordProps> = ({
+const TextRevealByWord: FC<Props> = ({
   paragraph,
   className,
 }) => {

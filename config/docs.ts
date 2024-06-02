@@ -68,16 +68,16 @@ export const docsConfig: DocsConfig = {
     //   ],
     // },
 
-    // {
-    //   title: "Fancy animations",
-    //   items: [
-    //     {
-    //       title: "Magic-card",
-    //       href: "/docs/components/magi2c-card",
-    //       items: [],
-    //     },
-    //   ],
-    // },
+    {
+      title: "Fancy animations",
+      items: [
+        {
+          title: "Zoom parallax",
+          href: "/docs/components/zoom-parallax",
+          items: [],
+        },
+      ],
+    },
 
     {
       title: "Text animations",

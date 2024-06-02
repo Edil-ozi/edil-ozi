@@ -22,6 +22,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/text-reveal.tsx"],
   },
+  "zoom-parallax": {
+    name: "zoom-parallax",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/zoom-parallax.tsx"],
+  },
 };
 
 const example: Registry = {
@@ -63,6 +68,14 @@ const example: Registry = {
     files: ["registry/components/example/text-reveal-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/text-reveal-demo"),
+    ),
+  },
+  "zoom-parallax-demo": {
+    name: "zoom-parallax-demo",
+    type: "components:example",
+    files: ["registry/components/example/zoom-parallax-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/zoom-parallax-demo"),
     ),
   },
 };
