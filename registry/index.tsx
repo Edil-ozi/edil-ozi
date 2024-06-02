@@ -12,7 +12,6 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/login-form.tsx"],
   },
-<<<<<<< HEAD
   "infinite-text": {
     name: "infinite-text",
     type: "components:ui",
@@ -33,7 +32,6 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/horizontal-scroll.tsx"],
   },
-=======
   "pricing-card": {
     name: "pricing-card",
     type: "components:ui",
@@ -179,7 +177,6 @@ const ui: Registry = {
   //   type: "components:ui",
   //   files: ["registry/components/magicui/typing-animation.tsx"],
   // },
->>>>>>> 5489ef6 (pricing-card)
 };
 
 const example: Registry = {

@@ -49,8 +49,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/magic-card",
           items: [],
         },
-<<<<<<< HEAD
-=======
         {
           title: "Pricing Card",
           href: "/docs/components/pricing-card",
@@ -284,7 +282,6 @@ export const docsConfig: DocsConfig = {
         //   href: "/docs/components/tooltip",
         //   items: [],
         // },
->>>>>>> 5489ef6 (pricing-card)
       ],
     },
     // {

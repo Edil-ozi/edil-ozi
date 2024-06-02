@@ -19,7 +19,7 @@ function withDiscount(price:number, discount:number) {
 
 const PricingCard: FC<Props> = ({ heading, description, price, discount, list, listHeading, buttonText, className, onClick }) => {
   return (
-    <div className={`bg-gradient-to-br h-fit from-indigo-900 to-gray-900 relative border xl:min-w-[310px] min-w-56 border-gray-800 rounded-lg shadow-lg p-6 lg:p-8 transform hover:scale-105 transition duration-300 overflow-hidden ${className}`}>
+    <div className={`bg-gradient-to-br h-fit w-fit from-indigo-900 to-gray-900 relative border xl:min-w-[310px] min-w-56 border-gray-800 rounded-lg shadow-lg p-6 lg:p-8 transform hover:scale-105 transition duration-300 overflow-hidden ${className}`}>
       <div className="mb-4 lg:mb-6 xl:mb-8">
         <h3 className="text-2xl lg:text-3xl xl:text-4xl font-semibold text-white">{heading}</h3>
         <p className="mt-2 lg:mt-4 text-gray-300 lg:text-xl xl:text-2xl">{description}</p>
