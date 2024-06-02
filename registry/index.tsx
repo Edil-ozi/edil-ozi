@@ -32,6 +32,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/horizontal-scroll.tsx"],
   },
+  "buttons": {
+    name: "buttons",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/buttons.tsx"],
+  },
 };
 
 const example: Registry = {
@@ -89,6 +94,14 @@ const example: Registry = {
     files: ["registry/components/example/horizontal-scroll-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/horizontal-scroll-demo"),
+    ),
+  },
+  "buttons-demo": {
+    name: "buttons-demo",
+    type: "components:example",
+    files: ["registry/components/example/buttons-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/buttons-demo"),
     ),
   },
 };
