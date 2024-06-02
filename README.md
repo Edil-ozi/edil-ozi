@@ -21,12 +21,12 @@ When creating new components, it is essential to adhere to the specific color pa
 
 #### Light Mode Colors
 - **Primary Color:** green palette
-- **Background Color:** slate-600+
+- **Background Color:** slate-600+ or gray palette 
 - **Text Color:** black
 
 #### Dark Mode Colors
 - **Primary Color:** green palette
-- **Background Color:** slate-100-500+
+- **Background Color:** slate-100-500+ or gray palette
 - **Text Color:** white
 
 Please use it as starting point. If the provided colors does not fit your requirements, consider using other tailwind colors as well. Ensure that you use these colors to create a cohesive and visually appealing interface.

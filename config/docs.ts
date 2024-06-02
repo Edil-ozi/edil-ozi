@@ -68,17 +68,32 @@ export const docsConfig: DocsConfig = {
     //   ],
     // },
 
+    // {
+    //   title: "Fancy animations",
+    //   items: [
+    //     {
+    //       title: "Zoom parallax",
+    //       href: "/docs/components/zoom-parallax",
+    //       items: [],
+    //     },
+    //   ],
+    // },
+
     {
-      title: "Fancy animations",
+      title: "On scroll animations",
       items: [
         {
           title: "Zoom parallax",
           href: "/docs/components/zoom-parallax",
           items: [],
         },
+        {
+          title: "Horizontal scroll",
+          href: "/docs/components/horizontal-scroll",
+          items: [],
+        },
       ],
     },
-
     {
       title: "Text animations",
       items: [

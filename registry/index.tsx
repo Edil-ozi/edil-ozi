@@ -27,6 +27,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/zoom-parallax.tsx"],
   },
+  "horizontal-scroll": {
+    name: "horizontal-scroll",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/horizontal-scroll.tsx"],
+  },
 };
 
 const example: Registry = {
@@ -76,6 +81,14 @@ const example: Registry = {
     files: ["registry/components/example/zoom-parallax-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/zoom-parallax-demo"),
+    ),
+  },
+  "horizontal-scroll-demo": {
+    name: "horizontal-scroll-demo",
+    type: "components:example",
+    files: ["registry/components/example/horizontal-scroll-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/horizontal-scroll-demo"),
     ),
   },
 };
