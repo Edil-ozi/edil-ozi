@@ -44,12 +44,6 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
-        // {
-        //   title: "Magic-card",
-        //   href: "/docs/components/magic-card",
-        //   items: [],
-        //   label: "New",
-        // },
         {
           title: "Magic-card",
           href: "/docs/components/magic-card",
