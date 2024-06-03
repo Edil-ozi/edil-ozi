@@ -1,41 +1,64 @@
-import { cn } from "@/lib/utils";
-import { CopyIcon } from "lucide-react";
 import { FC } from "react";
+
+import useCopyToClipboard from "@/hooks/useCopyToClipboard";
+
+import ButtonsCard from "@/components/buttons-card";
 
 interface Props {
 }
 
 const Buttons: FC<Props> = () => {
 
+  const { copy } = useCopyToClipboard()
+
   const buttons = [
     {
-      name: "Sketch",
-      description: "Sketch button for your website",
+      name: "Submit",
 
       component: (
-        <button className="px-4 py-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
-          Sketch
-        </button>
+        <button type="button" className="text-purple-700  h-12 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-md text-sm px-6  text-center me-2 mb-2 dark:border-purple-500 dark:text-purple-500 dark:hover:text-white dark:hover:bg-purple-600 dark:focus:ring-purple-800 focus:ring-offset-2">Submit</button>
       ),
     },
-
     {
-      name: "Sketch",
-      description: "Sketch button for your website",
+      name: "Shimmer",
 
       component: (
-        <button className="px-4 py-2 rounded-md border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200">
-          Sketch
+        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-200 dark:border-slate-800 bg-[linear-gradient(110deg,#fff,45%,#f1f1f1,55%,#fff)] dark:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-600 dark:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-slate-400 dark:focus:ring-slate-300">
+          Shimmer
         </button>
       ),
+      code: `
+        // Button code
+        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-200 dark:border-slate-800 bg-[linear-gradient(110deg,#fff,45%,#f1f1f1,55%,#fff)] dark:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-600 dark:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-slate-400 dark:focus:ring-slate-300">
+          Shimmer
+        </button>
+  
+        // tailwind.config.js code
+        {
+          "animation": {
+            shimmer: "shimmer 2s linear infinite"
+          },
+          "keyframes": {
+            shimmer: {
+              from: {
+                "backgroundPosition": "0 0"
+              },
+              to: {
+                "backgroundPosition": "-200% 0"
+              }
+            }
+          }
+        }
+      `,
     },
+
   ]
 
   return (
     <div className="pb-40 px-4 w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto gap-10">
         {buttons.map((btn) => (
-          <ButtonsCard key={btn.name}>
+          <ButtonsCard key={btn.name} onClick={() => copy(btn)}>
             {btn.component}
           </ButtonsCard>
         ))}
@@ -47,25 +70,3 @@ const Buttons: FC<Props> = () => {
 export default Buttons;
 
 
-export const ButtonsCard = ({
-  children,
-  className,
-  onClick,
-}: {
-  children?: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
-}) => {
-  return (
-    <div
-      onClick={onClick}
-      className={cn(
-        "h-60 w-full bg-background rounded-xl border border-neutral-100 dark:border-white/[0.2] hover:border-neutral-200 group/btn overflow-hidden relative flex items-center justify-center",
-        className
-      )}
-    >
-      <CopyIcon className="absolute top-2 right-2 text-neutral-300 group-hover/btn:block hidden h-4 w-4 transition duration-200" />
-      <div className="relative z-40">{children}</div>
-    </div>
-  );
-};
