@@ -1,34 +1,34 @@
-import { notFound } from "next/navigation"
-import { allDocs } from "contentlayer/generated"
+import { notFound } from "next/navigation";
+import { allDocs } from "contentlayer/generated";
 
-import "@/styles/mdx.css"
-import Link from "next/link"
-import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons"
-import Balancer from "react-wrap-balancer"
+import "@/styles/mdx.css";
+import Link from "next/link";
+import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
+import Balancer from "react-wrap-balancer";
 
-import { getTableOfContents } from "@/lib/toc"
-import { cn } from "@/lib/utils"
-import { badgeVariants } from "@/components/ui/badge"
-import { Mdx } from "@/components/mdx-components"
-import { DocPager } from "@/components/pager"
-import { ScrollArea } from "@/components/scroll-area"
-import { DashboardTableOfContents } from "@/components/toc"
+import { getTableOfContents } from "@/lib/toc";
+import { cn } from "@/lib/utils";
+import { badgeVariants } from "@/components/ui/badge";
+import { Mdx } from "@/components/mdx-components";
+import { DocPager } from "@/components/pager";
+import { ScrollArea } from "@/components/scroll-area";
+import { DashboardTableOfContents } from "@/components/toc";
 
 interface DocPageProps {
   params: {
-    slug: string[]
-  }
+    slug: string[];
+  };
 }
 
 async function getDocFromParams({ params }: DocPageProps) {
-  const slug = params.slug?.join("/") || ""
-  const doc = allDocs.find((doc) => doc.slugAsParams === slug)
+  const slug = params.slug?.join("/") || "";
+  const doc = allDocs.find((doc) => doc.slugAsParams === slug);
 
   if (!doc) {
-    return null
+    return null;
   }
 
-  return doc
+  return doc;
 }
 
 export async function generateStaticParams(): Promise<
@@ -36,21 +36,21 @@ export async function generateStaticParams(): Promise<
 > {
   return allDocs.map((doc) => ({
     slug: doc.slugAsParams.split("/"),
-  }))
+  }));
 }
 
 export default async function DocPage({ params }: DocPageProps) {
-  const doc = await getDocFromParams({ params })
-  console.log('HELLLLLLLLLLLO', doc)
+  const doc = await getDocFromParams({ params });
+  console.log("HELLLLLLLLLLLO", doc);
 
   if (!doc) {
-    notFound()
+    notFound();
   }
 
-  const toc = await getTableOfContents(doc.body.raw)
+  const toc = await getTableOfContents(doc.body.raw);
 
   return (
-    <main className="relative py-6 lg:gap-10 lg:py-8 ">
+    <main className="relative py-6 lg:gap-10 lg:py-8">
       <div className="mx-auto w-full min-w-0">
         <div className="mb-4 flex items-center space-x-1 text-sm text-muted-foreground">
           <div className="overflow-hidden text-ellipsis whitespace-nowrap">
@@ -119,6 +119,5 @@ export default async function DocPage({ params }: DocPageProps) {
         }}
       />
     </main>
-  )
+  );
 }
-

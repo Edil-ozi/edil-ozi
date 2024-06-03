@@ -59,7 +59,11 @@
 //   // @ts-ignore
 //   computedFields,
 // contentlayer.config.ts
-import { defineDocumentType, defineNestedType, makeSource } from "contentlayer/source-files";
+import {
+  defineDocumentType,
+  defineNestedType,
+  makeSource,
+} from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
@@ -99,7 +103,7 @@ const computedFields = {
         dateModified: doc.date,
         description: doc.summary,
         image: doc.image,
-      } as WithContext<BlogPosting>),
+      }) as WithContext<BlogPosting>,
   },
 };
 
@@ -233,7 +237,8 @@ export default makeSource({
               return;
             }
 
-            preElement.properties["__withMeta__"] = node.children.at(0).tagName === "div";
+            preElement.properties["__withMeta__"] =
+              node.children.at(0).tagName === "div";
             preElement.properties["__rawString__"] = node.__rawString__;
 
             if (node.__src__) {

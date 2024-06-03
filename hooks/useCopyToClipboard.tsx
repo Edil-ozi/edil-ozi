@@ -1,7 +1,6 @@
 import reactElementToJSXString from "react-element-to-jsx-string";
 
 const useCopyToClipboard = () => {
-
   const copy = (button: any) => {
     if (button.code) {
       copyToClipboard(button.code);
@@ -24,7 +23,7 @@ const useCopyToClipboard = () => {
         console.error("Error copying text to clipboard:", err);
       });
   }
-  return { copy }
+  return { copy };
 };
 
-export default useCopyToClipboard
+export default useCopyToClipboard;

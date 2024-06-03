@@ -1,10 +1,7 @@
 import Buttons from "@/registry/components/edil-ozi/buttons";
 
 const HorizontalScrollDemo = () => {
-
-  return (
-    <Buttons />
-  );
+  return <Buttons />;
 };
 
-export default HorizontalScrollDemo
+export default HorizontalScrollDemo;

@@ -10,16 +10,25 @@ export const metadata: Metadata = {
 };
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning >
+    <html lang="en" suppressHydrationWarning>
       <head />
       {/* remove dark as default */}
-      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.className)}>
-        <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange >
+      <body
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          fontSans.className,
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          disableTransitionOnChange
+        >
           <div className="relative flex min-h-screen flex-col bg-background">
             {children}
           </div>

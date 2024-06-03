@@ -4,26 +4,29 @@ import useCopyToClipboard from "@/hooks/useCopyToClipboard";
 
 import ButtonsCard from "@/components/buttons-card";
 
-interface Props {
-}
+interface Props {}
 
 const Buttons: FC<Props> = () => {
-
-  const { copy } = useCopyToClipboard()
+  const { copy } = useCopyToClipboard();
 
   const buttons = [
     {
       name: "Submit",
 
       component: (
-        <button type="button" className="text-purple-700  h-12 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-2 focus:outline-none focus:ring-purple-300 font-medium rounded-md text-sm px-6  text-center me-2 mb-2 dark:border-purple-500 dark:text-purple-500 dark:hover:text-white dark:hover:bg-purple-600 dark:focus:ring-purple-800 focus:ring-offset-2">Submit</button>
+        <button
+          type="button"
+          className="mb-2 me-2 h-12 rounded-md border border-purple-700 px-6 text-center text-sm font-medium text-purple-700 hover:bg-purple-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 dark:border-purple-500 dark:text-purple-500 dark:hover:bg-purple-600 dark:hover:text-white dark:focus:ring-purple-800"
+        >
+          Submit
+        </button>
       ),
     },
     {
       name: "Shimmer",
 
       component: (
-        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-200 dark:border-slate-800 bg-[linear-gradient(110deg,#fff,45%,#f1f1f1,55%,#fff)] dark:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-600 dark:text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-slate-400 dark:focus:ring-slate-300">
+        <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-200 bg-[linear-gradient(110deg,#fff,45%,#f1f1f1,55%,#fff)] bg-[length:200%_100%] px-6 font-medium text-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-slate-400 dark:border-slate-800 dark:bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] dark:text-slate-400 dark:focus:ring-slate-300">
           Shimmer
         </button>
       ),
@@ -51,12 +54,11 @@ const Buttons: FC<Props> = () => {
         }
       `,
     },
-
-  ]
+  ];
 
   return (
-    <div className="pb-40 px-4 w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-7xl mx-auto gap-10">
+    <div className="w-full px-4 pb-40">
+      <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {buttons.map((btn) => (
           <ButtonsCard key={btn.name} onClick={() => copy(btn)}>
             {btn.component}
@@ -68,5 +70,3 @@ const Buttons: FC<Props> = () => {
 };
 
 export default Buttons;
-
-

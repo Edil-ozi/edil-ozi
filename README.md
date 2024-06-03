@@ -5,6 +5,7 @@ Welcome to the project! We appreciate your interest in contributing. Please read
 ### 0. How to add new components
 
 #### You need only 5 files to be changed in the following order
+
 `config/docs.ts` - add new sidebar field
 
 `registry/components/edil-ozi` - add your brand new component
@@ -20,11 +21,13 @@ Welcome to the project! We appreciate your interest in contributing. Please read
 When creating new components, it is essential to adhere to the specific color palette provided below to maintain a consistent design throughout the application. All colors are build in tailwind 3.3+ versions.
 
 #### Light Mode Colors
+
 - **Primary Color:** green palette
-- **Background Color:** slate-600+ or gray palette 
+- **Background Color:** slate-600+ or gray palette
 - **Text Color:** black
 
 #### Dark Mode Colors
+
 - **Primary Color:** green palette
 - **Background Color:** slate-100-500+ or gray palette
 - **Text Color:** white
@@ -34,12 +37,14 @@ Please use it as starting point. If the provided colors does not fit your requir
 ### 2. Mobile-First Responsive Design
 
 All components must be designed with a mobile-first approach. This means starting with the mobile design and then scaling up to larger screens. Ensure that your components:
+
 - Are fully functional and visually optimized for mobile devices.
 - Adapt smoothly to different screen sizes and orientations.
 
 ### 3. Code Efficiency and User Experience
 
 Each component should:
+
 - Contain the minimal amount of code necessary to provide full user experience functionality.
 - Be as efficient as possible without compromising on the user experience for 'n' users.
 - Follow best practices for code reusability, readability and maintainability.

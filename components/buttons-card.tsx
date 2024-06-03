@@ -14,17 +14,17 @@ const ButtonsCard = ({
     <div
       onClick={onClick}
       className={cn(
-        "h-40 md:h-50 xl:h-60 w-full bg-background rounded-xl border border-neutral-100 dark:border-white/[0.2] hover:border-neutral-200 group/btn overflow-hidden relative flex items-center justify-center",
-        className
+        "md:h-50 group/btn relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-100 bg-background hover:border-neutral-200 dark:border-white/[0.2] xl:h-60",
+        className,
       )}
     >
       <button className="group" type="button" tabIndex={-1}>
-        <CopyIcon className="absolute top-2 right-2 text-neutral-300 group-hover/btn:block hidden h-4 w-4 transition duration-200 group-focus:hidden" />
-        <Check className="absolute stroke-green-500 top-2 right-2 text-neutral-300 group-hover/btn:hidden hidden h-4 w-4 transition duration-200 group-focus:block" />
+        <CopyIcon className="absolute right-2 top-2 hidden h-4 w-4 text-neutral-300 transition duration-200 group-hover/btn:block group-focus:hidden" />
+        <Check className="absolute right-2 top-2 hidden h-4 w-4 stroke-green-500 text-neutral-300 transition duration-200 group-hover/btn:hidden group-focus:block" />
       </button>
       <div className="relative z-40">{children}</div>
     </div>
   );
 };
 
-export default ButtonsCard
+export default ButtonsCard;

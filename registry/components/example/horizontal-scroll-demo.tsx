@@ -1,7 +1,6 @@
 import HorizontalScrollCarousel from "@/registry/components/edil-ozi/horizontal-scroll";
 
 const HorizontalScrollDemo = () => {
-
   const images = [
     "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=1950",
     "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948",
@@ -20,4 +19,4 @@ const HorizontalScrollDemo = () => {
   );
 };
 
-export default HorizontalScrollDemo
+export default HorizontalScrollDemo;

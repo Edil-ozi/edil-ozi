@@ -5,8 +5,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface Props {
-  text: string
-  speed?: number
+  text: string;
+  speed?: number;
 }
 
 const InfiniteText: FC<Props> = ({ text, speed = 0.1 }) => {
@@ -44,18 +44,33 @@ const InfiniteText: FC<Props> = ({ text, speed = 0.1 }) => {
     requestAnimationFrame(animation);
   }, []);
   return (
-    <div className="h-[320px] w-full z-[10] ">
-      <div className="flex items-center rounded-lg overflow-hidden relative h-full">
-        <Image src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029" objectFit="cover" fill={true} alt="bg" />
+    <div className="z-[10] h-[320px] w-full">
+      <div className="relative flex h-full items-center overflow-hidden rounded-lg">
+        <Image
+          src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029"
+          objectFit="cover"
+          fill={true}
+          alt="bg"
+        />
         <div className="absolute">
-          <div ref={slider} className="relative whitespace-nowrap flex m-0">
-            <p ref={firstText} className="text-4xl md:text-5xl lg:text-6xl font-medium m-0 text-white mr-3">{text}</p>
-            <p ref={secondText} className="text-4xl md:text-5xl lg:text-6xl font-medium m-0 text-white">{text}</p>
+          <div ref={slider} className="relative m-0 flex whitespace-nowrap">
+            <p
+              ref={firstText}
+              className="m-0 mr-3 text-4xl font-medium text-white md:text-5xl lg:text-6xl"
+            >
+              {text}
+            </p>
+            <p
+              ref={secondText}
+              className="m-0 text-4xl font-medium text-white md:text-5xl lg:text-6xl"
+            >
+              {text}
+            </p>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default InfiniteText
+export default InfiniteText;

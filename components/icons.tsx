@@ -1,5 +1,5 @@
 import { AlertTriangle, Check, ChevronLeft, Copy } from "lucide-react";
-type IconProps = React.HTMLAttributes<SVGElement>
+type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
   logo: (props: IconProps) => (
@@ -150,4 +150,4 @@ export const Icons = {
   copy: Copy,
   warning: AlertTriangle,
   chevronLeft: ChevronLeft,
-}
+};
