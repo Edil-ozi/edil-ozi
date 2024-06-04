@@ -81,12 +81,17 @@ const config: Config = {
           backgroundPosition: "-200% 0",
         },
       },
+      "logo-carousel": {
+        from: { transform: "translateX(0)" },
+        to: { transform: "translateX(calc(-100% - 2rem))" },
+      },
     },
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
       "caret-blink": "caret-blink 1.25s ease-out infinite",
       shimmer: "shimmer 2s linear infinite",
+      "logo-carousel": "logo-carousel 16s linear infinite",
     },
   },
   plugins: [require("tailwindcss-animate")],

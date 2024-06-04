@@ -1,0 +1,49 @@
+---
+title: Logo Carousel
+date: 2024-06-04
+description: Animated logo carousel.
+---
+
+<ComponentPreview name="logo-carousel-demo" />
+
+<Steps>
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+      "logo-carousel": {
+        from: { transform: "translateX(0)" },
+        to: { transform: "translateX(calc(-100% - 2rem))" },
+      },
+    },
+    //Adjust duration as your needs 
+    animation: {
+      "logo-carousel": "logo-carousel 16s linear infinite",
+    },
+    },
+  },
+};
+```
+### Create new file and copy the code below
+```text
+components/edil-ozi/logo-carousel.tsx
+```
+
+<ComponentSource name="logo-carousel" />
+
+</Steps>
+
+## Props
+
+| Prop    | Type                                           | Description                        | Default |
+| ------- | -----------------------------------------------| -----------------------------------| ------- |
+| logos   | `{title: string, url: string}[]`               | Data with `title` and `image url`  |[]       |
+| animate?| boolean                                        | Whether apply animation or not     |  true   |
+| shadows?| boolean                                        | Whether apply shadows or not       |  true   |

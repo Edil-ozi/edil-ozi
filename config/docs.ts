@@ -52,16 +52,21 @@ export const docsConfig: DocsConfig = {
           title: "Login Form",
           href: "/docs/components/login-form",
           items: [],
-          label: "New",
         },
         {
-          title: "Magic-card",
+          title: "Magic Card",
           href: "/docs/components/magic-card",
           items: [],
         },
         {
           title: "Pricing Card",
           href: "/docs/components/pricing-card",
+          items: [],
+          label: "New",
+        },
+        {
+          title: "Logo Carousel",
+          href: "/docs/components/logo-carousel",
           items: [],
           label: "New",
         },

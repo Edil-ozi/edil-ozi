@@ -2,6 +2,14 @@ import { Registry } from "@/registry/schema";
 import * as React from "react";
 
 const ui: Registry = {
+  //Components (base)
+  buttons: {
+    name: "buttons",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/buttons.tsx"],
+  },
+
+  //Clean Components
   "magic-card": {
     name: "magic-card",
     type: "components:ui",
@@ -17,6 +25,13 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/pricing-card.tsx"],
   },
+  "logo-carousel": {
+    name: "logo-carousel",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/logo-carousel.tsx"],
+  },
+
+  //Text animations
   "infinite-text": {
     name: "infinite-text",
     type: "components:ui",
@@ -27,6 +42,8 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/text-reveal.tsx"],
   },
+
+  //On scroll animations
   "zoom-parallax": {
     name: "zoom-parallax",
     type: "components:ui",
@@ -37,14 +54,20 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/horizontal-scroll.tsx"],
   },
-  buttons: {
-    name: "buttons",
-    type: "components:ui",
-    files: ["registry/components/edil-ozi/buttons.tsx"],
-  },
 };
 
 const example: Registry = {
+
+  //Components (base)
+  "buttons-demo": {
+    name: "buttons-demo",
+    type: "components:example",
+    files: ["registry/components/example/buttons-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/buttons-demo"),
+    ),
+  },
+  //Clean Components
   "magic-card-demo": {
     name: "magic-card-demo",
     type: "components:example",
@@ -71,6 +94,14 @@ const example: Registry = {
     files: ["registry/components/example/pricing-card-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/pricing-card-demo")),
   },
+  "logo-carousel-demo": {
+    name: "logo-carousel-demo",
+    type: "components:example",
+    files: ["registry/components/example/logo-carousel-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/logo-carousel-demo")),
+  },
+
+  //Text animations
   "infinite-text-demo": {
     name: "infinite-text-demo",
     type: "components:example",
@@ -87,6 +118,8 @@ const example: Registry = {
       () => import("@/registry/components/example/text-reveal-demo"),
     ),
   },
+
+  //On scroll animations
   "zoom-parallax-demo": {
     name: "zoom-parallax-demo",
     type: "components:example",
@@ -101,14 +134,6 @@ const example: Registry = {
     files: ["registry/components/example/horizontal-scroll-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/horizontal-scroll-demo"),
-    ),
-  },
-  "buttons-demo": {
-    name: "buttons-demo",
-    type: "components:example",
-    files: ["registry/components/example/buttons-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/buttons-demo"),
     ),
   },
 };

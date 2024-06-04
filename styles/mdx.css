@@ -73,3 +73,7 @@
 .steps > h3 {
   @apply mb-4 mt-8 text-base font-semibold;
 }
+
+article > .steps:first-child > h3:first-child {
+  @apply mt-0;
+}
