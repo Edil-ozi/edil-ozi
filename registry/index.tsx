@@ -8,6 +8,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/buttons.tsx"],
   },
+  "base-inputs": {
+    name: "base-inputs",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/base-inputs.tsx"],
+  },
 
   //Clean Components
   "magic-card": {
@@ -65,6 +70,14 @@ const example: Registry = {
     files: ["registry/components/example/buttons-demo.tsx"],
     component: React.lazy(
       () => import("@/registry/components/example/buttons-demo"),
+    ),
+  },
+  "base-inputs-demo": {
+    name: "base-inputs-demo",
+    type: "components:example",
+    files: ["registry/components/example/base-inputs-demo.tsx"],
+    component: React.lazy(
+      () => import("@/registry/components/example/base-inputs-demo"),
     ),
   },
   //Clean Components

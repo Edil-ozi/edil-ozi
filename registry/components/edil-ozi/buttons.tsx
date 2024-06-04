@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import useCopyToClipboard from "@/hooks/useCopyToClipboard";
 
-import ButtonsCard from "@/components/buttons-card";
+import CardWrapper from "@/components/card-wrapper";
 
 interface Props {}
 
@@ -92,9 +92,9 @@ const Buttons: FC<Props> = () => {
     <div className="w-full px-4 pb-40">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {buttons.map((btn) => (
-          <ButtonsCard key={btn.name} onClick={() => copy(btn)}>
+          <CardWrapper key={btn.name} onClick={() => copy(btn)}>
             {btn.component}
-          </ButtonsCard>
+          </CardWrapper>
         ))}
       </div>
     </div>

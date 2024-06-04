@@ -43,6 +43,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/buttons",
           items: [],
         },
+        {
+          title: "Base Inputs",
+          href: "/docs/components/base-inputs",
+          items: [],
+        },
       ],
     },
     {

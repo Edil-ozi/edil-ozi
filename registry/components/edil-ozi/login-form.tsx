@@ -38,7 +38,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
             <h1 className="text-xl font-bold leading-tight tracking-tight">
               Login
             </h1>
-            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
+            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit} >
               {inputs.map(({ title, type, placeholder, classes }) => (
                 <div key={title}>
                   <label
@@ -48,6 +48,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
                     {title}
                   </label>
                   <input
+                    autoComplete="false"
                     onChange={(e) =>
                       setForm((prev) => ({
                         ...prev,
@@ -57,7 +58,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
                     type={type}
                     name={type}
                     id={title}
-                    className={`block w-full rounded-md border border-gray-300 bg-gray-100 p-2.5 text-black outline-none focus:ring focus:ring-green-500 sm:text-sm ${classes}`}
+                    className={`block w-full rounded-md border border-gray-300 bg-gray-100 p-2.5 text-black outline-none focus:ring focus:ring-slate-400 sm:text-sm ${classes}`}
                     placeholder={placeholder}
                   />
                 </div>
@@ -69,7 +70,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
                       id="remember"
                       aria-describedby="remember"
                       type="checkbox"
-                      className="h-4 w-4 rounded border bg-gray-100 outline-none focus:ring focus:ring-green-500"
+                      className="h-4 w-4 rounded border bg-gray-100 outline-none focus:ring focus:ring-slate-400"
                     />
                   </div>
                   <div className="ml-3 text-sm">
@@ -78,14 +79,14 @@ const LoginForm: FC<Props> = ({ classes }) => {
                 </div>
                 <a
                   href="#"
-                  className="text-sm font-medium outline-none hover:underline focus:ring focus:ring-green-500"
+                  className="text-sm font-medium outline-none hover:underline focus:ring focus:ring-slate-400"
                 >
                   Forget password?
                 </a>
               </div>
               <button
                 type="submit"
-                className="w-full rounded-md bg-green-500 px-5 py-2.5 text-center text-sm font-medium text-black outline-none focus:ring focus:ring-green-600"
+                className="w-full rounded-md bg-green-500 px-5 py-2.5 text-center text-sm font-medium text-black outline-none focus:ring focus:ring-gray-200"
               >
                 Sign in
               </button>

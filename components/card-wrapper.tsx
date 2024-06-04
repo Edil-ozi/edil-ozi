@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Check, CopyIcon } from "lucide-react";
 
-const ButtonsCard = ({
+const CardWrapper = ({
   children,
   className,
   onClick,
@@ -27,4 +27,4 @@ const ButtonsCard = ({
   );
 };
 
-export default ButtonsCard;
+export default CardWrapper;
