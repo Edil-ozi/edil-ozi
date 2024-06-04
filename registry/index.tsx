@@ -62,7 +62,6 @@ const ui: Registry = {
 };
 
 const example: Registry = {
-
   //Components (base)
   "buttons-demo": {
     name: "buttons-demo",
@@ -93,25 +92,33 @@ const example: Registry = {
     name: "magic-card-gradient",
     type: "components:example",
     files: ["registry/components/example/magic-card-gradient.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/magic-card-gradient")),
+    component: React.lazy(
+      () => import("@/registry/components/example/magic-card-gradient"),
+    ),
   },
   "login-form-demo": {
     name: "login-form-demo",
     type: "components:example",
     files: ["registry/components/example/login-form-demo.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/login-form-demo")),
+    component: React.lazy(
+      () => import("@/registry/components/example/login-form-demo"),
+    ),
   },
   "pricing-card-demo": {
     name: "pricing-card-demo",
     type: "components:example",
     files: ["registry/components/example/pricing-card-demo.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/pricing-card-demo")),
+    component: React.lazy(
+      () => import("@/registry/components/example/pricing-card-demo"),
+    ),
   },
   "logo-carousel-demo": {
     name: "logo-carousel-demo",
     type: "components:example",
     files: ["registry/components/example/logo-carousel-demo.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/logo-carousel-demo")),
+    component: React.lazy(
+      () => import("@/registry/components/example/logo-carousel-demo"),
+    ),
   },
 
   //Text animations

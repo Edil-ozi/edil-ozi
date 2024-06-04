@@ -18,20 +18,22 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-      "logo-carousel": {
-        from: { transform: "translateX(0)" },
-        to: { transform: "translateX(calc(-100% - 2rem))" },
+        "logo-carousel": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - 2rem))" },
+        },
       },
-    },
-    //Adjust duration as your needs 
-    animation: {
-      "logo-carousel": "logo-carousel 16s linear infinite",
-    },
+      //Adjust duration as your needs
+      animation: {
+        "logo-carousel": "logo-carousel 16s linear infinite",
+      },
     },
   },
 };
 ```
+
 ### Create new file and copy the code below
+
 ```text
 components/edil-ozi/logo-carousel.tsx
 ```
@@ -42,8 +44,8 @@ components/edil-ozi/logo-carousel.tsx
 
 ## Props
 
-| Prop    | Type                                           | Description                        | Default |
-| ------- | -----------------------------------------------| -----------------------------------| ------- |
-| logos   | `{title: string, url: string}[]`               | Data with `title` and `image url`  |[]       |
-| animate?| boolean                                        | Whether apply animation or not     |  true   |
-| shadows?| boolean                                        | Whether apply shadows or not       |  true   |
+| Prop     | Type                             | Description                       | Default |
+| -------- | -------------------------------- | --------------------------------- | ------- |
+| logos    | `{title: string, url: string}[]` | Data with `title` and `image url` | []      |
+| animate? | boolean                          | Whether apply animation or not    | true    |
+| shadows? | boolean                          | Whether apply shadows or not      | true    |

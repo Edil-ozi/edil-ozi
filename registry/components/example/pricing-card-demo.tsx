@@ -10,10 +10,9 @@ type Card = {
   listHeading?: string;
   className?: string;
   onClick?: () => void;
-}
+};
 
 export default function PricingCardDemo() {
-
   const cards: Card[] = [
     {
       heading: "Room 1",
@@ -22,7 +21,7 @@ export default function PricingCardDemo() {
       discount: 40,
       list: ["Clean", "Soft", "With beautiful view", "Bedroom"],
       buttonText: "Book now!",
-      className: '',
+      className: "",
     },
     {
       heading: "Room 2",
@@ -30,7 +29,7 @@ export default function PricingCardDemo() {
       price: 399.45,
       list: ["Clean", "Soft", "With beautiful view", "Bedroom"],
       buttonText: "Book now!",
-      className: '',
+      className: "",
     },
     {
       heading: "Room 3",
@@ -39,13 +38,13 @@ export default function PricingCardDemo() {
       discount: 15,
       list: ["Clean", "Soft", "With beautiful view", "Bedroom"],
       buttonText: "Book now!",
-      className: '',
+      className: "",
     },
-  ]
+  ];
 
   return (
-    <div className="flex flex-wrap gap-6 justify-center">
-      {cards.map(card => (
+    <div className="flex flex-wrap justify-center gap-6">
+      {cards.map((card) => (
         <PricingCard key={card.heading} {...card} />
       ))}
     </div>

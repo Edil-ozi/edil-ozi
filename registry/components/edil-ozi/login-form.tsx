@@ -38,7 +38,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
             <h1 className="text-xl font-bold leading-tight tracking-tight">
               Login
             </h1>
-            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit} >
+            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
               {inputs.map(({ title, type, placeholder, classes }) => (
                 <div key={title}>
                   <label

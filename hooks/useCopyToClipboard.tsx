@@ -9,15 +9,14 @@ const useCopyToClipboard = () => {
     let buttonString = reactElementToJSXString(button.component);
 
     if (buttonString) {
-      const textToCopy = buttonString;
-      copyToClipboard(textToCopy);
+      copyToClipboard(buttonString);
     }
   };
   function copyToClipboard(text: string) {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        console.log("Text copied to clipboard:", text);
+        console.log("Text copied to clipboard:");
       })
       .catch((err) => {
         console.error("Error copying text to clipboard:", err);
