@@ -9,10 +9,7 @@ interface Props {
   className?: string;
 }
 
-const TextRevealByWord: FC<Props> = ({
-  paragraph,
-  className,
-}) => {
+const TextRevealByWord: FC<Props> = ({ paragraph, className }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll({

@@ -3,7 +3,7 @@ import Link from "next/link";
 import MainNav from "@/components/main-nav";
 import MobileNav from "@/components/mobile-nav";
 import CommandMenu from "@/components/command-menu";
-import ModeToggle from "@/components/mode-toggle"
+import ModeToggle from "@/components/mode-toggle";
 import { buttonVariants } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 
@@ -26,7 +26,9 @@ export default function SiteHeader() {
               target="_blank"
               rel="noreferrer"
             >
-              <div className={cn(buttonVariants({ variant: "ghost" }), "w-9 px-0")}>
+              <div
+                className={cn(buttonVariants({ variant: "ghost" }), "w-9 px-0")}
+              >
                 <Icons.gitHub className="h-4 w-4" />
                 <span className="sr-only">GitHub</span>
               </div>
@@ -36,5 +38,5 @@ export default function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }

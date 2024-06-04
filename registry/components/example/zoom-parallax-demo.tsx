@@ -1,9 +1,7 @@
 import ZoomParallax from "@/registry/components/edil-ozi/zoom-parallax";
 
 const ZoomParallaxDemo = () => {
-  return (
-    <ZoomParallax />
-  );
-}
+  return <ZoomParallax />;
+};
 
-export default ZoomParallaxDemo
+export default ZoomParallaxDemo;

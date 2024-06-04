@@ -1,8 +1,7 @@
 import TextReveal from "@/registry/components/edil-ozi/text-reveal";
 
 export default function InfiniteTextDemo() {
-
-  const paragraph = "Edil ozi will change the way you design."
+  const paragraph = "Edil ozi will change the way you design.";
 
   return (
     <div className="z-10 flex min-h-[16rem] items-center justify-center rounded-lg border bg-white dark:bg-black">

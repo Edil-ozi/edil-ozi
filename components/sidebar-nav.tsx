@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { SidebarNavItem } from "@/types/nav"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { SidebarNavItem } from "@/types/nav";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export interface DocsSidebarNavProps {
-  items: SidebarNavItem[]
+  items: SidebarNavItem[];
 }
 
 export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   return items.length ? (
     <div className="w-full">
@@ -26,15 +26,18 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
         </div>
       ))}
     </div>
-  ) : null
+  ) : null;
 }
 
 interface DocsSidebarNavItemsProps {
-  items: SidebarNavItem[]
-  pathname: string | null
+  items: SidebarNavItem[];
+  pathname: string | null;
 }
 
-export function DocsSidebarNavItems({ items, pathname }: DocsSidebarNavItemsProps) {
+export function DocsSidebarNavItems({
+  items,
+  pathname,
+}: DocsSidebarNavItemsProps) {
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max text-sm">
       {items.map((item, index) =>
@@ -43,11 +46,11 @@ export function DocsSidebarNavItems({ items, pathname }: DocsSidebarNavItemsProp
             key={index}
             href={item.href}
             className={cn(
-              "group flex w-full items-center rounded-md border border-transparent px-2 py-1 transition hover:translate-x-2 hover:text-primary",
+              "group flex w-full items-center rounded-md border border-transparent px-2 py-1 transition duration-200 ease-in-out hover:translate-x-1 hover:text-primary",
               item.disabled && "cursor-not-allowed opacity-60",
               pathname === item.href
                 ? "font-medium text-foreground"
-                : "text-muted-foreground"
+                : "text-muted-foreground",
             )}
             target={item.external ? "_blank" : ""}
             rel={item.external ? "noreferrer" : ""}
@@ -63,8 +66,8 @@ export function DocsSidebarNavItems({ items, pathname }: DocsSidebarNavItemsProp
           <span
             key={index}
             className={cn(
-              "flex w-full cursor-not-allowed items-center rounded-md p-2 text-muted-foreground hover",
-              item.disabled && "cursor-not-allowed opacity-60"
+              "hover flex w-full cursor-not-allowed items-center rounded-md p-2 text-muted-foreground",
+              item.disabled && "cursor-not-allowed opacity-60",
             )}
           >
             {item.title}
@@ -74,8 +77,8 @@ export function DocsSidebarNavItems({ items, pathname }: DocsSidebarNavItemsProp
               </span>
             )}
           </span>
-        )
+        ),
       )}
     </div>
-  ) : null
+  ) : null;
 }

@@ -45,10 +45,7 @@ export function ComponentPreview({
 
   return (
     <div
-      className={cn(
-        "relative my-4 flex flex-col space-y-2 w-full",
-        className,
-      )}
+      className={cn("relative my-4 flex w-full flex-col space-y-2", className)}
       {...props}
     >
       <Tabs defaultValue="preview" className="relative mr-auto w-full">
@@ -80,7 +77,7 @@ export function ComponentPreview({
             <React.Suspense
               fallback={
                 <div className="flex items-center text-sm text-muted-foreground">
-                  <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                  <Icons.spinner className="animate-spin mr-2 h-4 w-4" />
                   Loading...
                 </div>
               }
