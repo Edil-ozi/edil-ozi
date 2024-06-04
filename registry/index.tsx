@@ -37,6 +37,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/pricing-card.tsx"],
   },
+  "accordion": {
+    name: "accordion",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/accordion.tsx"],
+  },
   // "linear-gradient": {
   //   name: "linear-gradient",
   //   type: "components:ui",
@@ -203,6 +208,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/pricing-card-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/pricing-card-demo")),
+  },
+  "accordion-demo": {
+    name: "accordion-demo",
+    type: "components:example",
+    files: ["registry/components/example/accordion-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/accordion-demo")),
   },
   "infinite-text-demo": {
     name: "infinite-text-demo",

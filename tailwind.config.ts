@@ -52,6 +52,12 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        keyframes: {
+
+        },
+        animation: {
+
+        },
       },
       borderRadius: {
         xl: `calc(var(--radius) + 4px)`,
@@ -63,7 +69,7 @@ const config: Config = {
     keyframes: {
       "accordion-down": {
         from: { height: "0" },
-        to: { height: "var(--radix-accordion-content-height)" },
+        to: { height: "fit" },
       },
       "accordion-up": {
         from: { height: "var(--radix-accordion-content-height)" },
@@ -73,11 +79,16 @@ const config: Config = {
         "0%,70%,100%": { opacity: "1" },
         "20%,50%": { opacity: "0" },
       },
+      "fadeIn": {
+        from: { "opacity": "0" },
+        to: { "opacity": "100" },
+      },
     },
     animation: {
-      "accordion-down": "accordion-down 0.2s ease-out",
+      "accordion-down": "accordion-down 0.5s ease-in-out forwards",
       "accordion-up": "accordion-up 0.2s ease-out",
       "caret-blink": "caret-blink 1.25s ease-out infinite",
+      "fadeIn": "fadeIn 0.2s ease-in-out forwards",
     },
   },
   plugins: [require("tailwindcss-animate")],

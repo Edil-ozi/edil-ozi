@@ -55,6 +55,12 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Accordion",
+          href: "/docs/components/accordion",
+          items: [],
+          label: "New",
+        },
       ],
     },
 
