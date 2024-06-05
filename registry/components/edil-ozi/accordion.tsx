@@ -13,27 +13,25 @@ import {
 
 import { cn } from "@/lib/utils";
 
+interface Children {
+  children: ReactNode
+}
 
-interface AccordionProps {
-  children: ReactNode;
+interface AccordionProps extends Children {
   multiple?: boolean;
 }
-interface AccordionItemProps {
-  children:ReactNode;
+interface AccordionItemProps extends Children {
   value: string;
   className?: string;
   disabled?: boolean;
 }
-interface AccordionSummary {
-  children:ReactNode;
+interface AccordionSummary extends Children {
   expandIcon?: ReactNode;
   isExpanded?:boolean;
   handleClick?:() => void;
   setHeights?: (prev: {}) => void;
-
 }
-interface AccordionDetails {
-  children: ReactNode;
+interface AccordionDetails extends Children {
   setHeights?: (prev: {}) => void;
 }
 interface AccordionContextType {
@@ -56,10 +54,8 @@ const Accordion:FC<AccordionProps> = ({children, multiple=true}) => {
   const [activeItem, setActiveItem] = useState("")
 
   const setToggle = (value: string) => {
-      setActiveItem(() => {
-        if (activeItem !== value) return value;
-        return "";
-      });
+    setActiveItem(() => (activeItem !== value ? value : ''))
+
     };
 
   return (
@@ -76,7 +72,7 @@ const AccordionSummary: FC<AccordionSummary> = ({children, isExpanded, handleCli
 
   useEffect(() => {
     if(ref.current !== null) {
-      setHeights?.((prev: {}) => {return {...prev, summary: ref.current?.clientHeight}})
+      setHeights?.((prev: {}) => ({ ...prev, summary: ref.current?.clientHeight }))
     }
   }, [setHeights])
 
@@ -85,7 +81,7 @@ const AccordionSummary: FC<AccordionSummary> = ({children, isExpanded, handleCli
 			<span>{children}</span>
       <span className={`transition ${isExpanded && "rotate-180"}`}>
         {!expandIcon ?
-          <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+          <svg fill="none" width="24" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" ><path d="M6 9l6 6 6-6"></path></svg>
           :
           expandIcon
         }
@@ -98,7 +94,7 @@ const AccordionDetails: FC<AccordionDetails> = ({children, setHeights}) => {
   const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if(ref.current !== null) {
-      setHeights?.((prev: {}) => {return {...prev, details: ref.current?.clientHeight}})
+      setHeights?.((prev: {}) => ({ ...prev, details: ref.current?.clientHeight }))
     }
   }, [setHeights])
   return (
@@ -120,12 +116,7 @@ const AccordionItem:FC<AccordionItemProps> = ({children, value, className, disab
     if (!multiple) {
       setToggle(value)
     } else {
-      setActiveItemMultiple(() => {
-        if(activeItemMultiple !== value) {
-          return value
-        }
-        return ""
-      }
+      setActiveItemMultiple(() => (activeItemMultiple !== value ? value : "")
       )
     }
   };

@@ -7,12 +7,12 @@ type Accordion = {
 }
 export default function AccordionDemo() {
   const accordions: Accordion[] = [
-    { title: "Why we?", text: "We made new future, new design, new abilities. very very very very very very very very very very very long text"},
+    { title: "Why we?", text: "We made new future, new design, new abilities. very very very very very very very very very very very very very very very very very very very very very very very very very very very long text" },
     { title: "Is it animated ?", text: "Just a little bit."},
     { title: "How do I access documentation?", text: "There is below documentation about this API."},
   ]
   return (
-    <div className="max-w-[500px] z-10">
+    <div className="w-full z-10">
       <Accordion>
         {accordions.map(({ title, text, defaultExpanded}) =>
           <AccordionItem key={title} value={title} className="border-b border-b-neutral-300 dark:border-b-neutral-800">
