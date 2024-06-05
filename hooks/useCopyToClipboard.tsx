@@ -2,6 +2,9 @@ import reactElementToJSXString from "react-element-to-jsx-string";
 
 const useCopyToClipboard = () => {
   const copy = (button: any) => {
+    if (button.func) {
+      button.func()
+    }
     if (button.code) {
       copyToClipboard(button.code);
       return;

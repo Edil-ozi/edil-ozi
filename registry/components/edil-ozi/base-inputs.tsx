@@ -24,14 +24,17 @@ const BaseInputs: FC<Props> = () => {
 
     {
       name: "Password",
+      func: () => console.log('hello world'),
       component: (
         <label className="group flex h-10 rounded-md border-2 border-stone-300 bg-stone-200 pl-4 dark:border-stone-600 dark:bg-stone-800">
           <input
             type="password"
-            className="h-full w-full bg-transparent focus:outline-none group-focus:border-red-500"
+            className="h-full w-full bg-transparent focus:outline-none"
             placeholder="Password"
           />
           <button
+            //fix it 
+            // onClick={() => this.func()}
             type="button"
             className="border-l-2 border-stone-300 px-2 dark:border-stone-500"
           >

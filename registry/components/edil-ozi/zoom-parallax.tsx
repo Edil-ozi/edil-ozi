@@ -62,7 +62,7 @@ const ZoomParallax: FC<Props> = ({ classes }) => {
   return (
     <section
       ref={container}
-      className={cn("relative z-20 h-[200vh] w-full", classes)}
+      className={cn("relative h-[200vh] w-full", classes)}
     >
       <div className="sticky top-0 h-screen overflow-hidden">
         {pictures.map(({ src, scale, classes }, index) => {
