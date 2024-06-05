@@ -15,15 +15,20 @@ const ui: Registry = {
   },
 
   //Clean Components
-  "magic-card": {
-    name: "magic-card",
+  "accordion": {
+    name: "accordion",
     type: "components:ui",
-    files: ["registry/components/edil-ozi/magic-card.tsx"],
+    files: ["registry/components/edil-ozi/accordion.tsx"],
   },
   "login-form": {
     name: "login-form",
     type: "components:ui",
     files: ["registry/components/edil-ozi/login-form.tsx"],
+  },
+  "magic-card": {
+    name: "magic-card",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/magic-card.tsx"],
   },
   "pricing-card": {
     name: "pricing-card",
@@ -119,6 +124,24 @@ const example: Registry = {
     component: React.lazy(
       () => import("@/registry/components/example/logo-carousel-demo"),
     ),
+  },
+  "accordion-demo": {
+    name: "accordion-demo",
+    type: "components:example",
+    files: ["registry/components/example/accordion-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/accordion-demo")),
+  },
+  "accordion-demo-single": {
+    name: "accordion-demo-single",
+    type: "components:example",
+    files: ["registry/components/example/accordion-demo-single.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/accordion-demo-single")),
+  },
+  "accordion-demo-withDisabled": {
+    name: "accordion-demo-withDisabled",
+    type: "components:example",
+    files: ["registry/components/example/accordion-demo-withDisabled.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/accordion-demo-withDisabled")),
   },
 
   //Text animations

@@ -1,0 +1,44 @@
+---
+title: Accordion
+date: 2024-06-03
+description: Show or hide content in accordion
+---
+
+<ComponentPreview name="accordion-demo" />
+
+<Steps>
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```text
+components/edil-ozi/accordion.tsx
+```
+<ComponentSource name="accordion" />
+
+</Steps>
+
+## Examples
+
+### Only one expanded at a time
+
+   Use " multiple " prop, and set it to " false " to expand only one accordion.
+
+<ComponentPreview name="accordion-demo-single" />
+
+### With disabled accordion
+
+  Use " disabled " prop to make it disabled.
+
+<ComponentPreview name="accordion-demo-withDisabled" />
+
+## Props
+
+| Prop name | Type          | Default | Description                             |
+| --------- | ---------     | ------- | --------------------------------------- |
+| value     | string        | -       | Must be UNIQUE                          |
+| multiple  | boolean       | true    | Only one expanded at a time or multiple |
+| disabled  | boolean       | false   | Makes accordion disabled                |
+| expandIcon| Element       | -       | Expand icon                             |
+| className | string        | -       | className for Accordeon element         |
