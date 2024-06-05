@@ -215,6 +215,18 @@ const example: Registry = {
     files: ["registry/components/example/accordion-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/accordion-demo")),
   },
+  "accordion-demo-single": {
+    name: "accordion-demo-single",
+    type: "components:example",
+    files: ["registry/components/example/accordion-demo-single.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/accordion-demo-single")),
+  },
+  "accordion-demo-withDisabled": {
+    name: "accordion-demo-withDisabled",
+    type: "components:example",
+    files: ["registry/components/example/accordion-demo-withDisabled.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/accordion-demo-withDisabled")),
+  },
   "infinite-text-demo": {
     name: "infinite-text-demo",
     type: "components:example",

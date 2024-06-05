@@ -3,7 +3,6 @@ import { Accordion, AccordionItem, AccordionSummary, AccordionDetails } from "..
 type Accordion = {
   title: string;
   text: string;
-  defaultExpanded?: boolean;
 }
 export default function AccordionDemo() {
   const accordions: Accordion[] = [
@@ -13,13 +12,17 @@ export default function AccordionDemo() {
   ]
   return (
     <div className="max-w-[500px] z-10">
-      <Accordion>
-        {accordions.map(({ title, text, defaultExpanded}) =>
+      <Accordion multiple={false}>
+        {accordions.map(({ title, text}) =>
           <AccordionItem key={title} value={title} className="border-b border-b-neutral-300 dark:border-b-neutral-800">
             <AccordionSummary>{title}</AccordionSummary>
             <AccordionDetails>{text}</AccordionDetails>
           </AccordionItem>
         )}
+          <AccordionItem key={'last'} value={'last'} className="border-b border-b-neutral-300 dark:border-b-neutral-800" disabled={true}>
+            <AccordionSummary>Disabled accordion</AccordionSummary>
+            <AccordionDetails>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consectetur placeat sunt neque maxime.</AccordionDetails>
+          </AccordionItem>
       </Accordion>
     </div>
 

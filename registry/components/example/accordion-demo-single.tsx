@@ -3,7 +3,6 @@ import { Accordion, AccordionItem, AccordionSummary, AccordionDetails } from "..
 type Accordion = {
   title: string;
   text: string;
-  defaultExpanded?: boolean;
 }
 export default function AccordionDemo() {
   const accordions: Accordion[] = [
@@ -13,9 +12,9 @@ export default function AccordionDemo() {
   ]
   return (
     <div className="max-w-[500px] z-10">
-      <Accordion>
-        {accordions.map(({ title, text, defaultExpanded}) =>
-          <AccordionItem key={title} value={title} className="border-b border-b-neutral-300 dark:border-b-neutral-800">
+      <Accordion multiple={false}>
+        {accordions.map(({ title, text}) =>
+          <AccordionItem key={title} value={title}>
             <AccordionSummary>{title}</AccordionSummary>
             <AccordionDetails>{text}</AccordionDetails>
           </AccordionItem>

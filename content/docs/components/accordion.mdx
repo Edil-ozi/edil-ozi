@@ -19,11 +19,26 @@ components/edil-ozi/accordion.tsx
 
 </Steps>
 
+## Examples
+
+### Only one expanded at a time
+
+   Use " multiple " prop, and set it to " false " to expand only one accordion.
+
+<ComponentPreview name="accordion-demo-single" />
+
+### With disabled accordion
+
+  Use " disabled " prop to make it disabled.
+
+<ComponentPreview name="accordion-demo-withDisabled" />
 
 ## Props
 
 | Prop name | Type          | Default | Description                             |
 | --------- | ---------     | ------- | --------------------------------------- |
-| type      | string        | "multiple"| How many will be opened "single" or "multiple"|
 | value     | string        | -       | Must be UNIQUE                          |
+| multiple  | boolean       | true    | Only one expanded at a time or multiple |
+| disabled  | boolean       | false   | Makes accordion disabled                |
+| expandIcon| Element       | -       | Expand icon                             |
 | className | string        | -       | className for Accordeon element         |
