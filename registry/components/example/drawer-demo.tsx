@@ -19,7 +19,7 @@ const DrawerDemo = () => {
         open={isDrawerActive}
         setOpen={setIsDrawerActive}
       >
-        <ul className="h-full bg-zinc-100 dark:bg-zinc-900 shadow-md shadow-zinc-400">
+        <ul className="h-full bg-zinc-100 dark:bg-zinc-900 shadow-md shadow-zinc-400 dark:shadow-zinc-950">
           {items.map((item) => (
             <li
               key={item}
