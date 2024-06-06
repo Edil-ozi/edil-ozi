@@ -35,6 +35,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/pricing-card.tsx"],
   },
+  drawer: {
+    name: "drawer",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/drawer.tsx"],
+  },
   "logo-carousel": {
     name: "logo-carousel",
     type: "components:ui",
@@ -116,6 +121,18 @@ const example: Registry = {
     component: React.lazy(
       () => import("@/registry/components/example/pricing-card-demo"),
     ),
+  },
+  "drawer-demo": {
+    name: "drawer-demo",
+    type: "components:example",
+    files: ["registry/components/example/drawer-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/drawer-demo")),
+  },
+  "drawer-demo-anchors": {
+    name: "drawer-demo-anchors",
+    type: "components:example",
+    files: ["registry/components/example/drawer-demo-anchors.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/drawer-demo-anchors")),
   },
   "logo-carousel-demo": {
     name: "logo-carousel-demo",

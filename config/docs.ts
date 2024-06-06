@@ -60,6 +60,12 @@ export const docsConfig: DocsConfig = {
           label: "New",
         },
         {
+          title: "Drawer",
+          href: "/docs/components/drawer",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Login Form",
           href: "/docs/components/login-form",
           items: [],
@@ -99,7 +105,7 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
-    
+
     {
       title: "Text animations",
       items: [

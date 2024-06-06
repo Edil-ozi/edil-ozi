@@ -1,0 +1,39 @@
+---
+title: Drawer
+date: 2024-06-06
+description: The navigation drawers ("sidebars") provide ergonomic access to destinations in a site or app functionality.
+---
+
+<ComponentPreview name="drawer-demo" />
+
+<Steps>
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```text
+components/edil-ozi/drawer.tsx
+```
+
+<ComponentSource name="drawer" />
+
+</Steps>
+
+## Examples
+
+### Anchor
+
+Use the anchor prop to specify which side of the screen the Drawer should originate from.
+
+The default value is left.
+
+<ComponentPreview name="drawer-demo-anchors" />
+
+## Props
+
+| Prop name | Type           | Default | Description                     |
+| --------- | -------------- | ------- | ------------------------------- |
+| open      | boolean        | false   | Drawer`s open state             |
+| setOpen   | setStateActino | -       | Set open state                  |
+| anchor    | string         | left    | Where will be drawer shown from |
