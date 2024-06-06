@@ -11,8 +11,8 @@ interface Props {
 }
 
 const styles = {
-  left: "top-0 data-[visible=false]:translate-x-[-100%] data-[visible=true]:translate-x-0",
-  right: "top-0 right-0 data-[visible=false]:translate-x-[100%] data-[visible=true]:translate-x-0",
+  left: "top-0 h-full data-[visible=false]:translate-x-[-100%] data-[visible=true]:translate-x-0",
+  right: "top-0 h-full right-0 data-[visible=false]:translate-x-[100%] data-[visible=true]:translate-x-0",
   top: "top-0 w-full flex-col h-fit data-[visible=false]:translate-y-[-100%] data-[visible=true]:translate-y-0",
   bottom: "bottom-0 w-full flex-col h-fit data-[visible=false]:translate-y-[100%] data-[visible=true]:translate-y-0",
 };
@@ -50,7 +50,7 @@ export default function Drawer({ open, setOpen, children, anchor = "left" }: Pro
       />
       <div
         data-visible={isVisible ? "true" : "false"}
-        className={`font-base fixed z-[101] h-full min-w-60 text-white shadow-md shadow-zinc-400 transition-transform duration-300 dark:shadow-zinc-950 ${styles[anchor]}`}
+        className={`font-base fixed z-[101] min-w-60 text-white shadow-md shadow-zinc-400 transition-transform duration-300 dark:shadow-zinc-950 ${styles[anchor]}`}
       >
         {children}
       </div>
