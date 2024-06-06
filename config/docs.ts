@@ -54,6 +54,12 @@ export const docsConfig: DocsConfig = {
       title: "Clean Components",
       items: [
         {
+          title: "Accordion",
+          href: "/docs/components/accordion",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Login Form",
           href: "/docs/components/login-form",
           items: [],
@@ -93,6 +99,7 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
+    
     {
       title: "Text animations",
       items: [
