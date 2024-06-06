@@ -50,7 +50,7 @@ export default function Drawer({ open, setOpen, children, anchor = "left" }: Pro
       />
       <div
         data-visible={isVisible ? "true" : "false"}
-        className={`font-base fixed z-[101] min-w-60 text-white shadow-md shadow-zinc-400 transition-transform duration-300 dark:shadow-zinc-950 ${styles[anchor]}`}
+        className={`font-base fixed z-[101] min-w-52 transition-transform duration-300 dark:shadow-zinc-950 ${styles[anchor]}`}
       >
         {children}
       </div>
