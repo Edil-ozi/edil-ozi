@@ -17,7 +17,10 @@ export default function MobileNav() {
   const [open, setOpen] = React.useState(false);
 
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
+    <Sheet
+      open={open}
+      onOpenChange={setOpen}
+    >
       <SheetTrigger asChild>
         <Button
           variant="ghost"
@@ -27,7 +30,10 @@ export default function MobileNav() {
           <span className="sr-only">Toggle Menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="pr-0">
+      <SheetContent
+        side="left"
+        className="pr-0"
+      >
         <MobileLink
           href="/"
           className="flex items-center"
@@ -53,7 +59,10 @@ export default function MobileNav() {
           </div> */}
           <div className="flex flex-col space-y-2">
             {docsConfig.sidebarNav.map((item, index) => (
-              <div key={index} className="flex flex-col space-y-3 pt-6">
+              <div
+                key={index}
+                className="flex flex-col space-y-3 pt-6"
+              >
                 <h4 className="font-medium">{item.title}</h4>
                 {item?.items?.length &&
                   item.items.map((item) => (
@@ -92,13 +101,7 @@ interface MobileLinkProps extends LinkProps {
   className?: string;
 }
 
-function MobileLink({
-  href,
-  onOpenChange,
-  className,
-  children,
-  ...props
-}: MobileLinkProps) {
+function MobileLink({ href, onOpenChange, className, children, ...props }: MobileLinkProps) {
   const router = useRouter();
   return (
     <Link

@@ -2,12 +2,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: ["class"],
-  content: [
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./content/**/*.mdx",
-    "./registry/**/*.{ts,tsx}",
-  ],
+  content: ["./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./content/**/*.mdx", "./registry/**/*.{ts,tsx}"],
 
   theme: {
     container: {
@@ -52,12 +47,8 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        keyframes: {
-
-        },
-        animation: {
-
-        },
+        keyframes: {},
+        animation: {},
       },
       borderRadius: {
         xl: `calc(var(--radius) + 4px)`,
@@ -91,9 +82,9 @@ const config: Config = {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(calc(-100% - 2rem))" },
       },
-      "fadeIn": {
-        from: { "opacity": "0" },
-        to: { "opacity": "100" },
+      fadeIn: {
+        from: { opacity: "0" },
+        to: { opacity: "100" },
       },
     },
     animation: {
@@ -102,7 +93,7 @@ const config: Config = {
       "caret-blink": "caret-blink 1.25s ease-out infinite",
       shimmer: "shimmer 2s linear infinite",
       "logo-carousel": "logo-carousel 16s linear infinite",
-      "fadeIn": "fadeIn 0.2s ease-in-out forwards",
+      fadeIn: "fadeIn 0.2s ease-in-out forwards",
     },
   },
   plugins: [require("tailwindcss-animate")],

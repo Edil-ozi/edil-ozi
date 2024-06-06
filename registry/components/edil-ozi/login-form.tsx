@@ -35,10 +35,11 @@ const LoginForm: FC<Props> = ({ classes }) => {
           className={`mx-12 w-full rounded-md bg-slate-100 text-black shadow-lg dark:bg-slate-900 dark:text-white md:w-[480px] ${classes}`}
         >
           <div className="space-y-4 p-6 sm:p-8 md:space-y-6">
-            <h1 className="text-xl font-bold leading-tight tracking-tight">
-              Login
-            </h1>
-            <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
+            <h1 className="text-xl font-bold leading-tight tracking-tight">Login</h1>
+            <form
+              className="space-y-4 md:space-y-6"
+              onSubmit={handleSubmit}
+            >
               {inputs.map(({ title, type, placeholder, classes }) => (
                 <div key={title}>
                   <label

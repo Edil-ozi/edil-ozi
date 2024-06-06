@@ -3,13 +3,7 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { DialogProps } from "@radix-ui/react-alert-dialog";
-import {
-  CircleIcon,
-  FileIcon,
-  LaptopIcon,
-  MoonIcon,
-  SunIcon,
-} from "@radix-ui/react-icons";
+import { CircleIcon, FileIcon, LaptopIcon, MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 
 import { docsConfig } from "@/config/docs";
@@ -72,7 +66,10 @@ export default function CommandMenu({ ...props }: DialogProps) {
           <span className="text-xs">⌘</span>K
         </kbd>
       </Button>
-      <CommandDialog open={open} onOpenChange={setOpen}>
+      <CommandDialog
+        open={open}
+        onOpenChange={setOpen}
+      >
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
@@ -93,7 +90,10 @@ export default function CommandMenu({ ...props }: DialogProps) {
               ))}
           </CommandGroup>
           {docsConfig.sidebarNav.map((group) => (
-            <CommandGroup key={group.title} heading={group.title}>
+            <CommandGroup
+              key={group.title}
+              heading={group.title}
+            >
               {group.items.map((navItem) => (
                 <CommandItem
                   key={navItem.href}

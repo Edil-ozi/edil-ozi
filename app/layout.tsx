@@ -3,7 +3,7 @@ import "../styles/globals.css";
 import { ThemeProvider } from "./_providers";
 import { cn } from "@/lib/utils";
 import { fontSans } from "@/lib/fonts";
-import { Toaster } from 'sonner';
+import { Toaster } from "sonner";
 
 import TailwindIndicator from "@/components/ui/tailwind-indicator";
 
@@ -18,25 +18,26 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
       <head />
       {/* remove dark as default */}
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.className,
-        )}
-      >
+      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.className)}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           disableTransitionOnChange
         >
-          <div className="relative flex min-h-screen flex-col bg-background">
-            {children}
-          </div>
+          <div className="relative flex min-h-screen flex-col bg-background">{children}</div>
           <TailwindIndicator />
-          <Toaster duration={2500} richColors visibleToasts={3} position="top-center" />
+          <Toaster
+            duration={2500}
+            richColors
+            visibleToasts={3}
+            position="top-center"
+          />
         </ThemeProvider>
       </body>
     </html>

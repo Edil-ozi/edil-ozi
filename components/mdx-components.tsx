@@ -1,10 +1,5 @@
 import TechStack from "@/components/tech-stack";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Event } from "@/lib/events";
 import { cn } from "@/lib/utils";
 import { useMDXComponent } from "next-contentlayer/hooks";
@@ -19,7 +14,10 @@ const CustomLink = (props: any) => {
 
   if (href.startsWith("/")) {
     return (
-      <Link {...props} href={href}>
+      <Link
+        {...props}
+        href={href}
+      >
         {props.children}
       </Link>
     );
@@ -29,7 +27,13 @@ const CustomLink = (props: any) => {
     return <a {...props} />;
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+    />
+  );
 };
 
 const components = {
@@ -40,10 +44,7 @@ const components = {
   TechStack,
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
-      className={cn(
-        "font-heading mt-2 scroll-m-20 text-4xl font-bold",
-        className,
-      )}
+      className={cn("font-heading mt-2 scroll-m-20 text-4xl font-bold", className)}
       {...props}
     />
   ),
@@ -58,37 +59,25 @@ const components = {
   ),
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
-      className={cn(
-        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-        className,
-      )}
+      className={cn("font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight", className)}
       {...props}
     />
   ),
   h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h4
-      className={cn(
-        "font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className,
-      )}
+      className={cn("font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight", className)}
       {...props}
     />
   ),
   h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h5
-      className={cn(
-        "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className,
-      )}
+      className={cn("mt-8 scroll-m-20 text-lg font-semibold tracking-tight", className)}
       {...props}
     />
   ),
   h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h6
-      className={cn(
-        "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
-        className,
-      )}
+      className={cn("mt-8 scroll-m-20 text-base font-semibold tracking-tight", className)}
       {...props}
     />
   ),
@@ -109,13 +98,22 @@ const components = {
     />
   ),
   ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-    <ul className={cn("my-6 list-disc", className)} {...props} />
+    <ul
+      className={cn("my-6 list-disc", className)}
+      {...props}
+    />
   ),
   ol: ({ className, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
-    <ol className={cn("my-6 list-decimal", className)} {...props} />
+    <ol
+      className={cn("my-6 list-decimal", className)}
+      {...props}
+    />
   ),
   li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <li className={cn("mt-2", className)} {...props} />
+    <li
+      className={cn("mt-2", className)}
+      {...props}
+    />
   ),
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <blockquote
@@ -125,11 +123,17 @@ const components = {
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="w-full overflow-y-auto">
-      <table className={cn("w-full", className)} {...props} />
+      <table
+        className={cn("w-full", className)}
+        {...props}
+      />
     </div>
   ),
   tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
-    <tr className={cn("m-0 border-t p-0", className)} {...props} />
+    <tr
+      className={cn("m-0 border-t p-0", className)}
+      {...props}
+    />
   ),
   th: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <th
@@ -151,10 +155,7 @@ const components = {
   ),
   Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
     <div
-      className={cn(
-        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
-        className,
-      )}
+      className={cn("font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight", className)}
       {...props}
     />
   ),

@@ -25,7 +25,7 @@ const BaseInputs: FC<Props> = () => {
 
     {
       name: "Password",
-      message: 'Copied with all functionality!',
+      message: "Copied with all functionality!",
       component: (
         <label className="group flex h-10 rounded-md border-2 border-stone-300 bg-stone-200 pl-4 dark:border-stone-600 dark:bg-stone-800">
           <input
@@ -34,7 +34,6 @@ const BaseInputs: FC<Props> = () => {
             placeholder="Password"
           />
           <button
-
             type="button"
             className="border-l-2 border-stone-300 px-2 dark:border-stone-500"
           >
@@ -77,27 +76,67 @@ const BaseInputs: FC<Props> = () => {
     {
       name: "Type something...",
       component: (
-
-        <form onSubmit={(e) => e.preventDefault()} className="relative w-full h-10 flex items-center  duration-500 ease rounded-[30px] before:content-[''] before:absolute before:origin-center before:w-full before:h-[3px] before:transition-all before:duration-500 before:rounded-[1px] before:bg-lime-600 dark:before:bg-lime-500 before:scale-x-0 before:left-0 before:bottom-0 focus-within:rounded-[1px] focus-within:before:scale-100 bg-gray-100 dark:bg-gray-800 pl-3 pr-3">
-          <button tabIndex={-1} type="button" className="border-none bg-none text-gray-500 mr-1 focus:outline-none focus:ring-2 focus:ring-lime-600 dark:focus:ring-lime-500">
-            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
-              <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" strokeWidth="1.333" strokeLinecap="round" strokeLinejoin="round"></path>
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="ease relative flex h-10 w-full items-center rounded-[30px] bg-gray-100 pl-3 pr-3 duration-500 before:absolute before:bottom-0 before:left-0 before:h-[3px] before:w-full before:origin-center before:scale-x-0 before:rounded-[1px] before:bg-lime-600 before:transition-all before:duration-500 before:content-[''] focus-within:rounded-[1px] focus-within:before:scale-100 dark:bg-gray-800 dark:before:bg-lime-500"
+        >
+          <button
+            tabIndex={-1}
+            type="button"
+            className="mr-1 border-none bg-none text-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-600 dark:focus:ring-lime-500"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+            >
+              <path
+                d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                stroke="currentColor"
+                strokeWidth="1.333"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
             </svg>
           </button>
-          <input className="text-[0.9rem] bg-transparent w-full h-full focus:outline-none text-black dark:text-white [&:not(:placeholder-shown)~button]:opacity-100 [&:not(:placeholder-shown)~button]:visible" placeholder="Type something..." required type="text" />
-          <button type="reset" className=" opacity-0 invisible border-none text-gray-400 focus:outline-none focus:ring-2 focus:ring-lime-600 dark:focus:ring-lime-500" >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          <input
+            className="h-full w-full bg-transparent text-[0.9rem] text-black focus:outline-none dark:text-white [&:not(:placeholder-shown)~button]:visible [&:not(:placeholder-shown)~button]:opacity-100"
+            placeholder="Type something..."
+            required
+            type="text"
+          />
+          <button
+            type="reset"
+            className="invisible border-none text-gray-400 opacity-0 focus:outline-none focus:ring-2 focus:ring-lime-600 dark:focus:ring-lime-500"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
             </svg>
           </button>
-        </form >
+        </form>
       ),
     },
     {
       name: "Enter text...",
       component: (
-        <input type="text" placeholder="Enter text..." className="h-10 w-full px-3 bg-gray-100 dark:bg-gray-700 rounded-sm text-black dark:text-white border-2 border-gray-400 dark:border-gray-600  focus:outline-none focus:border-blue-500 dark:focus:border-blue-600 focus:shadow-[0_0_0_0.2rem_rgba(0,123,255,0.30)] dark:focus:shadow-[0_0_0_0.2rem_rgba(0,111,200,0.45)]" />
-
+        <input
+          type="text"
+          placeholder="Enter text..."
+          className="h-10 w-full rounded-sm border-2 border-gray-400 bg-gray-100 px-3 text-black focus:border-blue-500 focus:shadow-[0_0_0_0.2rem_rgba(0,123,255,0.30)] focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-600 dark:focus:shadow-[0_0_0_0.2rem_rgba(0,111,200,0.45)]"
+        />
       ),
     },
   ];
@@ -106,7 +145,10 @@ const BaseInputs: FC<Props> = () => {
     <div className="w-full px-4 pb-40">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 lg:grid-cols-2">
         {buttons.map((btn) => (
-          <CardWrapper key={btn.name} onClick={() => copy(btn)}>
+          <CardWrapper
+            key={btn.name}
+            onClick={() => copy(btn)}
+          >
             {btn.component}
           </CardWrapper>
         ))}

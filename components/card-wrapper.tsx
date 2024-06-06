@@ -17,7 +17,12 @@ const CardWrapper = ({
         className,
       )}
     >
-      <button onClick={onClick} className="group" type="button" tabIndex={-1}>
+      <button
+        onClick={onClick}
+        className="group"
+        type="button"
+        tabIndex={-1}
+      >
         <CopyIcon className="absolute right-2 top-2 hidden h-4 w-4 text-neutral-300 transition duration-200 group-hover/btn:block group-focus:hidden" />
         <Check className="absolute right-2 top-2 hidden h-4 w-4 stroke-green-500 text-neutral-300 transition duration-200 group-hover/btn:hidden group-focus:block" />
       </button>

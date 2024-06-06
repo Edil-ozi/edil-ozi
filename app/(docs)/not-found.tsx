@@ -14,12 +14,8 @@ export default function NotFound() {
           <p className="rounded-full bg-blue-50 p-3 text-sm font-medium dark:bg-gray-800">
             <Icons.warning className="h-6 w-6" />
           </p>
-          <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
-            Page not found
-          </h1>
-          <p className="mt-4 text-gray-500 dark:text-gray-400">
-            The page you are looking for doesn&apos;t exist.
-          </p>
+          <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">Page not found</h1>
+          <p className="mt-4 text-gray-500 dark:text-gray-400">The page you are looking for doesn&apos;t exist.</p>
 
           <div className="group mt-6 flex w-full shrink-0 items-center gap-x-3 sm:w-auto">
             <Button
@@ -30,7 +26,10 @@ export default function NotFound() {
               <span>Go back</span>
             </Button>
 
-            <Link href="/" className={buttonVariants({ variant: "default" })}>
+            <Link
+              href="/"
+              className={buttonVariants({ variant: "default" })}
+            >
               Take me home
             </Link>
           </div>

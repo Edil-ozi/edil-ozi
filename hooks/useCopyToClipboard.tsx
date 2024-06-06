@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 import reactElementToJSXString from "react-element-to-jsx-string";
-import { toast } from 'sonner';
+import { toast } from "sonner";
 
 type Button = {
-  component: ReactNode
-  code?: string,
-  message?: string
-}
+  component: ReactNode;
+  code?: string;
+  message?: string;
+};
 
 const useCopyToClipboard = () => {
   const copy = ({ component, code, message }: Button) => {
@@ -22,13 +22,12 @@ const useCopyToClipboard = () => {
   };
   async function copyToClipboard(text: string, message?: string) {
     try {
-      await navigator.clipboard.writeText(text)
+      await navigator.clipboard.writeText(text);
       if (message) {
-        toast.success(message)
+        toast.success(message);
       }
-
     } catch (err) {
-      console.log('Error copy', err)
+      console.log("Error copy", err);
     }
   }
   return { copy };

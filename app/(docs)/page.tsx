@@ -1,10 +1,5 @@
 import { Icons } from "@/components/icons";
-import {
-  PageActions,
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/page-header";
+import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/page-header";
 import { buttonVariants } from "@/components/ui/button";
 
 import { siteConfig } from "@/config/site";
@@ -20,11 +15,14 @@ export default function Home() {
           Embrace efficiency in development.
         </PageHeaderHeading>
         <PageHeaderDescription>
-          Beautifully designed components that you can copy and paste into your
-          apps. Accessible. Customizable. Open Source.
+          Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open
+          Source.
         </PageHeaderDescription>
         <PageActions>
-          <Link href="/docs" className={cn(buttonVariants())}>
+          <Link
+            href="/docs"
+            className={cn(buttonVariants())}
+          >
             Get Started
           </Link>
           <Link

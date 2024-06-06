@@ -15,11 +15,20 @@ const HorizontalScrollCarousel: FC<Props> = ({ images }) => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-90%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] w-full">
+    <section
+      ref={targetRef}
+      className="relative h-[300vh] w-full"
+    >
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
+        <motion.div
+          style={{ x }}
+          className="flex gap-4"
+        >
           {images.map((src) => (
-            <Card src={src} key={src} />
+            <Card
+              src={src}
+              key={src}
+            />
           ))}
         </motion.div>
       </div>
@@ -33,7 +42,12 @@ const Card: FC<{ src: string }> = ({ src }) => {
       key={src}
       className="group relative h-[450px] w-[450px] overflow-hidden rounded-lg border border-gray-400"
     >
-      <Image src={src} fill objectFit="cover" alt={src} />
+      <Image
+        src={src}
+        fill
+        objectFit="cover"
+        alt={src}
+      />
     </div>
   );
 };

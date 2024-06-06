@@ -45,7 +45,10 @@ export default function PricingCardDemo() {
   return (
     <div className="flex flex-wrap justify-center gap-6">
       {cards.map((card) => (
-        <PricingCard key={card.heading} {...card} />
+        <PricingCard
+          key={card.heading}
+          {...card}
+        />
       ))}
     </div>
   );

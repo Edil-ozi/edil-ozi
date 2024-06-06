@@ -1,8 +1,4 @@
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 type TechComponentType = {
@@ -87,7 +83,11 @@ const techComponents: TechComponents = {
         strokeLinejoin="round"
       >
         <title>Framer Motion</title>
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path
+          stroke="none"
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
         <path d="M12 12l-8 -8v16l16 -16v16l-4 -4" />
         <path d="M20 12l-8 8l-4 -4" />
       </svg>
@@ -131,13 +131,7 @@ const techComponents: TechComponents = {
   },
 };
 
-export default function TechStack({
-  technologies,
-  className,
-}: {
-  technologies: string[];
-  className?: string;
-}) {
+export default function TechStack({ technologies, className }: { technologies: string[]; className?: string }) {
   return (
     <div className={cn("not-prose flex flex-row gap-2", className)}>
       {technologies.map((tech) => (

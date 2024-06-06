@@ -59,11 +59,7 @@
 //   // @ts-ignore
 //   computedFields,
 // contentlayer.config.ts
-import {
-  defineDocumentType,
-  defineNestedType,
-  makeSource,
-} from "contentlayer/source-files";
+import { defineDocumentType, defineNestedType, makeSource } from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
@@ -81,8 +77,7 @@ const computedFields = {
   },
   image: {
     type: "string",
-    resolve: (post: any) =>
-      `${process.env.NEXT_PUBLIC_APP_URL}/api/og?title=${encodeURI(post.title)}`,
+    resolve: (post: any) => `${process.env.NEXT_PUBLIC_APP_URL}/api/og?title=${encodeURI(post.title)}`,
   },
   slug: {
     type: "string",
@@ -237,8 +232,7 @@ export default makeSource({
               return;
             }
 
-            preElement.properties["__withMeta__"] =
-              node.children.at(0).tagName === "div";
+            preElement.properties["__withMeta__"] = node.children.at(0).tagName === "div";
             preElement.properties["__rawString__"] = node.__rawString__;
 
             if (node.__src__) {

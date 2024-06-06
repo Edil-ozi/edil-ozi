@@ -2,11 +2,7 @@ import Balance from "react-wrap-balancer";
 
 import { cn } from "@/lib/utils";
 
-function PageHeader({
-  className,
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+function PageHeader({ className, children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <section
       className={cn(
@@ -20,10 +16,7 @@ function PageHeader({
   );
 }
 
-function PageHeaderHeading({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLHeadingElement>) {
+function PageHeaderHeading({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
   return (
     <h1
       className={cn(
@@ -35,31 +28,19 @@ function PageHeaderHeading({
   );
 }
 
-function PageHeaderDescription({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLParagraphElement>) {
+function PageHeaderDescription({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) {
   return (
     <Balance
-      className={cn(
-        "max-w-[750px] text-center text-lg font-light text-foreground",
-        className,
-      )}
+      className={cn("max-w-[750px] text-center text-lg font-light text-foreground", className)}
       {...props}
     />
   );
 }
 
-function PageActions({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLDivElement>) {
+function PageActions({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
-      className={cn(
-        "flex w-full items-center justify-center space-x-4 py-4 md:pb-10",
-        className,
-      )}
+      className={cn("flex w-full items-center justify-center space-x-4 py-4 md:pb-10", className)}
       {...props}
     />
   );

@@ -15,7 +15,7 @@ const ui: Registry = {
   },
 
   //Clean Components
-  "accordion": {
+  accordion: {
     name: "accordion",
     type: "components:ui",
     files: ["registry/components/edil-ozi/accordion.tsx"],
@@ -77,50 +77,38 @@ const example: Registry = {
     name: "buttons-demo",
     type: "components:example",
     files: ["registry/components/example/buttons-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/buttons-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/buttons-demo")),
   },
   "base-inputs-demo": {
     name: "base-inputs-demo",
     type: "components:example",
     files: ["registry/components/example/base-inputs-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/base-inputs-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/base-inputs-demo")),
   },
   //Clean Components
   "magic-card-demo": {
     name: "magic-card-demo",
     type: "components:example",
     files: ["registry/components/example/magic-card-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/magic-card-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/magic-card-demo")),
   },
   "magic-card-gradient": {
     name: "magic-card-gradient",
     type: "components:example",
     files: ["registry/components/example/magic-card-gradient.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/magic-card-gradient"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/magic-card-gradient")),
   },
   "login-form-demo": {
     name: "login-form-demo",
     type: "components:example",
     files: ["registry/components/example/login-form-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/login-form-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/login-form-demo")),
   },
   "pricing-card-demo": {
     name: "pricing-card-demo",
     type: "components:example",
     files: ["registry/components/example/pricing-card-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/pricing-card-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/pricing-card-demo")),
   },
   "drawer-demo": {
     name: "drawer-demo",
@@ -138,9 +126,7 @@ const example: Registry = {
     name: "logo-carousel-demo",
     type: "components:example",
     files: ["registry/components/example/logo-carousel-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/logo-carousel-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/logo-carousel-demo")),
   },
   "accordion-demo": {
     name: "accordion-demo",
@@ -166,17 +152,13 @@ const example: Registry = {
     name: "infinite-text-demo",
     type: "components:example",
     files: ["registry/components/example/infinite-text-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/infinite-text-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/infinite-text-demo")),
   },
   "text-reveal-demo": {
     name: "text-reveal-demo",
     type: "components:example",
     files: ["registry/components/example/text-reveal-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/text-reveal-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/text-reveal-demo")),
   },
 
   //On scroll animations
@@ -184,17 +166,13 @@ const example: Registry = {
     name: "zoom-parallax-demo",
     type: "components:example",
     files: ["registry/components/example/zoom-parallax-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/zoom-parallax-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/zoom-parallax-demo")),
   },
   "horizontal-scroll-demo": {
     name: "horizontal-scroll-demo",
     type: "components:example",
     files: ["registry/components/example/horizontal-scroll-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/horizontal-scroll-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/horizontal-scroll-demo")),
   },
 };
 
