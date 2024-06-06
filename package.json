@@ -38,6 +38,7 @@
     "react-element-to-jsx-string": "^15.0.0",
     "react-wrap-balancer": "^1.1.0",
     "schema-dts": "^1.1.2",
+    "sonner": "^1.4.41",
     "tailwind-merge": "^2.3.0",
     "zod": "^3.23.8"
   },

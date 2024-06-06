@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { ThemeProvider } from "./_providers";
 import { cn } from "@/lib/utils";
 import { fontSans } from "@/lib/fonts";
+import { Toaster } from 'sonner';
 
 import TailwindIndicator from "@/components/ui/tailwind-indicator";
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             {children}
           </div>
           <TailwindIndicator />
+          <Toaster duration={2500} richColors visibleToasts={3} position="top-center" />
         </ThemeProvider>
       </body>
     </html>
