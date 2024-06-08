@@ -48,6 +48,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/base-inputs",
           items: [],
         },
+        {
+          title: "Toggle Inputs",
+          href: "/docs/components/toggle-inputs",
+          label: "New",
+          items: [],
+        },
       ],
     },
     {
@@ -57,7 +63,6 @@ export const docsConfig: DocsConfig = {
           title: "Accordion",
           href: "/docs/components/accordion",
           items: [],
-          label: "New",
         },
         {
           title: "Drawer",
@@ -79,7 +84,6 @@ export const docsConfig: DocsConfig = {
           title: "Pricing Card",
           href: "/docs/components/pricing-card",
           items: [],
-          label: "New",
         },
         {
           title: "Logo Carousel",

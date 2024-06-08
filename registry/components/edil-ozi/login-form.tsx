@@ -32,7 +32,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
     <section className="z-[10] mx-4 w-full">
       <div className="mx-auto flex w-full flex-col items-center justify-center">
         <div
-          className={`mx-12 w-full rounded-md bg-slate-100 text-black shadow-lg dark:bg-slate-900 dark:text-white md:w-[480px] ${classes}`}
+          className={`mx-12 w-full rounded-md bg-stone-100 text-black shadow-lg dark:bg-stone-900 dark:text-white md:w-[480px] ${classes}`}
         >
           <div className="space-y-4 p-6 sm:p-8 md:space-y-6">
             <h1 className="text-xl font-bold leading-tight tracking-tight">Login</h1>
@@ -59,7 +59,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
                     type={type}
                     name={type}
                     id={title}
-                    className={`block w-full rounded-md border border-gray-300 bg-gray-100 p-2.5 text-black outline-none focus:ring focus:ring-slate-400 sm:text-sm ${classes}`}
+                    className={`block w-full rounded-md border border-gray-300 bg-gray-100 p-2.5 text-black outline-none focus:ring focus:ring-stone-400 sm:text-sm ${classes}`}
                     placeholder={placeholder}
                   />
                 </div>
@@ -71,7 +71,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
                       id="remember"
                       aria-describedby="remember"
                       type="checkbox"
-                      className="h-4 w-4 rounded border bg-gray-100 outline-none focus:ring focus:ring-slate-400"
+                      className="h-4 w-4 rounded border bg-gray-100 outline-none focus:ring focus:ring-stone-400"
                     />
                   </div>
                   <div className="ml-3 text-sm">
@@ -80,7 +80,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
                 </div>
                 <a
                   href="#"
-                  className="text-sm font-medium outline-none hover:underline focus:ring focus:ring-slate-400"
+                  className="text-sm font-medium outline-none hover:underline focus:ring focus:ring-stone-400"
                 >
                   Forget password?
                 </a>

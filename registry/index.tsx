@@ -13,6 +13,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/base-inputs.tsx"],
   },
+  "toggle-inputs": {
+    name: "toggle-inputs",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/toggle-inputs.tsx"],
+  },
 
   //Clean Components
   accordion: {
@@ -84,6 +89,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/base-inputs-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/base-inputs-demo")),
+  },
+  "toggle-inputs-demo": {
+    name: "toggle-inputs-demo",
+    type: "components:example",
+    files: ["registry/components/example/toggle-inputs-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/toggle-inputs-demo")),
   },
   //Clean Components
   "magic-card-demo": {

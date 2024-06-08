@@ -74,22 +74,6 @@ const Buttons: FC<Props> = () => {
     },
 
     {
-      name: "Shimmer-v2",
-
-      component: (
-        <button
-          type="button"
-          className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-slate-200 bg-white px-6 py-1.5 text-xs font-medium text-slate-600 transition-colors duration-300 ease-in hover:shadow-[#000103]/50 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-slate-400 dark:border-slate-800 dark:bg-[#000103] dark:text-slate-400"
-        >
-          <span className="text-base">Shimmer-v2</span>
-          <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-13deg)_translateX(100%)]">
-            <div className="relative h-full w-10 bg-black/5 dark:bg-white/15" />
-          </div>
-        </button>
-      ),
-    },
-
-    {
       name: "Gradient Borders",
 
       component: (
@@ -103,7 +87,7 @@ const Buttons: FC<Props> = () => {
           <div className="relative z-10 flex h-8 items-center space-x-2 rounded-full bg-slate-100 px-4 text-black/80 ring-2 ring-white/10 dark:bg-slate-950 dark:text-white/80">
             <span>Gradient Borders</span>
           </div>
-          <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
+          <span className="absolute bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
         </button>
       ),
     },
@@ -114,7 +98,7 @@ const Buttons: FC<Props> = () => {
       component: (
         <button
           type="button"
-          className="relative overflow-hidden rounded-sm border-2 border-solid border-emerald-500 px-4 py-2 text-sm text-black transition-colors duration-700 ease-out before:absolute before:-left-10 before:top-0 before:z-[-1] before:h-full before:w-[0%] before:skew-x-[45deg] before:bg-emerald-500 before:transition-all before:delay-75 before:duration-700 before:content-[''] hover:before:w-[150%] focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-1 focus:ring-offset-white dark:border-emerald-700 dark:text-white dark:before:bg-emerald-700 dark:focus:ring-emerald-800 dark:focus:ring-offset-black"
+          className="relative overflow-hidden rounded-sm border-2 border-solid border-emerald-500 px-4 py-2 text-sm text-black transition-colors duration-700 ease-out before:absolute before:-left-10 before:top-0 before:z-[-1] before:h-full before:w-[0%] before:skew-x-[45deg] before:bg-emerald-500 before:transition-all before:delay-75 before:duration-700 before:content-[''] hover:before:w-[150%] focus:before:w-[150%] focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-1 focus:ring-offset-white dark:border-emerald-700 dark:text-white dark:before:bg-emerald-700 dark:focus:ring-emerald-800 dark:focus:ring-offset-black"
         >
           Diagonal Swipe
         </button>
@@ -148,6 +132,23 @@ const Buttons: FC<Props> = () => {
         </button>
       ),
     },
+
+    {
+      name: "Shimmer-v2",
+
+      component: (
+        <button
+          type="button"
+          className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-slate-200 bg-white px-6 py-1.5 text-xs font-medium text-slate-600 transition-colors duration-300 ease-in hover:shadow-[#000103]/50 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2 focus:ring-offset-slate-400 dark:border-slate-800 dark:bg-[#000103] dark:text-slate-400"
+        >
+          <span className="text-base">Shimmer-v2</span>
+          <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-13deg)_translateX(100%)]">
+            <div className="relative h-full w-10 bg-black/5 dark:bg-white/15" />
+          </div>
+        </button>
+      ),
+    },
+
   ];
 
   return (
