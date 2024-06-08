@@ -11,17 +11,17 @@ const Buttons: FC<Props> = () => {
 
   const buttons = [
     {
-      name: "Submit",
+      name: "Base",
+
 
       component: (
-        <button
-          type="button"
-          className="h-10 rounded-md border border-purple-700 px-6 text-center text-sm font-medium text-purple-700 hover:bg-purple-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-transparent dark:border-purple-500 dark:text-purple-500 dark:hover:bg-purple-600 dark:hover:text-white dark:focus:ring-purple-800"
-        >
-          Submit
+        <button className="px-8 py-2 text-black dark:text-white text-sm rounded-md font-semibold transition hover:bg-gray-100 dark:hover:bg-gray-900 focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-700 focus:outline-none">
+          Base
         </button>
       ),
     },
+
+
 
     {
       name: "Shimmer",
@@ -74,6 +74,19 @@ const Buttons: FC<Props> = () => {
     },
 
     {
+      name: "Shiny day",
+
+      component: (
+        <button
+          type="button"
+          className="h-12 w-full rounded-sm border-none bg-[linear-gradient(325deg,#0044ff_0%,#2ccfff_55%,#0044ff_90%)] bg-[280%_auto] px-6 py-2 font-medium text-white shadow-[0px_0px_20px_rgba(71,184,255,0.5),0px_5px_5px_-1px_rgba(58,125,233,0.25),inset_4px_4px_8px_rgba(175,230,255,0.5),inset_-4px_-4px_8px_rgba(19,95,216,0.35)] transition-[background] duration-700 hover:bg-right-top focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-blue-500 dark:focus:ring-offset-black"
+        >
+          Shiny Day
+        </button>
+      ),
+    },
+
+    {
       name: "Gradient Borders",
 
       component: (
@@ -106,7 +119,7 @@ const Buttons: FC<Props> = () => {
     },
 
     {
-      name: "Gradient-v2",
+      name: "Gradient",
 
       component: (
         <button
@@ -114,21 +127,8 @@ const Buttons: FC<Props> = () => {
           className="group flex w-full items-center rounded-lg bg-[linear-gradient(144deg,#FF20F2,#2242F3_50%,#2ae120)] p-[3px] text-sm font-medium tracking-normal text-black transition-transform duration-200 hover:text-white hover:outline-none focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-1 focus:ring-offset-white active:scale-90 active:outline-none dark:text-white dark:focus:ring-gray-500 dark:focus:ring-offset-black"
         >
           <span className="h-full w-full rounded-md bg-slate-100 px-4 py-2 duration-300 group-hover:bg-transparent dark:bg-slate-950">
-            Gradient-v2
+            Gradient
           </span>
-        </button>
-      ),
-    },
-
-    {
-      name: "Shiny day",
-
-      component: (
-        <button
-          type="button"
-          className="h-12 w-full rounded-sm border-none bg-[linear-gradient(325deg,#0044ff_0%,#2ccfff_55%,#0044ff_90%)] bg-[280%_auto] px-6 py-2 font-medium text-white shadow-[0px_0px_20px_rgba(71,184,255,0.5),0px_5px_5px_-1px_rgba(58,125,233,0.25),inset_4px_4px_8px_rgba(175,230,255,0.5),inset_-4px_-4px_8px_rgba(19,95,216,0.35)] transition-[background] duration-700 hover:bg-right-top focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-blue-500 dark:focus:ring-offset-black"
-        >
-          Shiny Day
         </button>
       ),
     },
@@ -145,6 +145,19 @@ const Buttons: FC<Props> = () => {
           <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-13deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-13deg)_translateX(100%)]">
             <div className="relative h-full w-10 bg-black/5 dark:bg-white/15" />
           </div>
+        </button>
+      ),
+    },
+
+    {
+      name: "Submit",
+
+      component: (
+        <button
+          type="button"
+          className="h-10 rounded-md transition border border-cyan-700 px-6 text-center text-sm font-medium text-cyan-700 hover:bg-cyan-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-transparent dark:border-cyan-500 dark:text-cyan-500 dark:hover:bg-cyan-600 dark:hover:text-white dark:focus:ring-cyan-800"
+        >
+          Submit
         </button>
       ),
     },
