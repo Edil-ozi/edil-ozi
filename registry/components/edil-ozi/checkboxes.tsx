@@ -256,28 +256,6 @@ const Checkboxes = () => {
       `
     },
   ];
-  const listCheckboxes = [
-
-    // {
-    //   component: (
-    //     <label
-    //       className="group z-[1] flex h-[2.5em] min-w-56 cursor-pointer flex-row items-center justify-center border border-solid border-[black] dark:border-white bg-white dark:bg-black p-[0.5em] text-xl font-semibold text-[black] dark:text-white shadow-[6px_6px_0px_black] dark:shadow-[6px_6px_0px_white] transition-[0.4s] hover:translate-x-1.5 hover:translate-y-1.5 hover:cursor-pointer hover:border-[none] hover:bg-[black] dark:hover:bg-white hover:text-[white] dark:hover:shadow-none hover:shadow-none"
-    //       htmlFor="checkbox"
-    //       id="themeswitch"
-    //     >
-    //       <input
-    //         type="checkbox"
-    //         id="checkbox"
-    //         className="peer hidden"
-    //       />
-    //       <div className=" transition-all absolute ml-[6.2em] h-[25px] w-[25px] rotate-[-120deg] rounded-[50%] border-4 border-solid border-[#222] bg-[#222] shadow-[inset_0px_6px_#999,inset_0px_6px_1px_1px_#999] duration-300 ease-in-out peer-checked:rotate-[360deg] peer-checked:border-4 peer-checked:border-[#F28C38] peer-checked:bg-[#F28C38] peer-checked:shadow-[inset_0px_6px_#F28C38,inset_0px_6px_1px_1px_#F28C38]"></div>
-    //       <span className="before:ease-in-out after:ease-in-out before:mr-[2em] before:text-[black] dark:before:text-white before:transition-200 before:content-['Dark_Mode'] after:mr-[1.7em] after:hidden after:text-[black] dark:after:text-white after:transition-200 after:content-['Light_Mode'] group-hover:before:text-white group-hover:after:text-white dark:group-hover:before:text-black dark:group-hover:after:text-black peer-checked:before:hidden peer-checked:after:block"></span>
-    //       <div className="back"></div>
-    //     </label>
-    //   ),
-    // },
-
-  ];
   return (
     <div className="w-full px-4 pb-40">
       <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
