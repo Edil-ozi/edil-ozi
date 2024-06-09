@@ -182,6 +182,78 @@ const Checkboxes = () => {
 
       className: "col-span-2",
 
+      animation: `
+      theme: {
+        extend:{
+          keyframes: {
+            "like": {
+              "0%": {
+                transform: "scale(0)"
+              },
+              "50%": {
+                transform: "scale(1.2)"
+              },
+              "100%": {
+                transform: "scale(1)"
+              }
+            },
+            "dislike": {
+              "0%": {
+                transform: "scale(0)"
+              },
+              "50%": {
+                transform: "scale(1.2)"
+              },
+              "100%": {
+                transform: "scale(1)"
+              }
+            },
+            "bookmark": {
+              "50%": {
+                transform: "scaleY(0.6)"
+              },
+              "100%": {
+                transform: "scaleY(1)"
+              }
+            },
+            "circle": {
+              "0%": {
+                width: "0",
+                height: "0",
+                opacity: "0",
+              },
+              "90%": {
+                width: "45px",
+                height: "45px",
+                opacity: "1",
+              },
+              "100%": {
+                opacity: "0",
+              }
+            },
+            "circles": {
+              from: {
+                transform: "scale(0)",
+              },
+              "40%": {
+                opacity:" 1",
+              },
+              to: {
+                transform: "scale(1.1)",
+                opacity: "0",
+              }
+            }
+          },
+          "animation": {
+            "like": "like 400ms ease",
+            "dislike": "dislike 400ms ease",
+            "bookmark": "bookmark 300ms ease",
+            "circle": "circle 300ms ",
+            "circles": "circles 300ms",
+          },
+        }
+      }
+      `
     },
   ];
   const listCheckboxes = [
