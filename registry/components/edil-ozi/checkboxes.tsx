@@ -145,7 +145,7 @@ const Checkboxes = () => {
       name: "Like",
 
       component: (
-        <div className="flex gap-8">
+        <div className="flex gap-8 flex-wrap w-44 sm:w-auto justify-center">
         <label className="h-10 group w-10 block relative cursor-pointer select-none transition-[100ms] hover:scale-110">
           <input type="checkbox" className="hidden" />
             <svg viewBox="0 0 256 256" className="h-[40px] w-[40px] p-1 transition-100 left-0 top-0 group-has-[:checked]:animate-like animate-dislike">
