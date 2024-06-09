@@ -63,6 +63,13 @@ const ui: Registry = {
     files: ["registry/components/edil-ozi/text-reveal.tsx"],
   },
 
+  //Fancy components
+  "swipe-grid": {
+    name: "swipe-grid",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/swipe-grid.tsx"],
+  },
+
   //On scroll animations
   "zoom-parallax": {
     name: "zoom-parallax",
@@ -170,6 +177,14 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/text-reveal-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/text-reveal-demo")),
+  },
+
+  //Fancy fullscreen
+  "swipe-grid-demo": {
+    name: "swipe-grid-demo",
+    type: "components:example",
+    files: ["registry/components/example/swipe-grid-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/swipe-grid-demo")),
   },
 
   //On scroll animations

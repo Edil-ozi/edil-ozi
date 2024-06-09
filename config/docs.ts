@@ -94,32 +94,46 @@ export const docsConfig: DocsConfig = {
       ],
     },
 
+    // {
+    //   title: "Fancy Components",
+    //   items: [
+
+    //   ],
+    // },
+
     {
       title: "On scroll animations",
       items: [
         {
-          title: "Zoom parallax",
-          href: "/docs/components/zoom-parallax",
+          title: "Swipe Grid",
+          href: "/docs/components/swipe-grid",
           items: [],
+          label: "New",
         },
         {
-          title: "Horizontal scroll",
+          title: "Horizontal Scroll",
           href: "/docs/components/horizontal-scroll",
+          items: [],
+        },
+
+        {
+          title: "Zoom Parallax",
+          href: "/docs/components/zoom-parallax",
           items: [],
         },
       ],
     },
 
     {
-      title: "Text animations",
+      title: "Text Animations",
       items: [
         {
-          title: "Infinite text",
+          title: "Infinite Text",
           href: "/docs/components/infinite-text",
           items: [],
         },
         {
-          title: "Text reveal",
+          title: "Text Reveal",
           href: "/docs/components/text-reveal",
           items: [],
         },
