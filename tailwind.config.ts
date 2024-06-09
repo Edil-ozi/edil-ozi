@@ -132,6 +132,41 @@ const config: Config = {
         "100%": {
           transform: "scale(1)"
         }
+      },
+      "bookmark": {
+        "50%": {
+          transform: "scaleY(0.6)"
+        },
+        "100%": {
+          transform: "scaleY(1)"
+        }
+      },
+      "circle": {
+        "0%": {
+          width: "0",
+          height: "0",
+          opacity: "0",
+        },
+        "90%": {
+          width: "45px",
+          height: "45px",
+          opacity: "1",
+        },
+        "100%": {
+          opacity: "0",
+        }
+      },
+      "circles": {
+        from: {
+          transform: "scale(0)",
+        },
+        "40%": {
+          opacity:" 1",
+        },
+        to: {
+          transform: "scale(1.1)",
+          opacity: "0",
+        }
       }
     },
     animation: {
@@ -145,6 +180,9 @@ const config: Config = {
       "wave": "wave 300ms ease",
       "like": "like 400ms ease",
       "dislike": "dislike 400ms ease",
+      "bookmark": "bookmark 300ms ease",
+      "circle": "circle 300ms ",
+      "circles": "circles 300ms",
     },
   },
   plugins: [require("tailwindcss-animate")],
