@@ -13,7 +13,7 @@ const CardWrapper = ({
   return (
     <div
       className={cn(
-        "md:h-50 group/btn relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-background hover:border-neutral-300 dark:border-white/[0.2] dark:hover:border-white/[0.25] xl:h-60",
+        "md:h-50 group/btn relative flex min-h-40 w-full items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-background hover:border-neutral-300 dark:border-white/[0.2] dark:hover:border-white/[0.25] xl:h-60",
         className,
       )}
     >

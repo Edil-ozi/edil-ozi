@@ -47,7 +47,9 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        keyframes: {},
+        keyframes: {
+
+        },
         animation: {},
       },
       borderRadius: {
@@ -82,10 +84,55 @@ const config: Config = {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(calc(-100% - 2rem))" },
       },
-      fadeIn: {
+      "fadeIn": {
         from: { opacity: "0" },
         to: { opacity: "100" },
       },
+      "pulse": {
+        "0%": {
+          boxShadow: "0 0 0 #0B6E4F90",
+          rotate: "{20deg}",
+        },
+        "50%": {
+          rotate: "-20deg",
+        },
+
+        "75%": {
+          boxShadow: "0 0 0 10px #0B6E4F60",
+        },
+
+        "100%": {
+          boxShadow: "0 0 0 13px #0B6E4F30",
+          rotate: "0",
+        },
+      },
+      "wave": {
+        "50%": {
+          transform: "scale(0.9)",
+        },
+      },
+      "like": {
+        "0%": {
+          transform: "scale(0)"
+        },
+        "50%": {
+          transform: "scale(1.2)"
+        },
+        "100%": {
+          transform: "scale(1)"
+        }
+      },
+      "dislike": {
+        "0%": {
+          transform: "scale(0)"
+        },
+        "50%": {
+          transform: "scale(1.2)"
+        },
+        "100%": {
+          transform: "scale(1)"
+        }
+      }
     },
     animation: {
       "accordion-down": "accordion-down 0.5s ease-in-out forwards",
@@ -93,7 +140,11 @@ const config: Config = {
       "caret-blink": "caret-blink 1.25s ease-out infinite",
       shimmer: "shimmer 2s linear infinite",
       "logo-carousel": "logo-carousel 16s linear infinite",
-      fadeIn: "fadeIn 0.2s ease-in-out forwards",
+      "fadeIn": "fadeIn 0.2s ease-in-out forwards",
+      "pulse": "pulse 500ms ease-in-out",
+      "wave": "wave 300ms ease",
+      "like": "like 400ms ease",
+      "dislike": "dislike 400ms ease",
     },
   },
   plugins: [require("tailwindcss-animate")],

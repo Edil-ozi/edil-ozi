@@ -13,6 +13,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/base-inputs.tsx"],
   },
+  checkboxes: {
+    name: "checkboxes",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/checkboxes.tsx"],
+  },
 
   //Clean Components
   accordion: {
@@ -84,6 +89,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/base-inputs-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/base-inputs-demo")),
+  },
+  "checkboxes-demo": {
+    name: "checkboxes-demo",
+    type: "components:example",
+    files: ["registry/components/example/checkboxes-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/checkboxes-demo")),
   },
   //Clean Components
   "magic-card-demo": {

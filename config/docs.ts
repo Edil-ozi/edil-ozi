@@ -48,6 +48,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/base-inputs",
           items: [],
         },
+        {
+          title: "Checkboxes",
+          href: "/docs/components/checkboxes",
+          items: [],
+        },
       ],
     },
     {
