@@ -78,9 +78,8 @@ const SwipeGrid = () => {
   return (
     <>
       {!loading ? (
-
-        <div className="w-full overflow-hidden z-10 bg-slate-300 dark:bg-slate-900">
-          <h1 className="text-center h-screen py-20 text-4xl">Scroll Down</h1>
+        <div className="w-full overflow-hidden z-10 bg-stone-200 dark:bg-stone-900">
+          <h1 className="text-center h-[50%] py-20 text-4xl">Scroll Down</h1>
           <section className="relative mb-[20vh]">
             <div ref={grid} className="grid place-items-center h-[calc(1/1*100%)] w-[calc(1/1*100%)] p-8" style={{ perspective: '1500px' }}>
               <div style={{ transformStyle: 'preserve-3d' }} ref={gridWrap} className="h-auto w-full grid grid-cols-4 gap-[2vw]">
@@ -94,6 +93,7 @@ const SwipeGrid = () => {
           </section>
           <h2 className="text-center text-2xl pb-20 dark:text-gray-600 text-gray-500">Refresh The Page For Different Image Positions</h2>
         </div>
+
       ) : (
         <p>loading...</p>
       )
