@@ -111,6 +111,13 @@ export const docsConfig: DocsConfig = {
           label: "New",
         },
         {
+          title: "Perspective Grid",
+          href: "/docs/components/perspective-grid",
+          items: [],
+          label: "New",
+        },
+
+        {
           title: "Horizontal Scroll",
           href: "/docs/components/horizontal-scroll",
           items: [],

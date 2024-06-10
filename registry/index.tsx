@@ -63,14 +63,17 @@ const ui: Registry = {
     files: ["registry/components/edil-ozi/text-reveal.tsx"],
   },
 
-  //Fancy components
+  //On scroll animations
   "swipe-grid": {
     name: "swipe-grid",
     type: "components:ui",
     files: ["registry/components/edil-ozi/swipe-grid.tsx"],
   },
-
-  //On scroll animations
+  "perspective-grid": {
+    name: "perspective-grid",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/perspective-grid.tsx"],
+  },
   "zoom-parallax": {
     name: "zoom-parallax",
     type: "components:ui",
@@ -179,15 +182,19 @@ const example: Registry = {
     component: React.lazy(() => import("@/registry/components/example/text-reveal-demo")),
   },
 
-  //Fancy fullscreen
+  //On scroll animations
   "swipe-grid-demo": {
     name: "swipe-grid-demo",
     type: "components:example",
     files: ["registry/components/example/swipe-grid-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/swipe-grid-demo")),
   },
-
-  //On scroll animations
+  "perspective-grid-demo": {
+    name: "perspective-grid-demo",
+    type: "components:example",
+    files: ["registry/components/example/perspective-grid-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/perspective-grid-demo")),
+  },
   "zoom-parallax-demo": {
     name: "zoom-parallax-demo",
     type: "components:example",
