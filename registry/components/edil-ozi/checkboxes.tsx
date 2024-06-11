@@ -5,6 +5,16 @@ const Checkboxes = () => {
   const { copy } = useCopyToClipboard();
   const checkboxes = [
     {
+      name: "Just a normal one",
+
+      component: (
+        <input
+          type="checkbox"
+          className="border-1 after:ease-[cubic-bezier(0.12,0.4,0.29,1.46)] before:duration-[0.1s] before:ease-[cubic-bezier(0.71,-0.46,0.88,0.6),opacity] before:delay-[0.1s] checked:before:duration-[0.2s] checked:before:ease-[cubic-bezier(0.12,0.4,0.29,1.46)] checked:before:delay-[0.1s] relative box-border block h-[1.5rem] w-[1.5rem] cursor-pointer appearance-none rounded-md border-[#d9d9d9] bg-slate-200 transition-all duration-300 before:absolute before:left-2/4 before:top-[42%] before:h-[10px] before:w-[6px] before:-translate-x-2/4 before:-translate-y-2/4 before:rotate-45 before:scale-0 before:border-b-2 before:border-r-2 before:border-solid before:border-b-[#fff] before:border-r-[#fff] before:opacity-0 before:transition-all before:content-[''] after:absolute after:inset-0 after:rounded-[7px] after:opacity-0 after:shadow-[0_0_0_calc(30px_/_2.5)_#1677ff] after:transition-all after:duration-500 after:content-[''] checked:border-transparent checked:bg-[#1677ff] checked:before:-translate-x-2/4 checked:before:-translate-y-2/4 checked:before:rotate-45 checked:before:scale-x-[1.4] checked:before:scale-y-[1.4] checked:before:opacity-100 checked:before:transition-all hover:border-[#1677ff] [&:active:not(:checked)]:after:opacity-100 [&:active:not(:checked)]:after:shadow-none [&:active:not(:checked)]:after:transition-none"
+        />
+      ),
+    },
+    {
       name: "With gradient shadow",
 
       component: (
@@ -23,17 +33,7 @@ const Checkboxes = () => {
       message: "Successfulty copied",
     },
     {
-      name: "Just a normal checbox",
-
-      component: (
-        <input
-          type="checkbox"
-          className="border-1 after:ease-[cubic-bezier(0.12,0.4,0.29,1.46)] before:duration-[0.1s] before:ease-[cubic-bezier(0.71,-0.46,0.88,0.6),opacity] before:delay-[0.1s] checked:before:duration-[0.2s] checked:before:ease-[cubic-bezier(0.12,0.4,0.29,1.46)] checked:before:delay-[0.1s] relative box-border block h-[1.5rem] w-[1.5rem] cursor-pointer appearance-none rounded-md border-[#d9d9d9] bg-slate-200 transition-all duration-300 before:absolute before:left-2/4 before:top-[42%] before:h-[10px] before:w-[6px] before:-translate-x-2/4 before:-translate-y-2/4 before:rotate-45 before:scale-0 before:border-b-2 before:border-r-2 before:border-solid before:border-b-[#fff] before:border-r-[#fff] before:opacity-0 before:transition-all before:content-[''] after:absolute after:inset-0 after:rounded-[7px] after:opacity-0 after:shadow-[0_0_0_calc(30px_/_2.5)_#1677ff] after:transition-all after:duration-500 after:content-[''] checked:border-transparent checked:bg-[#1677ff] checked:before:-translate-x-2/4 checked:before:-translate-y-2/4 checked:before:rotate-45 checked:before:scale-x-[1.4] checked:before:scale-y-[1.4] checked:before:opacity-100 checked:before:transition-all hover:border-[#1677ff] [&:active:not(:checked)]:after:opacity-100 [&:active:not(:checked)]:after:shadow-none [&:active:not(:checked)]:after:transition-none"
-        />
-      ),
-    },
-    {
-      name: "Checkbox with animation",
+      name: "With animation",
 
       component: (
         <label className="relative block cursor-pointer select-none text-2xl">
@@ -74,7 +74,7 @@ const Checkboxes = () => {
         }`,
     },
     {
-      name: "Box to checkbox",
+      name: "Transformer",
 
       component: (
         <label className="block h-[1.5rem] w-[1.5rem] cursor-pointer">
@@ -86,175 +86,6 @@ const Checkboxes = () => {
         </label>
       ),
     },
-    {
-      name: "List like checkbox",
-
-      component: (
-        <>
-          <label className="flex min-w-56 cursor-pointer items-center justify-between rounded-md bg-white/40 dark:bg-zinc-800/80 p-3 shadow hover:bg-white/20 has-[:checked]:bg-white/30 dark:has-[:checked]:text-sky-200 has-[:checked]:text-indigo-400 has-[:checked]:ring-2 dark:has-[:checked]:ring-sky-200 has-[:checked]:ring-indigo-200">
-            <div className="flex items-center space-x-5">
-              <div className="flex items-center">
-                <svg
-                  className="h-4 w-4 text-black dark:text-white"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  >
-                  <path
-                    fill-rule="evenodd"
-                    d="M12.037 21.998a10.313 10.313 0 0 1-7.168-3.049 9.888 9.888 0 0 1-2.868-7.118 9.947 9.947 0 0 1 3.064-6.949A10.37 10.37 0 0 1 12.212 2h.176a9.935 9.935 0 0 1 6.614 2.564L16.457 6.88a6.187 6.187 0 0 0-4.131-1.566 6.9 6.9 0 0 0-4.794 1.913 6.618 6.618 0 0 0-2.045 4.657 6.608 6.608 0 0 0 1.882 4.723 6.891 6.891 0 0 0 4.725 2.07h.143c1.41.072 2.8-.354 3.917-1.2a5.77 5.77 0 0 0 2.172-3.41l.043-.117H12.22v-3.41h9.678c.075.617.109 1.238.1 1.859-.099 5.741-4.017 9.6-9.746 9.6l-.215-.002Z"
-                    clip-rule="evenodd"
-                    ></path>
-                </svg>
-                <span className="text-black dark:text-white"> Pay </span>
-              </div>
-              <h2 className="text-lg">Google Pay</h2>
-            </div>
-            <input type="checkbox" className="hidden peer"/>
-            <div className="relative h-[20px] w-[20px] bg-slate-200 border-[3px] border-[#eee]  rounded-[50%] left-0 top-0 after:content-[''] after:absolute after:hidden after:w-[0.25em] after:h-[0.5em] peer-checked:bg-blue-400 peer-checked:after:block;"></div>
-          </label>
-
-          <label className="flex relative hover:bg-[rgba(0,119,255,0.1)] rounded-md cursor-pointer pl-12 py-1 pr-5 after:content-[''] after:absolute after:top-[10px] after:left-3.5 after:block after:w-5 after:h-5 after:rounded-[2px] after:transition-all after:duration-200 after:border after:border-slate-200 hover:after:border-[#07f] has-[:checked]:after:bg-[#07f] has-[:checked]:after:animate-wave has-[:checked]:after:border-[#07f] text-2xl">
-            <input type="checkbox" className="hidden peer" />
-            <span className="">Morning</span>
-          </label>
-        </>
-      ),
-
-      className: "col-span-2",
-
-      animation: `
-      theme: {
-        extend:{
-          keyframes: {
-            "wave": {
-              "50%": {
-                transform: "scale(0.9)",
-              },
-            },
-          }
-          "animation": {
-            "wave": "wave 300ms ease",
-          },
-        }
-      }
-      `
-    },
-    {
-      name: "Like",
-
-      component: (
-        <div className="flex gap-8 flex-wrap w-44 sm:w-auto justify-center">
-        <label className="h-10 group w-10 block relative cursor-pointer select-none transition-[100ms] hover:scale-110">
-          <input type="checkbox" className="hidden" />
-            <svg viewBox="0 0 256 256" className="h-[40px] w-[40px] p-1 transition-100 left-0 top-0 group-has-[:checked]:animate-like animate-dislike">
-            <path className="group-has-[:checked]:fill-red-700  fill-slate-200 group-has-[:checked]:stroke-none" d="M224.6,51.9a59.5,59.5,0,0,0-43-19.9,60.5,60.5,0,0,0-44,17.6L128,59.1l-7.5-7.4C97.2,28.3,59.2,26.3,35.9,47.4a59.9,59.9,0,0,0-2.3,87l83.1,83.1a15.9,15.9,0,0,0,22.6,0l81-81C243.7,113.2,245.6,75.2,224.6,51.9Z" strokeWidth="20px"></path>
-            </svg>
-        </label>
-
-        <label className="h-10 group w-10 block relative cursor-pointer select-none transition-[100ms] hover:scale-110">
-          <input type="checkbox" className="hidden" />
-            <svg viewBox="0 0 24 24" className="h-[40px] w-[40px] transition-100 left-0 top-0 group-has-[:checked]:animate-like animate-dislike">
-            <path className="group-has-[:checked]:fill-[#1c7dff] group-has-[:checked]:stroke-[1.2] dark:stroke-black stroke-white fill-slate-200 group-has-[:checked]:stroke-white dark:group-has-[:checked]:stroke-[#212121]" d="M8 10V20M8 10L4 9.99998V20L8 20M8 10L13.1956 3.93847C13.6886 3.3633 14.4642 3.11604 15.1992 3.29977L15.2467 3.31166C16.5885 3.64711 17.1929 5.21057 16.4258 6.36135L14 9.99998H18.5604C19.8225 9.99998 20.7691 11.1546 20.5216 12.3922L19.3216 18.3922C19.1346 19.3271 18.3138 20 17.3604 20L8 20"></path>
-            </svg>
-        </label>
-        <label className="h-10 group w-10 block relative cursor-pointer select-none transition-[100ms] hover:scale-110">
-          <input type="checkbox" className="hidden" />
-            <svg viewBox="0 0 24 24" className="h-[40px] w-[40px] transition-100 left-0 top-0 group-has-[:checked]:animate-like animate-dislike">
-            <path className="group-has-[:checked]:fill-[#1c7dff] group-has-[:checked]:stroke-[1.2] dark:stroke-black stroke-white fill-slate-200 group-has-[:checked]:stroke-white dark:group-has-[:checked]:stroke-[#212121]" d="M8 14V4M8 14L4 14V4.00002L8 4M8 14L13.1956 20.0615C13.6886 20.6367 14.4642 20.884 15.1992 20.7002L15.2467 20.6883C16.5885 20.3529 17.1929 18.7894 16.4258 17.6387L14 14H18.5604C19.8225 14 20.7691 12.8454 20.5216 11.6078L19.3216 5.60779C19.1346 4.67294 18.3138 4.00002 17.3604 4.00002L8 4"></path>
-            </svg>
-        </label>
-
-        <label className="ui-bookmark">
-          <input type="checkbox" className="peer hidden" />
-          <div className="p-[6px] w-[40px] h-[40px] fill-slate-200 transition-all duration-200 cursor-pointer flex justify-center items-center relative origin-top peer-checked:delay-100 peer-checked:fill-[gold] peer-checked:animate-[bookmark_300ms_forwards] after:content-[''] after:absolute after:w-2.5 after:h-2.5 after:shadow-[0_30px_0_-4px_gold,30px_0_0_-4px_gold,0_-30px_0_-4px_gold,-30px_0_0_-4px_gold,-22px_22px_0_-4px_gold,-22px_-22px_0_-4px_gold,22px_-22px_0_-4px_gold,22px_22px_0_-4px_gold] after:rounded-[50%] after:scale-0 peer-checked:after:animate-[circles_300ms_cubic-bezier(0.175,0.885,0.32,1.275)_forwards] peer-checked:after:delay-500 before:content-[''] before:absolute before:border-[1px] before:opacity-0 before:rounded-[50%] before:border-[gold] peer-checked:before:delay-500 peer-checked:before:animate-[circle_300ms_cubic-bezier(0.175,0.885,0.32,1.275)_forwards]
-          ">
-            <svg viewBox="0 0 32 32">
-                <path
-                  d="M27 4v27a1 1 0 0 1-1.625.781L16 24.281l-9.375 7.5A1 1 0 0 1 5 31V4a4 4 0 0 1 4-4h14a4 4 0 0 1 4 4z"
-                ></path>
-            </svg>
-          </div>
-        </label>
-        </div>
-      ),
-
-      className: "col-span-2",
-
-      animation: `
-      theme: {
-        extend:{
-          keyframes: {
-            "like": {
-              "0%": {
-                transform: "scale(0)"
-              },
-              "50%": {
-                transform: "scale(1.2)"
-              },
-              "100%": {
-                transform: "scale(1)"
-              }
-            },
-            "dislike": {
-              "0%": {
-                transform: "scale(0)"
-              },
-              "50%": {
-                transform: "scale(1.2)"
-              },
-              "100%": {
-                transform: "scale(1)"
-              }
-            },
-            "bookmark": {
-              "50%": {
-                transform: "scaleY(0.6)"
-              },
-              "100%": {
-                transform: "scaleY(1)"
-              }
-            },
-            "circle": {
-              "0%": {
-                width: "0",
-                height: "0",
-                opacity: "0",
-              },
-              "90%": {
-                width: "45px",
-                height: "45px",
-                opacity: "1",
-              },
-              "100%": {
-                opacity: "0",
-              }
-            },
-            "circles": {
-              from: {
-                transform: "scale(0)",
-              },
-              "40%": {
-                opacity:" 1",
-              },
-              to: {
-                transform: "scale(1.1)",
-                opacity: "0",
-              }
-            }
-          },
-          "animation": {
-            "like": "like 400ms ease",
-            "dislike": "dislike 400ms ease",
-            "bookmark": "bookmark 300ms ease",
-            "circle": "circle 300ms ",
-            "circles": "circles 300ms",
-          },
-        }
-      }
-      `
-    },
   ];
   return (
     <div className="w-full px-4 pb-40">
@@ -263,7 +94,6 @@ const Checkboxes = () => {
           <CardWrapper
             key={checkbox.name}
             onClick={() => copy(checkbox)}
-            className={`col-span-2 ${checkbox.className || "sm:col-span-1"} min-h-52 lg:h-52`}
           >
             <div className="flex flex-col items-center gap-4 xl:gap-8 text-center p-1">
               {checkbox.component}
