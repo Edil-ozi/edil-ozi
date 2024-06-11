@@ -76,11 +76,6 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Magic Card",
-          href: "/docs/components/magic-card",
-          items: [],
-        },
-        {
           title: "Pricing Card",
           href: "/docs/components/pricing-card",
           items: [],
@@ -151,7 +146,7 @@ export const docsConfig: DocsConfig = {
     //   title: "React Hooks",
     //   items: [
     //     {
-    //       title: "Magic-card",
+    //       title: "Some usefull hook",
     //       href: "/docs/components/mag2ic-card",
     //       items: [],
     //     },

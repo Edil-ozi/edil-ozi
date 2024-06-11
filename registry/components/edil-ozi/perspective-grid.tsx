@@ -13,6 +13,7 @@ const images = [
   "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=640",
   "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=640",
   "https://images.unsplash.com/photo-1489365091240-6a18fc761ec2?q=40&w=640",
+  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1887"
 ];
 
 const PerspectiveGrid = () => {
@@ -36,20 +37,20 @@ const PerspectiveGrid = () => {
         start: 'top bottom+=5%',
         end: 'bottom top-=5%',
         scrub: true,
-        // markers: true, // Optional: for debugging
+        markers: true, // Optional: for debugging
       }
     });
 
-    grid.current.style.perspective = '1500px';
-    gridWrap.current.style.width = "110%"
+    grid.current.style.perspective = '1300px';
+    gridWrap.current.style.width = "105%"
     grid.current.style.height = 'calc(1 / 0.5 * 100%)'
-    grid.current.style.width = 'calc(1 / 0.5 * 100%)'
-    gridWrap.current.style.gridTemplateColumns = "repeat(8, minmax(6, 1fr)";
+    grid.current.style.width = 'calc(1 / 0.85 * 100%)'
+    gridWrap.current.style.gridTemplateColumns = "repeat(6, minmax(4, 1fr)";
 
     timeline
       .set(gridItems, {
         transformOrigin: '50% 0%',
-        z: () => gsap.utils.random(-5000, -2000),
+        z: () => gsap.utils.random(-4000, -2000),
         rotationX: () => gsap.utils.random(-65, -25),
         filter: 'brightness(0%)',
       })
@@ -63,7 +64,7 @@ const PerspectiveGrid = () => {
         z: 6500,
       }, 0)
       .fromTo(gridItemsInner, {
-        scale: 2,
+        scale: 1.5,
       }, {
         scale: 0.5,
       }, 0);
@@ -79,7 +80,7 @@ const PerspectiveGrid = () => {
 
   return (
     <div className="w-full overflow-hidden z-10 bg-stone-200 dark:bg-stone-900">
-      <h1 className="text-center h-[50%] py-20 text-4xl">Scroll Down</h1>
+      <h1 className="text-center h-[50%] pt-20 pb-10 text-4xl">Scroll Down</h1>
       <div className="relative py-[30vh] w-full">
         <div ref={grid} className="grid place-items-center w-full" style={{ perspective: "1200px" }}>
           <div style={{ transformStyle: 'preserve-3d' }} ref={gridWrap} className="h-auto w-full grid grid-cols-4 gap-[2vw]">

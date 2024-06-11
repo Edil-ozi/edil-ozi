@@ -30,11 +30,6 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/login-form.tsx"],
   },
-  "magic-card": {
-    name: "magic-card",
-    type: "components:ui",
-    files: ["registry/components/edil-ozi/magic-card.tsx"],
-  },
   "pricing-card": {
     name: "pricing-card",
     type: "components:ui",
@@ -107,18 +102,6 @@ const example: Registry = {
     component: React.lazy(() => import("@/registry/components/example/toggle-inputs-demo")),
   },
   //Clean Components
-  "magic-card-demo": {
-    name: "magic-card-demo",
-    type: "components:example",
-    files: ["registry/components/example/magic-card-demo.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/magic-card-demo")),
-  },
-  "magic-card-gradient": {
-    name: "magic-card-gradient",
-    type: "components:example",
-    files: ["registry/components/example/magic-card-gradient.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/magic-card-gradient")),
-  },
   "login-form-demo": {
     name: "login-form-demo",
     type: "components:example",

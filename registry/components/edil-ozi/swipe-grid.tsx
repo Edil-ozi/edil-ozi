@@ -43,8 +43,8 @@ const SwipeGrid = () => {
     });
 
     grid.current.style.perspective = '1000px';
+    grid.current.style.width = 'calc(1 / 0.65 * 100%)'
     grid.current.style.height = 'calc(1 / 0.5 * 100%)'
-    grid.current.style.width = 'calc(1 / 0.5 * 100%)'
 
     timeline
       .set(gridWrap.current, {
@@ -83,7 +83,7 @@ const SwipeGrid = () => {
           <section className="relative mb-[20vh]">
             <div ref={grid} className="grid place-items-center h-[calc(1/1*100%)] w-[calc(1/1*100%)] p-8" style={{ perspective: '1500px' }}>
               <div style={{ transformStyle: 'preserve-3d' }} ref={gridWrap} className="h-auto w-full grid grid-cols-4 gap-[2vw]">
-                {images.concat(images, images, images, images).map((src, index) => (
+                {Array(5).fill(images).flat().map((src, index) => (
                   <div key={index} className="grid__item aspect-[1.5] w-full h-auto overflow-hidden relative rounded-md grid place-items-center ring-1 ring-offset-2 ring-offset-slate-200 dark:ring-offset-slate-900 ring-slate-600 dark:ring-slate-400">
                     <Image objectFit="cover" quality={40} src={src} fill={true} className="grid__item-inner relative min-w-[300px] h-auto" alt="image" />
                   </div>
