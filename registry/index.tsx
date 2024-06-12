@@ -20,7 +20,7 @@ const ui: Registry = {
   },
 
   //Clean Components
-  accordion: {
+  "accordion": {
     name: "accordion",
     type: "components:ui",
     files: ["registry/components/edil-ozi/accordion.tsx"],
@@ -40,10 +40,15 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/pricing-card.tsx"],
   },
-  drawer: {
+  "drawer": {
     name: "drawer",
     type: "components:ui",
     files: ["registry/components/edil-ozi/drawer.tsx"],
+  },
+  "tabs": {
+    name: "tabs",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/tabs.tsx"],
   },
   "logo-carousel": {
     name: "logo-carousel",
@@ -151,6 +156,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/accordion-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/accordion-demo")),
+  },
+  "tabs-demo": {
+    name: "tabs-demo",
+    type: "components:example",
+    files: ["registry/components/example/tabs-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/tabs-demo")),
   },
   "accordion-demo-single": {
     name: "accordion-demo-single",

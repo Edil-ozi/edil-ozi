@@ -91,6 +91,11 @@ export const docsConfig: DocsConfig = {
           items: [],
           label: "New",
         },
+        {
+          title: "Tabs",
+          href: "/docs/components/tabs",
+          items: [],
+        },
       ],
     },
 
