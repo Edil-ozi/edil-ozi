@@ -6,11 +6,11 @@ type Button = {
   component: ReactNode;
   code?: string;
   message?: string;
-  animation?: string;
+  extra?: string;
 };
 
 const useCopyToClipboard = () => {
-  const copy = ({ component, code, message, animation }: Button) => {
+  const copy = ({ component, code, message, extra }: Button) => {
     if (code) {
       copyToClipboard(code, message);
       return;
@@ -18,12 +18,12 @@ const useCopyToClipboard = () => {
     let buttonString = reactElementToJSXString(component);
 
     if (buttonString) {
-      copyToClipboard(buttonString, message, animation);
+      copyToClipboard(buttonString, message, extra);
     }
   };
-  async function copyToClipboard(text: string, message?: string, animation?: string) {
+  async function copyToClipboard(text: string, message?: string, extra?: string) {
     try {
-      await navigator.clipboard.writeText(text + "\n" + animation);
+      await navigator.clipboard.writeText(text + "\n" + extra);
       if (message) {
         toast.success(message);
       }

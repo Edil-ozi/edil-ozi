@@ -1,7 +1,7 @@
 import Checkboxes from "../edil-ozi/checkboxes";
 
 
-const CheckboxesDemo = () => {
+function CheckboxesDemo() {
   return <Checkboxes />;
 };
 

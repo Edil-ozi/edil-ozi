@@ -72,7 +72,7 @@ const config: Config = {
         "0%,70%,100%": { opacity: "1" },
         "20%,50%": { opacity: "0" },
       },
-      shimmer: {
+      "shimmer": {
         from: {
           backgroundPosition: "0 0",
         },
@@ -111,69 +111,12 @@ const config: Config = {
           transform: "scale(0.9)",
         },
       },
-      "like": {
-        "0%": {
-          transform: "scale(0)"
-        },
-        "50%": {
-          transform: "scale(1.2)"
-        },
-        "100%": {
-          transform: "scale(1)"
-        }
-      },
-      "dislike": {
-        "0%": {
-          transform: "scale(0)"
-        },
-        "50%": {
-          transform: "scale(1.2)"
-        },
-        "100%": {
-          transform: "scale(1)"
-        }
-      },
-      "bookmark": {
-        "50%": {
-          transform: "scaleY(0.6)"
-        },
-        "100%": {
-          transform: "scaleY(1)"
-        }
-      },
-      "circle": {
-        "0%": {
-          width: "0",
-          height: "0",
-          opacity: "0",
-        },
-        "90%": {
-          width: "45px",
-          height: "45px",
-          opacity: "1",
-        },
-        "100%": {
-          opacity: "0",
-        }
-      },
-      "circles": {
-        from: {
-          transform: "scale(0)",
-        },
-        "40%": {
-          opacity:" 1",
-        },
-        to: {
-          transform: "scale(1.1)",
-          opacity: "0",
-        }
-      }
     },
     animation: {
       "accordion-down": "accordion-down 0.5s ease-in-out forwards",
       "accordion-up": "accordion-up 0.2s ease-out",
       "caret-blink": "caret-blink 1.25s ease-out infinite",
-      shimmer: "shimmer 2s linear infinite",
+      "shimmer": "shimmer 2s linear infinite",
       "logo-carousel": "logo-carousel 16s linear infinite",
       "fadeIn": "fadeIn 0.2s ease-in-out forwards",
       "pulse": "pulse 500ms ease-in-out",
