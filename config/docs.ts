@@ -84,17 +84,21 @@ export const docsConfig: DocsConfig = {
           title: "Logo Carousel",
           href: "/docs/components/logo-carousel",
           items: [],
-          label: "New",
         },
       ],
     },
 
-    // {
-    //   title: "Fancy Components",
-    //   items: [
-
-    //   ],
-    // },
+    {
+      title: "Fancy Components",
+      items: [
+        {
+          title: "Double hover",
+          href: "/docs/components/double-hover",
+          items: [],
+          label: "New",
+        },
+      ],
+    },
 
     {
       title: "On scroll animations",

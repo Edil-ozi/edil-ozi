@@ -46,6 +46,13 @@ const ui: Registry = {
     files: ["registry/components/edil-ozi/logo-carousel.tsx"],
   },
 
+  // Fancy components
+  "double-hover": {
+    name: "double-hover",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/double-hover.tsx"],
+  },
+
   //Text animations
   "infinite-text": {
     name: "infinite-text",
@@ -149,6 +156,14 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/accordion-demo-withDisabled.tsx"],
     component: React.lazy(() => import("@/registry/components/example/accordion-demo-withDisabled")),
+  },
+
+  // Fancy components
+  "double-hover-demo": {
+    name: "double-hover-demo",
+    type: "components:example",
+    files: ["registry/components/example/double-hover-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/double-hover-demo")),
   },
 
   //Text animations
