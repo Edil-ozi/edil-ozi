@@ -35,11 +35,6 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/login-form.tsx"],
   },
-  "magic-card": {
-    name: "magic-card",
-    type: "components:ui",
-    files: ["registry/components/edil-ozi/magic-card.tsx"],
-  },
   "pricing-card": {
     name: "pricing-card",
     type: "components:ui",
@@ -68,14 +63,17 @@ const ui: Registry = {
     files: ["registry/components/edil-ozi/text-reveal.tsx"],
   },
 
-  //Fancy components
+  //On scroll animations
   "swipe-grid": {
     name: "swipe-grid",
     type: "components:ui",
     files: ["registry/components/edil-ozi/swipe-grid.tsx"],
   },
-
-  //On scroll animations
+  "perspective-grid": {
+    name: "perspective-grid",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/perspective-grid.tsx"],
+  },
   "zoom-parallax": {
     name: "zoom-parallax",
     type: "components:ui",
@@ -116,18 +114,6 @@ const example: Registry = {
   },
   
   //Clean Components
-  "magic-card-demo": {
-    name: "magic-card-demo",
-    type: "components:example",
-    files: ["registry/components/example/magic-card-demo.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/magic-card-demo")),
-  },
-  "magic-card-gradient": {
-    name: "magic-card-gradient",
-    type: "components:example",
-    files: ["registry/components/example/magic-card-gradient.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/magic-card-gradient")),
-  },
   "login-form-demo": {
     name: "login-form-demo",
     type: "components:example",
@@ -191,15 +177,19 @@ const example: Registry = {
     component: React.lazy(() => import("@/registry/components/example/text-reveal-demo")),
   },
 
-  //Fancy fullscreen
+  //On scroll animations
   "swipe-grid-demo": {
     name: "swipe-grid-demo",
     type: "components:example",
     files: ["registry/components/example/swipe-grid-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/swipe-grid-demo")),
   },
-
-  //On scroll animations
+  "perspective-grid-demo": {
+    name: "perspective-grid-demo",
+    type: "components:example",
+    files: ["registry/components/example/perspective-grid-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/perspective-grid-demo")),
+  },
   "zoom-parallax-demo": {
     name: "zoom-parallax-demo",
     type: "components:example",
