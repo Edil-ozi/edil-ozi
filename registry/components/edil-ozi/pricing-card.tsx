@@ -34,16 +34,16 @@ const PricingCard: FC<Props> = ({
     >
       <div className="flex h-full flex-col justify-between">
         <div className="mb-4 lg:mb-6 xl:mb-8">
-          <h3 className="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl xl:text-4xl">{heading}</h3>
+          <h3 className="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl xl:text-4xl text-white">{heading}</h3>
           <p className="text-gray-300 lg:text-base xl:text-xl">{description}</p>
         </div>
         <div>
           <div className="mb-3 flex space-x-2 xl:mb-4">
-            <span className="text-3xl font-extrabold lg:text-4xl xl:text-5xl">${discount ? withDiscount : price}</span>
+            <span className="text-3xl font-extrabold lg:text-4xl xl:text-5xl text-white">${discount ? withDiscount : price}</span>
             {discount && <span className="text-gray-400 line-through md:text-lg lg:text-xl xl:text-2xl">{price}$</span>}
           </div>
           {discount && (
-            <div className="origin-center-right absolute right-[-50%] top-0 w-full -translate-x-6 translate-y-4 rotate-45 bg-gradient-to-r from-blue-500 to-purple-500 text-center lg:text-lg xl:text-xl">
+            <div className="origin-center-right absolute right-[-50%] top-0 w-full -translate-x-6 translate-y-4 rotate-45 bg-gradient-to-r from-blue-500 to-purple-500 text-center lg:text-lg xl:text-xl text-white">
               {discount}%
             </div>
           )}

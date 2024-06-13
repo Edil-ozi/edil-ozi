@@ -49,6 +49,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Checkboxes",
+          href: "/docs/components/checkboxes",
+          label: "New",
+          items: [],
+        },
+        {
           title: "Toggle Inputs",
           href: "/docs/components/toggle-inputs",
           label: "New",
