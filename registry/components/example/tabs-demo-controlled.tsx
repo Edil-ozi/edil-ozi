@@ -18,9 +18,11 @@ const tabs = [
 ]
 
 export default function TabsDemo() {
+  const [selected, setSelected] = useState()
   return (
     <div className="z-10 w-full p-3">
-      <TabContainer>
+      <div className="px-6 py-2">Selected tab: {selected}</div>
+      <TabContainer onChange={setSelected}>
         <Tabs>
           {tabs.map(({title}) => <Tab key={title} value={title}>{title}</Tab>)}
         </Tabs>
