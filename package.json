@@ -28,6 +28,7 @@
     "framer-motion": "^11.2.10",
     "gsap": "^3.12.5",
     "jotai": "^2.8.1",
+    "lenis": "^1.1.3",
     "lucide-react": "^0.379.0",
     "next": "14.2.3",
     "next-contentlayer": "^0.3.4",

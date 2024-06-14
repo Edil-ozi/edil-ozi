@@ -125,6 +125,12 @@ export const docsConfig: DocsConfig = {
         },
 
         {
+          title: "Two way parallax",
+          href: "/docs/components/two-way-parallax",
+          items: [],
+        },
+
+        {
           title: "Zoom Parallax",
           href: "/docs/components/zoom-parallax",
           items: [],
