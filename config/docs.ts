@@ -51,13 +51,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Checkboxes",
           href: "/docs/components/checkboxes",
-          label: "New",
           items: [],
         },
         {
           title: "Toggle Inputs",
           href: "/docs/components/toggle-inputs",
-          label: "New",
           items: [],
         },
       ],
@@ -74,7 +72,6 @@ export const docsConfig: DocsConfig = {
           title: "Drawer",
           href: "/docs/components/drawer",
           items: [],
-          label: "New",
         },
         {
           title: "Login Form",
@@ -90,7 +87,6 @@ export const docsConfig: DocsConfig = {
           title: "Logo Carousel",
           href: "/docs/components/logo-carousel",
           items: [],
-          label: "New",
         },
       ],
     },
@@ -128,6 +124,7 @@ export const docsConfig: DocsConfig = {
           title: "Two way parallax",
           href: "/docs/components/two-way-parallax",
           items: [],
+          label: "New",
         },
 
         {

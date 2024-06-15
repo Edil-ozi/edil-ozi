@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
+//optional hook for smooth scrolling
+import useLenis from "@/hooks/useLenis";
+
 const images = [
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=40&w=640",
   "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=40&w=640",
@@ -67,10 +70,13 @@ const SwipeGrid = () => {
     setLoading(false)
   }
 
+  useLenis()
+
   useEffect(() => {
     //make sure we run this function only once
     if (!hasRun.current && grid.current) {
       applyAnimation();
+      window.scrollTo({ top: 0 })
       hasRun.current = true;
     }
   }, [grid])

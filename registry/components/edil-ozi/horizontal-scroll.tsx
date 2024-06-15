@@ -2,6 +2,9 @@ import { FC, useRef } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
 import Image from "next/image";
 
+//optional hook for smooth scrolling
+import useLenis from "@/hooks/useLenis";
+
 interface Props {
   images: string[];
 }
@@ -14,6 +17,8 @@ const HorizontalScrollCarousel: FC<Props> = ({ images }) => {
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-90%"]);
 
+  useLenis()
+
   return (
     <section
       ref={targetRef}
@@ -25,10 +30,7 @@ const HorizontalScrollCarousel: FC<Props> = ({ images }) => {
           className="flex gap-4"
         >
           {images.map((src) => (
-            <Card
-              src={src}
-              key={src}
-            />
+            <Card src={src} key={src} />
           ))}
         </motion.div>
       </div>

@@ -56,8 +56,10 @@ const LoginForm: FC<Props> = ({ classes }) => {
                         [e.target.name]: e.target.value,
                       }))
                     }
-                    type={type}
-                    name={type}
+                    type={type || 'text'}
+
+                    //name must be unique
+                    name={title}
                     id={title}
                     className={`block w-full rounded-md border border-gray-300 bg-gray-100 p-2.5 text-black outline-none focus:ring focus:ring-stone-400 sm:text-sm ${classes}`}
                     placeholder={placeholder}
