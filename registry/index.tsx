@@ -84,6 +84,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/horizontal-scroll.tsx"],
   },
+  "infinite-scroll": {
+    name: "infinite-scroll",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/infinite-scroll.tsx"],
+  },
   "two-way-parallax": {
     name: "two-way-parallax",
     type: "components:ui",
@@ -206,6 +211,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/horizontal-scroll-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/horizontal-scroll-demo")),
+  },
+  "infinite-scroll-demo": {
+    name: "infinite-scroll-demo",
+    type: "components:example",
+    files: ["registry/components/example/infinite-scroll-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/infinite-scroll-demo")),
   },
   "two-way-parallax-demo": {
     name: "two-way-parallax-demo",

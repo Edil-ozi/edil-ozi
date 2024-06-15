@@ -121,6 +121,13 @@ export const docsConfig: DocsConfig = {
         },
 
         {
+          title: "Infinite Scroll",
+          href: "/docs/components/infinite-scroll",
+          items: [],
+          label: "New",
+        },
+
+        {
           title: "Two way parallax",
           href: "/docs/components/two-way-parallax",
           items: [],
