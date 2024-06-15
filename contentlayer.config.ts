@@ -1,64 +1,3 @@
-// // contentlayer.config.ts
-// import { defineDocumentType, defineNestedType, makeSource } from "contentlayer/source-files";
-// import rehypeAutolinkHeadings from "rehype-autolink-headings";
-// import rehypePrettyCode from "rehype-pretty-code";
-
-// import rehypeSlug from "rehype-slug";
-// import remarkGfm from "remark-gfm";
-// import { BlogPosting, WithContext } from "schema-dts";
-// import { visit } from "unist-util-visit";
-// import { env } from "./env.mjs";
-// import { rehypeComponent } from "./lib/rehype-component";
-
-// /** @type {import('contentlayer/source-files').ComputedFields} */
-// const computedFields = {
-//   url: {
-//     type: "string",
-//     resolve: (post: any) => `/${post._raw.flattenedPath}`,
-//   },
-//   image: {
-//     type: "string",
-//     resolve: (post: any) => `/api/og?title=${encodeURI(post.title)}`,
-//   },
-//   slug: {
-//     type: "string",
-//     resolve: (doc: any) => `/${doc._raw.flattenedPath}`,
-//   },
-//   slugAsParams: {
-//     type: "string",
-//     resolve: (doc: any) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
-//   },
-//   structuredData: {
-//     type: "json",
-//     resolve: (doc: any) =>
-//       ({
-//         "@context": "https://schema.org",
-//         "@type": `BlogPosting`,
-//         headline: doc.title,
-//         datePublished: doc.date,
-//         dateModified: doc.date,
-//         description: doc.summary,
-//         image: doc.image,
-//       } as WithContext<BlogPosting>),
-//   },
-// };
-
-// export const Page = defineDocumentType(() => ({
-//   name: "Page",
-//   filePathPattern: `pages/**/*.mdx`,
-//   contentType: "mdx",
-//   fields: {
-//     title: {
-//       type: "string",
-//       required: true,
-//     },
-//     description: {
-//       type: "string",
-//     },
-//   },
-//   // @ts-ignore
-//   computedFields,
-// contentlayer.config.ts
 import { defineDocumentType, defineNestedType, makeSource } from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -156,6 +95,11 @@ export const Doc = defineDocumentType(() => ({
     featured: {
       type: "boolean",
       default: false,
+      required: false,
+    },
+    tools: {
+      type: "list",
+      of: { type: "string" },
       required: false,
     },
     toc: { type: "boolean", default: true, required: false },
