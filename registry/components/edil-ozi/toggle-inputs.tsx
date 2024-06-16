@@ -4,7 +4,7 @@ import useCopyToClipboard from "@/hooks/useCopyToClipboard";
 
 import CardWrapper from "@/components/card-wrapper";
 
-interface Props { }
+interface Props {}
 
 const ToggleInputs: FC<Props> = () => {
   const { copy } = useCopyToClipboard();

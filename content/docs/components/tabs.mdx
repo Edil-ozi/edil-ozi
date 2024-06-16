@@ -1,7 +1,7 @@
 ---
 title: Tabs
 date: 2024-05-21
-description: Animated Tabs
+description: Animated & Light Tabs to level up your project.
 ---
 
 <ComponentPreview name="tabs-demo" />
@@ -24,12 +24,15 @@ components/edil-ozi/tabs.tsx
 
 ### Getting selected tab
 
-Use " onChange " prop, and send setState function.
+Use " onChange " prop, and send setState function. Example: Here we use our Pricing-Card Component, and change its price depend on selected tab instead of creating two panels.
 
 <ComponentPreview name="tabs-demo-controlled" />
 
 ## Props
 
-| Prop name   | Type     | Default | Description                        |
-| ----------- | -------- | ------- | ---------------------------------- |
-
+| Prop name | Type | Default | Description |
+| --------- | ---- | ------- | ----------- |
+| className |string| -       | ClassName for components |
+| onChange  | function | -   | onChange prop for TbasContainer, use it to have a choosed one outside of component |
+| value     | string or number | required | Required value. One value for tab and panel. |
+| activeClassName | string | - | Classname for active(selected) tab. |

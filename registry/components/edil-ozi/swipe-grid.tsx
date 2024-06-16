@@ -30,19 +30,19 @@ const SwipeGrid = () => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Child elements of grid
-    const gridItems = grid.current?.querySelectorAll('.grid__item');
-    const gridItemsInner = [...gridItems].map(item => item.querySelector('.grid__item-inner'));
+    const gridItems = grid.current?.querySelectorAll(".grid__item");
+    const gridItemsInner = [...gridItems].map((item) => item.querySelector(".grid__item-inner"));
 
     // Define GSAP timeline with ScrollTrigger
     const timeline = gsap.timeline({
-      defaults: { ease: 'none' },
+      defaults: { ease: "none" },
       scrollTrigger: {
         trigger: gridWrap.current,
-        start: 'top bottom+=5%',
-        end: 'bottom top-=5%',
+        start: "top bottom+=5%",
+        end: "bottom top-=5%",
         scrub: true,
         // markers: true // Optional: for debugging
-      }
+      },
     });
 
     grid.current.style.perspective = '1000px';
@@ -51,10 +51,10 @@ const SwipeGrid = () => {
 
     timeline
       .set(gridWrap.current, {
-        rotationY: 25
+        rotationY: 25,
       })
       .set(gridItems, {
-        z: () => gsap.utils.random(-1600, 200)
+        z: () => gsap.utils.random(-1600, 200),
       })
       .fromTo(gridItems, {
         xPercent: () => gsap.utils.random(-1000, -500)
@@ -77,7 +77,7 @@ const SwipeGrid = () => {
       window.scrollTo({ top: 0 })
       hasRun.current = true;
     }
-  }, [grid])
+  }, [grid]);
 
   return (
     <div className="w-full overflow-hidden z-10 bg-stone-200 dark:bg-stone-900">

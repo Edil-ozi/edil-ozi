@@ -13,15 +13,12 @@ const Buttons: FC<Props> = () => {
     {
       name: "Base",
 
-
       component: (
-        <button className="px-8 py-2 text-black dark:text-white text-sm rounded-md font-semibold transition hover:bg-gray-100 dark:hover:bg-gray-900 focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-700 focus:outline-none">
+        <button className="rounded-md px-8 py-2 text-sm font-semibold text-black transition hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:text-white dark:hover:bg-gray-900 dark:focus:ring-gray-700">
           Base
         </button>
       ),
     },
-
-
 
     {
       name: "Shimmer",
@@ -111,7 +108,7 @@ const Buttons: FC<Props> = () => {
       component: (
         <button
           type="button"
-          className="relative overflow-hidden rounded-sm border-2 border-solid border-emerald-500 px-4 py-2 text-sm text-black transition-colors duration-700 ease-out before:absolute before:-left-10 before:top-0 before:z-[-1] before:h-full before:w-[0%] before:skew-x-[45deg] before:bg-emerald-500 before:transition-all before:delay-75 before:duration-700 before:content-[''] hover:before:w-[150%] focus:before:w-[150%] focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-1 focus:ring-offset-white dark:border-emerald-700 dark:text-white dark:before:bg-emerald-700 dark:focus:ring-emerald-800 dark:focus:ring-offset-black"
+          className="relative overflow-hidden rounded-sm border-2 border-solid border-emerald-500 px-4 py-2 text-sm text-black transition-colors duration-700 ease-out before:absolute before:-left-10 before:top-0 before:z-[-1] before:h-full before:w-[0%] before:skew-x-[45deg] before:bg-emerald-500 before:transition-all before:delay-75 before:duration-700 before:content-[''] hover:before:w-[150%] focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-1 focus:ring-offset-white focus:before:w-[150%] dark:border-emerald-700 dark:text-white dark:before:bg-emerald-700 dark:focus:ring-emerald-800 dark:focus:ring-offset-black"
         >
           Diagonal Swipe
         </button>
@@ -155,13 +152,12 @@ const Buttons: FC<Props> = () => {
       component: (
         <button
           type="button"
-          className="h-10 rounded-md transition border border-cyan-700 px-6 text-center text-sm font-medium text-cyan-700 hover:bg-cyan-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-transparent dark:border-cyan-500 dark:text-cyan-500 dark:hover:bg-cyan-600 dark:hover:text-white dark:focus:ring-cyan-800"
+          className="h-10 rounded-md border border-cyan-700 px-6 text-center text-sm font-medium text-cyan-700 transition hover:bg-cyan-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-transparent dark:border-cyan-500 dark:text-cyan-500 dark:hover:bg-cyan-600 dark:hover:text-white dark:focus:ring-cyan-800"
         >
           Submit
         </button>
       ),
     },
-
   ];
 
   return (

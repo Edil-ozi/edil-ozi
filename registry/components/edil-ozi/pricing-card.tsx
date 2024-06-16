@@ -30,7 +30,7 @@ const PricingCard: FC<Props> = ({
   })();
   return (
     <div
-      className={`relative w-full min-w-56 max-w-[300px] transform overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-br from-indigo-900 to-gray-900 p-6 shadow-lg transition duration-300 hover:scale-[none] md:hover:scale-105 lg:p-8 xl:min-w-[310px] ${className}`}
+      className={`relative w-full min-w-56 max-w-[300px] transform overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-br from-indigo-800 to-gray-900 p-6 shadow-lg transition duration-300 hover:scale-[none] md:hover:scale-105 lg:p-8 xl:min-w-[310px] ${className}`}
     >
       <div className="flex h-full flex-col justify-between">
         <div className="mb-4 lg:mb-6 xl:mb-8">
@@ -61,7 +61,7 @@ const PricingCard: FC<Props> = ({
                 className={`flex items-center`}
               >
                 <svg
-                  className="mr-2 h-5 w-5 text-green-400"
+                  className="mr-2 h-5 min-w-5 text-green-400"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
