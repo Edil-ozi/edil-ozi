@@ -50,6 +50,12 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/logo-carousel.tsx"],
   },
+  //Fancy
+  "canvas-cursor": {
+    name: "canvas-cursor",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/canvas-cursor.tsx"],
+  },
 
   //Text animations
   "infinite-text": {
@@ -166,6 +172,14 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/accordion-demo-withDisabled.tsx"],
     component: React.lazy(() => import("@/registry/components/example/accordion-demo-withDisabled")),
+  },
+
+  //Fance 
+  "canvas-cursor-demo": {
+    name: "canvas-cursor-demo",
+    type: "components:example",
+    files: ["registry/components/example/canvas-cursor-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/canvas-cursor-demo")),
   },
 
   //Text animations

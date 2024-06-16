@@ -91,12 +91,17 @@ export const docsConfig: DocsConfig = {
       ],
     },
 
-    // {
-    //   title: "Fancy Components",
-    //   items: [
-
-    //   ],
-    // },
+    {
+      title: "Fancy Components",
+      items: [
+        {
+          title: "Canvas Cursor",
+          href: "/docs/components/canvas-cursor",
+          items: [],
+          label: "New",
+        },
+      ],
+    },
 
     {
       title: "On scroll animations",
