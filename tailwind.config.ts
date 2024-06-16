@@ -47,9 +47,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        keyframes: {
-
-        },
+        keyframes: {},
         animation: {},
       },
       borderRadius: {
@@ -72,7 +70,7 @@ const config: Config = {
         "0%,70%,100%": { opacity: "1" },
         "20%,50%": { opacity: "0" },
       },
-      "shimmer": {
+      shimmer: {
         from: {
           backgroundPosition: "0 0",
         },
@@ -84,11 +82,11 @@ const config: Config = {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(calc(-100% - 2rem))" },
       },
-      "fadeIn": {
+      fadeIn: {
         from: { opacity: "0" },
         to: { opacity: "100" },
       },
-      "pulse": {
+      pulse: {
         "0%": {
           boxShadow: "0 0 0 #0B6E4F90",
           rotate: "{20deg}",
@@ -106,7 +104,7 @@ const config: Config = {
           rotate: "0",
         },
       },
-      "wave": {
+      wave: {
         "50%": {
           transform: "scale(0.9)",
         },
@@ -116,16 +114,16 @@ const config: Config = {
       "accordion-down": "accordion-down 0.5s ease-in-out forwards",
       "accordion-up": "accordion-up 0.2s ease-out",
       "caret-blink": "caret-blink 1.25s ease-out infinite",
-      "shimmer": "shimmer 2s linear infinite",
+      shimmer: "shimmer 2s linear infinite",
       "logo-carousel": "logo-carousel 16s linear infinite",
-      "fadeIn": "fadeIn 0.2s ease-in-out forwards",
-      "pulse": "pulse 500ms ease-in-out",
-      "wave": "wave 300ms ease",
-      "like": "like 400ms ease",
-      "dislike": "dislike 400ms ease",
-      "bookmark": "bookmark 300ms ease",
-      "circle": "circle 300ms ",
-      "circles": "circles 300ms",
+      fadeIn: "fadeIn 0.2s ease-in-out forwards",
+      pulse: "pulse 500ms ease-in-out",
+      wave: "wave 300ms ease",
+      like: "like 400ms ease",
+      dislike: "dislike 400ms ease",
+      bookmark: "bookmark 300ms ease",
+      circle: "circle 300ms ",
+      circles: "circles 300ms",
     },
   },
   plugins: [require("tailwindcss-animate")],

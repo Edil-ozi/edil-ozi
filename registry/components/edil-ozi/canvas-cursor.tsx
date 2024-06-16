@@ -1,16 +1,18 @@
-'use client'
-import { useEffect } from 'react';
+"use client";
+import { useEffect } from "react";
 
-import { renderCanvas } from '@/hooks/CanvasCursor'
+import { renderCanvas } from "@/hooks/CanvasCursor";
 
 const CanvasCursor = () => {
-
   useEffect(() => renderCanvas(), []);
   return (
-    <div className=" w-full h-20 flex items-center justify-center text-black bg-neutral-200 z-10 rounded-md">
+    <div className="z-10 flex h-20 w-full items-center justify-center rounded-md bg-neutral-200 text-black">
       <h1>Try it on the whole page</h1>
-      <canvas className="pointer-events-none fixed inset-0" id="canvas"></canvas>
+      <canvas
+        className="pointer-events-none fixed inset-0"
+        id="canvas"
+      ></canvas>
     </div>
-  )
+  );
 };
-export default CanvasCursor
+export default CanvasCursor;

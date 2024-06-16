@@ -128,7 +128,7 @@ const example: Registry = {
     files: ["registry/components/example/toggle-inputs-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/toggle-inputs-demo")),
   },
-  
+
   //Clean Components
   "login-form-demo": {
     name: "login-form-demo",
@@ -191,7 +191,7 @@ const example: Registry = {
     component: React.lazy(() => import("@/registry/components/example/accordion-demo-withDisabled")),
   },
 
-  //Fance 
+  //Fance
   "canvas-cursor-demo": {
     name: "canvas-cursor-demo",
     type: "components:example",

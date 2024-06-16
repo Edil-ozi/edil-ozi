@@ -7,10 +7,10 @@ settings:
 importers:
   .:
     dependencies:
-      '@gsap/react':
+      "@gsap/react":
         specifier: ^2.1.1
         version: 2.1.1
-      '@radix-ui/react-accordion':
+      "@radix-ui/react-accordion":
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       "@radix-ui/react-alert-dialog":
@@ -223,11 +223,13 @@ packages:
       "@effect-ts/otel-node":
         optional: true
 
-  '@darkroom.engineering/tempus@0.0.46':
-    resolution: {integrity: sha512-s5vav3KMHYezvUCl4ee5epg0oimF6M8C9gAaKxFnFaTvX2q3ywFDryIv6XLd0mRFUt3S1uHDJqKaiEcs2ZVSvw==}
+  "@darkroom.engineering/tempus@0.0.46":
+    resolution:
+      { integrity: sha512-s5vav3KMHYezvUCl4ee5epg0oimF6M8C9gAaKxFnFaTvX2q3ywFDryIv6XLd0mRFUt3S1uHDJqKaiEcs2ZVSvw== }
 
-  '@effect-ts/core@0.60.5':
-    resolution: {integrity: sha512-qi1WrtJA90XLMnj2hnUszW9Sx4dXP03ZJtCc5DiUBIOhF4Vw7plfb65/bdBySPoC9s7zy995TdUX1XBSxUkl5w==}
+  "@effect-ts/core@0.60.5":
+    resolution:
+      { integrity: sha512-qi1WrtJA90XLMnj2hnUszW9Sx4dXP03ZJtCc5DiUBIOhF4Vw7plfb65/bdBySPoC9s7zy995TdUX1XBSxUkl5w== }
 
   "@effect-ts/otel-exporter-trace-otlp-grpc@0.15.1":
     resolution:
@@ -478,12 +480,14 @@ packages:
     engines: { node: ">=6" }
     hasBin: true
 
-  '@gsap/react@2.1.1':
-    resolution: {integrity: sha512-apGPRrmpqxvl1T6Io1KgT8tFU+IuACI6z4zmT7t8+PASserJeLVRFJdSNUFA2Xb/eVkZI1noE8LIrY/w/oJECw==}
+  "@gsap/react@2.1.1":
+    resolution:
+      { integrity: sha512-apGPRrmpqxvl1T6Io1KgT8tFU+IuACI6z4zmT7t8+PASserJeLVRFJdSNUFA2Xb/eVkZI1noE8LIrY/w/oJECw== }
 
-  '@humanwhocodes/config-array@0.11.14':
-    resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
-    engines: {node: '>=10.10.0'}
+  "@humanwhocodes/config-array@0.11.14":
+    resolution:
+      { integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg== }
+    engines: { node: ">=10.10.0" }
 
   "@humanwhocodes/module-importer@1.0.1":
     resolution:
@@ -2659,10 +2663,11 @@ packages:
     engines: { node: ">=0.10" }
 
   lenis@1.1.3:
-    resolution: {integrity: sha512-Ny62QbNKFdnYPutULPMCgXU6YADKgkICBke41snSXDH1p9iIA1w1+RiHSfJEoMaRCa1SXer4Rzv0f4txCQcQpg==}
+    resolution:
+      { integrity: sha512-Ny62QbNKFdnYPutULPMCgXU6YADKgkICBke41snSXDH1p9iIA1w1+RiHSfJEoMaRCa1SXer4Rzv0f4txCQcQpg== }
     peerDependencies:
-      react: '>=17.0.0'
-      react-dom: '>=17.0.0'
+      react: ">=17.0.0"
+      react-dom: ">=17.0.0"
     peerDependenciesMeta:
       react:
         optional: true
@@ -4238,9 +4243,9 @@ snapshots:
       ts-pattern: 4.3.0
       type-fest: 3.13.1
 
-  '@darkroom.engineering/tempus@0.0.46': {}
+  "@darkroom.engineering/tempus@0.0.46": {}
 
-  '@effect-ts/core@0.60.5':
+  "@effect-ts/core@0.60.5":
     dependencies:
       "@effect-ts/system": 0.57.5
 
@@ -4401,12 +4406,12 @@ snapshots:
       protobufjs: 7.3.0
       yargs: 17.7.2
 
-  '@gsap/react@2.1.1':
+  "@gsap/react@2.1.1":
     dependencies:
       gsap: 3.12.5
       react: 18.3.1
 
-  '@humanwhocodes/config-array@0.11.14':
+  "@humanwhocodes/config-array@0.11.14":
     dependencies:
       "@humanwhocodes/object-schema": 2.0.3
       debug: 4.3.4
@@ -6461,7 +6466,7 @@ snapshots:
 
   lenis@1.1.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@darkroom.engineering/tempus': 0.0.46
+      "@darkroom.engineering/tempus": 0.0.46
     optionalDependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)

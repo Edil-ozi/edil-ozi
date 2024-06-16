@@ -54,14 +54,20 @@ const InfiniteText: FC<Props> = ({ text, speed = 0.1 }) => {
           alt="bg"
         />
         <div className="absolute">
-          <div ref={slider}
-            className="relative m-0 flex whitespace-nowrap">
-            <p ref={firstText}
-              className="m-0 mr-3 text-4xl font-medium text-white md:text-6xl lg:text-7xl">
+          <div
+            ref={slider}
+            className="relative m-0 flex whitespace-nowrap"
+          >
+            <p
+              ref={firstText}
+              className="m-0 mr-3 text-4xl font-medium text-white md:text-6xl lg:text-7xl"
+            >
               {text}
             </p>
-            <p ref={secondText}
-              className="m-0 text-4xl font-medium text-white md:text-6xl lg:text-7xl">
+            <p
+              ref={secondText}
+              className="m-0 text-4xl font-medium text-white md:text-6xl lg:text-7xl"
+            >
               {text}
             </p>
           </div>

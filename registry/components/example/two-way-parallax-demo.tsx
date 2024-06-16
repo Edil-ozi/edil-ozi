@@ -18,10 +18,10 @@ const TwoWayParallaxDemo = () => {
   ];
   return (
     <section className="w-full pb-[30vh]">
-      <div className="text-2xl font-medium text-center pb-[30vh]">Scroll Down</div>
+      <div className="pb-[30vh] text-center text-2xl font-medium">Scroll Down</div>
       <TwoWayParallax images={images} />
-    </section >
-  )
+    </section>
+  );
 };
 
-export default TwoWayParallaxDemo
+export default TwoWayParallaxDemo;

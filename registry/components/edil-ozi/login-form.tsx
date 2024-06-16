@@ -56,8 +56,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
                         [e.target.name]: e.target.value,
                       }))
                     }
-                    type={type || 'text'}
-
+                    type={type || "text"}
                     //name must be unique
                     name={title}
                     id={title}

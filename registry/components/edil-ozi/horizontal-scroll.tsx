@@ -17,7 +17,7 @@ const HorizontalScrollCarousel: FC<Props> = ({ images }) => {
 
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-90%"]);
 
-  useLenis()
+  useLenis();
 
   return (
     <section
@@ -30,7 +30,10 @@ const HorizontalScrollCarousel: FC<Props> = ({ images }) => {
           className="flex gap-4"
         >
           {images.map((src) => (
-            <Card src={src} key={src} />
+            <Card
+              src={src}
+              key={src}
+            />
           ))}
         </motion.div>
       </div>
