@@ -1,3 +1,4 @@
+
 import {
   createContext,
   FC,
@@ -14,7 +15,8 @@ interface TabsProps {
   value?: string | number;
   onChange?: any;
   children?: ReactNode;
-
+  className?: string;
+  activeClassName?: string;
 }
 interface TabProps {
   value: string;
@@ -44,7 +46,7 @@ const useTabsContext = (): TabsContextType => {
   return context;
 };
 
-const TabContainer: FC<TabsProps> = ({children, onChange}) => {
+const TabContainer: FC<TabsProps> = ({children, onChange, className}) => {
   const [active, setActive] = useState({item: "", width: 0, height: 0, left: 0, top: 0});
 
   const handleChange = (value: ActiveItem) => {
@@ -54,12 +56,14 @@ const TabContainer: FC<TabsProps> = ({children, onChange}) => {
 
   return (
     <TabsContext.Provider value={{ active, handleChange }}>
-      {children}
+      <div className={className}>
+        {children}
+      </div>
     </TabsContext.Provider>
   );
 }
 
-const Tabs: FC<TabsProps> = ({ children }) => {
+const Tabs: FC<TabsProps> = ({ children, className, activeClassName }) => {
   const {active, handleChange} = useTabsContext()
 
   const ref = useRef<HTMLDivElement>(null)
@@ -79,9 +83,9 @@ const Tabs: FC<TabsProps> = ({ children }) => {
   }, [])
 
   return (
-      <div ref={ref} className="w-full flex flex-nowrap overflow-auto rounded-md bg-slate-100 gap-2 p-2 bg shadow-md relative dark:bg-zinc-900">
+      <div ref={ref} className={cn("flex flex-nowrap overflow-auto rounded-md bg-slate-100 gap-2 p-2 bg shadow-md relative dark:bg-zinc-900", className)}>
         {children}
-        <span style={{width: active.width, height: active.height, left: active.left, top: active.top, margin: 0}} className="absolute z-1 h-full bg-slate-200 dark:bg-zinc-800 rounded-sm transition-all duration-200 ease-in-out"></span>
+        <span style={{width: active.width, height: active.height, left: active.left, top: active.top, margin: 0}} className={cn("absolute z-1 h-full bg-slate-200 dark:bg-zinc-800 rounded-sm transition-all duration-200 ease-in-out", activeClassName)}></span>
       </div>
   );
 };
@@ -111,7 +115,7 @@ const Tab: FC<TabProps> = ({ children, className, value }) => {
       onClick={handleClick}
       ref={ref}
       className={cn(
-        `px-6 py-2 rounded-sm z-10 text-nowrap`,
+        `px-6 py-2 rounded-sm z-10 text-nowrap transition-colors duration-200`,
         className,
       )}
     >

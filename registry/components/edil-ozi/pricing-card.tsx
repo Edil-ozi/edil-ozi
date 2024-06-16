@@ -30,20 +30,20 @@ const PricingCard: FC<Props> = ({
   })();
   return (
     <div
-      className={`relative w-full min-w-56 max-w-[300px] transform overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-br from-indigo-900 to-gray-900 p-6 shadow-lg transition duration-300 hover:scale-[none] md:hover:scale-105 lg:p-8 xl:min-w-[310px] ${className}`}
+      className={`relative w-full min-w-56 max-w-[300px] transform overflow-hidden rounded-lg border border-gray-800 bg-gradient-to-br from-indigo-800 to-gray-900 p-6 shadow-lg transition duration-300 hover:scale-[none] md:hover:scale-105 lg:p-8 xl:min-w-[310px] ${className}`}
     >
       <div className="flex h-full flex-col justify-between">
         <div className="mb-4 lg:mb-6 xl:mb-8">
-          <h3 className="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl xl:text-4xl">{heading}</h3>
+          <h3 className="mb-2 text-2xl font-semibold lg:mb-4 lg:text-3xl xl:text-4xl text-white">{heading}</h3>
           <p className="text-gray-300 lg:text-base xl:text-xl">{description}</p>
         </div>
         <div>
           <div className="mb-3 flex space-x-2 xl:mb-4">
-            <span className="text-3xl font-extrabold lg:text-4xl xl:text-5xl">${discount ? withDiscount : price}</span>
+            <span className="text-3xl font-extrabold lg:text-4xl xl:text-5xl text-white">${discount ? withDiscount : price}</span>
             {discount && <span className="text-gray-400 line-through md:text-lg lg:text-xl xl:text-2xl">{price}$</span>}
           </div>
           {discount && (
-            <div className="origin-center-right absolute right-[-50%] top-0 w-full -translate-x-6 translate-y-4 rotate-45 bg-gradient-to-r from-blue-500 to-purple-500 text-center lg:text-lg xl:text-xl">
+            <div className="origin-center-right absolute right-[-50%] top-0 w-full -translate-x-6 translate-y-4 rotate-45 bg-gradient-to-r from-blue-500 to-purple-500 text-center lg:text-lg xl:text-xl text-white">
               {discount}%
             </div>
           )}
@@ -61,7 +61,7 @@ const PricingCard: FC<Props> = ({
                 className={`flex items-center`}
               >
                 <svg
-                  className="mr-2 h-5 w-5 text-green-400"
+                  className="mr-2 h-5 min-w-5 text-green-400"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
