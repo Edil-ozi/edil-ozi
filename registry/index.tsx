@@ -20,7 +20,7 @@ const ui: Registry = {
   },
 
   //Clean Components
-  "accordion": {
+  accordion: {
     name: "accordion",
     type: "components:ui",
     files: ["registry/components/edil-ozi/accordion.tsx"],
@@ -40,12 +40,12 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/pricing-card.tsx"],
   },
-  "drawer": {
+  drawer: {
     name: "drawer",
     type: "components:ui",
     files: ["registry/components/edil-ozi/drawer.tsx"],
   },
-  "tabs": {
+  tabs: {
     name: "tabs",
     type: "components:ui",
     files: ["registry/components/edil-ozi/tabs.tsx"],
