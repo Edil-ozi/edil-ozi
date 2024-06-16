@@ -8,9 +8,8 @@ description:
 
 <Steps>
 
-### Create New Files
-
-Create new file `canvasCusor` and copy the following code
+### Create CanvasCursor.js file 
+Copy and paste the following code
 
 ```js
   function n(e) {
@@ -117,7 +116,7 @@ Create new file `canvasCusor` and copy the following code
       ctx.globalCompositeOperation = "source-over";
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
       ctx.globalCompositeOperation = "lighter";
-      ctx.strokeStyle = "hsla(" + Math.round(f.update()) + ",90%,50%,0.25)";
+      ctx.strokeStyle = "hsla(" + Math.round(f.update()) + ",50%,50%,0.35)";
       ctx.lineWidth = 1;
       for (var e, t = 0; t < E.trails; t++) {
         (e = lines[t]).update();
@@ -179,10 +178,9 @@ Create new file `canvasCusor` and copy the following code
     resizeCanvas();
   };
 
-
 ```
 
-
+### Create New Component
 Copy and paste the following code into your project.
 
 ```text
@@ -192,9 +190,3 @@ components/edil-ozi/canvas-cursor.tsx
 <ComponentSource name="canvas-cursor" />
 
 </Steps>
-
-## Props
-
-| Prop name | Type     | Default | Description   |
-| --------- | -------- | ------- | ------------- |
-| images    | string[] | -       | Array of urls |

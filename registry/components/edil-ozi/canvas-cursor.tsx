@@ -1,19 +1,15 @@
 'use client'
-import { FC, useEffect, } from 'react';
+import { useEffect } from 'react';
 
+import { renderCanvas } from '@/hooks/CanvasCursor'
 
-import { renderCanvas } from './CanvasCursor.js'
-
-
-interface Props { };
-
-const CanvasCursor: FC<Props> = () => {
+const CanvasCursor = () => {
 
   useEffect(() => renderCanvas(), []);
   return (
-    <div className=" w-full h-[800px] bg-slate-700 z-10">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ab facere sapiente totam quia voluptatum atque reiciendis, unde incidunt excepturi vitae perspiciatis quasi maxime nam veritatis, similique ducimus vel! Repudiandae, doloremque voluptatem laborum praesentium, eos deleniti id veniam, repellendus officia doloribus aperiam atque. Aperiam voluptas natus repellendus laboriosam, hic quisquam.
-      <canvas className="bg-skin-base pointer-events-none fixed inset-0" id="canvas"></canvas>
+    <div className=" w-full h-20 flex items-center justify-center text-black bg-neutral-200 z-10 rounded-md">
+      <h1>Try it on the whole page</h1>
+      <canvas className="pointer-events-none fixed inset-0" id="canvas"></canvas>
     </div>
   )
 };

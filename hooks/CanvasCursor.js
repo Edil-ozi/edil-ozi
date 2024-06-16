@@ -22,8 +22,8 @@ function Line(e) {
 
 Line.prototype = {
   init: function (e) {
-    this.spring = e.spring + 0.1 * Math.random() - 0.05;
-    this.friction = E.friction + 0.01 * Math.random() - 0.005;
+    this.spring = e.spring + 0.1 * Math.random() - 0.02;
+    this.friction = E.friction + 0.01 * Math.random() - 0.002;
     this.nodes = [];
     for (var t, n = 0; n < E.size; n++) {
       t = new Node();
@@ -76,7 +76,7 @@ Line.prototype = {
 function onMousemove(e) {
   function o() {
     lines = [];
-    for (var e = 0; e < E.trails; e++) lines.push(new Line({ spring: 0.45 + (e / E.trails) * 0.025 }));
+    for (var e = 0; e < E.trails; e++) lines.push(new Line({ spring: 0.4 + (e / E.trails) * 0.025 }));
   }
   function c(e) {
     e.touches
@@ -102,7 +102,7 @@ function render() {
     ctx.globalCompositeOperation = "source-over";
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.globalCompositeOperation = "lighter";
-    ctx.strokeStyle = "hsla(" + Math.round(f.update()) + ",90%,50%,0.25)";
+    ctx.strokeStyle = "hsla(" + Math.round(f.update()) + ",50%,50%,0.35)";
     ctx.lineWidth = 1;
     for (var e, t = 0; t < E.trails; t++) {
       (e = lines[t]).update();
