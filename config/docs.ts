@@ -88,6 +88,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/logo-carousel",
           items: [],
         },
+        {
+          title: "Tabs",
+          href: "/docs/components/tabs",
+          items: [],
+        },
       ],
     },
 
