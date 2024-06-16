@@ -1,7 +1,11 @@
-import { FC } from "react";
 import CanvasCursor from "@/registry/components/edil-ozi/canvas-cursor";
 
 const CanvasCursorDemo = () => {
-  return <CanvasCursor />;
+  return (
+    <div className="z-10 flex h-20 w-full items-center justify-center rounded-md bg-neutral-200 text-black">
+      <h1>Try it on the whole page</h1>
+      <CanvasCursor />
+    </div>
+  );
 };
 export default CanvasCursorDemo;

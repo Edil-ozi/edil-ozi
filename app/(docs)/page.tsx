@@ -4,6 +4,7 @@ import { buttonVariants } from "@/components/ui/button";
 
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
+import CanvasCursor from "@/registry/components/edil-ozi/canvas-cursor";
 import Link from "next/link";
 
 export default function Home() {
@@ -15,8 +16,8 @@ export default function Home() {
           Embrace efficiency in development.
         </PageHeaderHeading>
         <PageHeaderDescription>
-          Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open
-          Source.
+          Choose our seamlessly integrated components for a customizable and accessible user experience. Trust in our
+          code for a seamless design that matches your brand aesthetic.
         </PageHeaderDescription>
         <PageActions>
           <Link
@@ -36,6 +37,7 @@ export default function Home() {
           </Link>
         </PageActions>
       </PageHeader>
+      <CanvasCursor />
     </div>
   );
 }
