@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useRef } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 //optional hook for smooth scrolling
 import useLenis from "@/hooks/useLenis";
@@ -19,23 +21,18 @@ const images = [
 ];
 
 const PerspectiveGrid = () => {
-  const grid = useRef<any>(null);
-  const gridWrap = useRef<any>(null);
-  const hasRun = useRef(false);
+  const grid = useRef<HTMLDivElement | null>(null);
+  const gridWrap = useRef<HTMLDivElement | null>(null);
 
-  const applyAnimation = () => {
-    // Register ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
+  const { contextSafe } = useGSAP()
 
-    // Child elements of grid
-    const gridItems = grid.current?.querySelectorAll('.grid__item');
-    const gridItemsInner = Array.from(gridItems).map((item: any) => item.querySelector('.grid__item-inner'));
+  const applyAnimation = contextSafe(() => {
+    if (!grid.current || !gridWrap.current) return;
 
-    // Define GSAP timeline with ScrollTrigger
     const timeline = gsap.timeline({
       defaults: { ease: 'none' },
       scrollTrigger: {
-        trigger: gridWrap.current,
+        trigger: '.grid_wrap',
         start: 'top bottom+=5%',
         end: 'bottom top-=5%',
         scrub: true,
@@ -43,54 +40,58 @@ const PerspectiveGrid = () => {
       }
     });
 
-    grid.current.style.perspective = '1300px';
-    gridWrap.current.style.width = "105%"
-    grid.current.style.height = '200%'
-    grid.current.style.width = '115%'
-    gridWrap.current.style.gridTemplateColumns = "repeat(6, minmax(4, 1fr)";
+    Object.assign(grid.current.style, {
+      perspective: '1300px',
+      height: '200%',
+      width: '115%'
+    });
+
+    Object.assign(gridWrap.current.style, {
+      width: '105%',
+      gridTemplateColumns: 'repeat(6, minmax(4, 1fr))'
+    });
 
     timeline
-      .set(gridItems, {
+      .set(".grid_item", {
         transformOrigin: '50% 0%',
         z: () => gsap.utils.random(-4000, -2000),
         rotationX: () => gsap.utils.random(-65, -25),
         filter: 'brightness(0%)',
       })
-      .to(gridItems, {
+      .to(".grid_item", {
         xPercent: () => gsap.utils.random(-150, 150),
         yPercent: () => gsap.utils.random(-300, 300),
         rotationX: 0,
         filter: 'brightness(200%)',
       }, 0)
-      .to(gridWrap.current, {
+      .to('.grid_wrap', {
         z: 6500,
       }, 0)
-      .fromTo(gridItemsInner, {
-        scale: 1.5,
-      }, {
-        scale: 0.5,
-      }, 0);
-  };
+      .fromTo(".grid_item-inner", { scale: 1.5, }, { scale: 0.5, }, 0);
+  });
 
   useLenis()
-  useEffect(() => {
-    // Make sure we run this function only once
-    if (!hasRun.current && grid.current) {
-      applyAnimation();
-      window.scrollTo({ top: 0 });
-      hasRun.current = true;
-    }
-  }, [grid]);
+
+  console.log('rerender')
+  useGSAP(() => {
+    // Register Scroll Triggren
+    gsap.registerPlugin(ScrollTrigger);
+    window.scrollTo({ top: 0 });
+    applyAnimation()
+
+  }, { scope: grid.current!, dependencies: [] })
+
+
 
   return (
     <div className="w-full overflow-hidden z-10 bg-stone-200 dark:bg-stone-900">
       <h1 className="text-center h-[50%] pt-20 pb-10 text-4xl">Scroll Down</h1>
       <div className="relative py-[20vh] w-full">
         <div ref={grid} className="grid place-items-center w-full" style={{ perspective: "1200px" }}>
-          <div style={{ transformStyle: 'preserve-3d' }} ref={gridWrap} className="h-auto w-full grid grid-cols-4 gap-[2vw]">
+          <div ref={gridWrap} style={{ transformStyle: 'preserve-3d' }} className="grid_wrap h-auto w-full grid grid-cols-4 gap-[2vw]">
             {Array(7).fill(images).flat().map((src, index) => (
-              <div key={index} className="grid__item aspect-[1.5] w-full h-auto overflow-hidden relative rounded-md grid place-items-center">
-                <Image objectFit="cover" quality={40} src={src} fill={true} className="grid__item-inner relative min-w-[300px] h-auto" alt="image" />
+              <div key={index} className="grid_item aspect-[1.5] w-full h-auto overflow-hidden relative rounded-md grid place-items-center">
+                <Image objectFit="cover" quality={40} src={src} fill={true} className="grid_item-inner relative min-w-[300px] h-auto" alt="image" />
               </div>
             ))}
           </div>
