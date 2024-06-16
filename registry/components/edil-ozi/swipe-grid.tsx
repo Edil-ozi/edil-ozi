@@ -1,8 +1,12 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+//optional hook for smooth scrolling
+import useLenis from "@/hooks/useLenis";
 
 const images = [
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=40&w=640",
@@ -20,7 +24,6 @@ const SwipeGrid = () => {
   const gridWrap = useRef<any>(null);
 
   const hasRun = useRef(false)
-  const [loading, setLoading] = useState(false)
 
   const applyAnimation = () => {
     // Register Scroll Triggren
@@ -43,8 +46,8 @@ const SwipeGrid = () => {
     });
 
     grid.current.style.perspective = '1000px';
+    grid.current.style.width = 'calc(1 / 0.65 * 100%)'
     grid.current.style.height = 'calc(1 / 0.5 * 100%)'
-    grid.current.style.width = 'calc(1 / 0.5 * 100%)'
 
     timeline
       .set(gridWrap.current, {
@@ -63,43 +66,35 @@ const SwipeGrid = () => {
       }, {
         scale: .5
       }, 0)
-
-    setLoading(false)
   }
+
+  useLenis()
 
   useEffect(() => {
     //make sure we run this function only once
     if (!hasRun.current && grid.current) {
       applyAnimation();
+      window.scrollTo({ top: 0 })
       hasRun.current = true;
     }
   }, [grid])
 
   return (
-    <>
-      {!loading ? (
-        <div className="w-full overflow-hidden z-10 bg-stone-200 dark:bg-stone-900">
-          <h1 className="text-center h-[50%] py-20 text-4xl">Scroll Down</h1>
-          <section className="relative mb-[20vh]">
-            <div ref={grid} className="grid place-items-center h-[calc(1/1*100%)] w-[calc(1/1*100%)] p-8" style={{ perspective: '1500px' }}>
-              <div style={{ transformStyle: 'preserve-3d' }} ref={gridWrap} className="h-auto w-full grid grid-cols-4 gap-[2vw]">
-                {images.concat(images, images, images, images).map((src, index) => (
-                  <div key={index} className="grid__item aspect-[1.5] w-full h-auto overflow-hidden relative rounded-md grid place-items-center ring-1 ring-offset-2 ring-offset-slate-200 dark:ring-offset-slate-900 ring-slate-600 dark:ring-slate-400">
-                    <Image objectFit="cover" quality={40} src={src} fill={true} className="grid__item-inner relative min-w-[300px] h-auto" alt="image" />
-                  </div>
-                ))}
+    <div className="w-full overflow-hidden z-10 bg-stone-200 dark:bg-stone-900">
+      <h1 className="text-center h-[50%] py-20 text-4xl">Scroll Down</h1>
+      <section className="relative mb-[20vh]">
+        <div ref={grid} className="grid place-items-center h-[calc(1/1*100%)] w-[calc(1/1*100%)] p-8" style={{ perspective: '1500px' }}>
+          <div style={{ transformStyle: 'preserve-3d' }} ref={gridWrap} className="h-auto w-full grid grid-cols-4 gap-[2vw]">
+            {Array(5).fill(images).flat().map((src, index) => (
+              <div key={index} className="grid__item aspect-[1.5] w-full h-auto overflow-hidden relative rounded-md grid place-items-center ring-1 ring-offset-2 ring-offset-slate-200 dark:ring-offset-slate-900 ring-slate-600 dark:ring-slate-400">
+                <Image objectFit="cover" quality={40} src={src} fill={true} className="grid__item-inner relative min-w-[300px] h-auto" alt="image" />
               </div>
-            </div>
-          </section>
-          <h2 className="text-center text-2xl pb-20 dark:text-gray-600 text-gray-500">Refresh The Page For Different Image Positions</h2>
+            ))}
+          </div>
         </div>
-
-      ) : (
-        <p>loading...</p>
-      )
-      }
-    </>
-
+      </section>
+      <h2 className="text-center text-2xl pb-20 dark:text-gray-600 text-gray-500">Refresh The Page For Different Image Positions</h2>
+    </div>
   );
 };
 

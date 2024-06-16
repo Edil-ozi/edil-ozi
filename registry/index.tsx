@@ -13,6 +13,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/base-inputs.tsx"],
   },
+  checkboxes: {
+    name: "checkboxes",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/checkboxes.tsx"],
+  },
   "toggle-inputs": {
     name: "toggle-inputs",
     type: "components:ui",
@@ -29,11 +34,6 @@ const ui: Registry = {
     name: "login-form",
     type: "components:ui",
     files: ["registry/components/edil-ozi/login-form.tsx"],
-  },
-  "magic-card": {
-    name: "magic-card",
-    type: "components:ui",
-    files: ["registry/components/edil-ozi/magic-card.tsx"],
   },
   "pricing-card": {
     name: "pricing-card",
@@ -68,14 +68,17 @@ const ui: Registry = {
     files: ["registry/components/edil-ozi/text-reveal.tsx"],
   },
 
-  //Fancy components
+  //On scroll animations
   "swipe-grid": {
     name: "swipe-grid",
     type: "components:ui",
     files: ["registry/components/edil-ozi/swipe-grid.tsx"],
   },
-
-  //On scroll animations
+  "perspective-grid": {
+    name: "perspective-grid",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/perspective-grid.tsx"],
+  },
   "zoom-parallax": {
     name: "zoom-parallax",
     type: "components:ui",
@@ -85,6 +88,11 @@ const ui: Registry = {
     name: "horizontal-scroll",
     type: "components:ui",
     files: ["registry/components/edil-ozi/horizontal-scroll.tsx"],
+  },
+  "two-way-parallax": {
+    name: "two-way-parallax",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/two-way-parallax.tsx"],
   },
 };
 
@@ -102,25 +110,20 @@ const example: Registry = {
     files: ["registry/components/example/base-inputs-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/base-inputs-demo")),
   },
+  "checkboxes-demo": {
+    name: "checkboxes-demo",
+    type: "components:example",
+    files: ["registry/components/example/checkboxes-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/checkboxes-demo")),
+  },
   "toggle-inputs-demo": {
     name: "toggle-inputs-demo",
     type: "components:example",
     files: ["registry/components/example/toggle-inputs-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/toggle-inputs-demo")),
   },
+  
   //Clean Components
-  "magic-card-demo": {
-    name: "magic-card-demo",
-    type: "components:example",
-    files: ["registry/components/example/magic-card-demo.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/magic-card-demo")),
-  },
-  "magic-card-gradient": {
-    name: "magic-card-gradient",
-    type: "components:example",
-    files: ["registry/components/example/magic-card-gradient.tsx"],
-    component: React.lazy(() => import("@/registry/components/example/magic-card-gradient")),
-  },
   "login-form-demo": {
     name: "login-form-demo",
     type: "components:example",
@@ -196,15 +199,19 @@ const example: Registry = {
     component: React.lazy(() => import("@/registry/components/example/text-reveal-demo")),
   },
 
-  //Fancy fullscreen
+  //On scroll animations
   "swipe-grid-demo": {
     name: "swipe-grid-demo",
     type: "components:example",
     files: ["registry/components/example/swipe-grid-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/swipe-grid-demo")),
   },
-
-  //On scroll animations
+  "perspective-grid-demo": {
+    name: "perspective-grid-demo",
+    type: "components:example",
+    files: ["registry/components/example/perspective-grid-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/perspective-grid-demo")),
+  },
   "zoom-parallax-demo": {
     name: "zoom-parallax-demo",
     type: "components:example",
@@ -216,6 +223,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/horizontal-scroll-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/horizontal-scroll-demo")),
+  },
+  "two-way-parallax-demo": {
+    name: "two-way-parallax-demo",
+    type: "components:example",
+    files: ["registry/components/example/two-way-parallax-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/two-way-parallax-demo")),
   },
 };
 

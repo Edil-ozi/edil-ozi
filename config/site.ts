@@ -1,12 +1,10 @@
 export const siteConfig = {
   name: "Edil Ozi",
-  // url: "https://ui.shadcn.com",
-  // ogImage: "https://ui.shadcn.com/og.jpg",
-  // description:
-  //   "Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.",
+  url: "https://edilozi.com",
+  description: "Beautiful, Open Source components that you can copy and paste into your projects.",
   links: {
-    shadcn: "https://ui.shadcn.com/",
-    twitter: "https://twitter.com/shadcn",
+    edilozi: "https://edilozi.com",
+    // twitter: "https://twitter.com/shadcn",
     github: "https://github.com/Shatlyk1011/edil-ozi",
   },
 };

@@ -18,7 +18,7 @@ const nextConfig = {
       },
       {
         source: "/docs/components",
-        destination: "/docs/components/magic-card",
+        destination: "/docs/components/accordion",
         permanent: true,
       },
     ];

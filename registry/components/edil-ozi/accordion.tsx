@@ -140,7 +140,7 @@ const AccordionItem: FC<AccordionItemProps> = ({ children, value, className, dis
     <div
       style={{ height: `${height}px` }}
       className={cn(
-        `box-content overflow-hidden border-b border-b-neutral-300 bg-slate-100 shadow-sm shadow-zinc-600 transition-all duration-200 ease-in-out first:rounded-t-sm last:rounded-b-sm dark:border-b-neutral-800 dark:bg-zinc-900 dark:shadow-zinc-950 ${isExpanded && "border-b-0 first:mb-4 last:mt-4 [&:not(:last-child):not(:first-child)]:my-4"} ${disabled && "bg-neutral-300 text-neutral-500 dark:bg-neutral-800"}`,
+        `box-content overflow-hidden border-b border-b-neutral-300 bg-gray-100 shadow-sm shadow-zinc-400 transition-all duration-200 ease-in-out first:rounded-t-sm last:rounded-b-sm dark:border-b-neutral-800 dark:bg-zinc-900 dark:shadow-zinc-950 ${isExpanded && "border-b-0 first:mb-4 last:mt-4 [&:not(:last-child):not(:first-child)]:my-4"} ${disabled && "bg-neutral-300 text-neutral-500 dark:bg-neutral-800"}`,
         className,
       )}
     >

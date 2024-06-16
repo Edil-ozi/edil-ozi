@@ -62,7 +62,15 @@ export default async function DocPage({ params }: DocPageProps) {
             </p>
           )}
         </div>
-        {doc.links ? (
+        {doc.tools && (
+          <div className="flex items-center space-x-2 pt-4">
+            <h3 className="text-sm font-medium ">Additional tools:</h3>
+            {doc.tools?.map((tool => (
+              <p className={cn(badgeVariants({ variant: "additional" }))} key={tool}>{tool}</p>
+            )))}
+          </div>
+        )}
+        {doc.links && (
           <div className="flex items-center space-x-2 pt-4">
             {doc.links?.doc && (
               <Link
@@ -87,7 +95,7 @@ export default async function DocPage({ params }: DocPageProps) {
               </Link>
             )}
           </div>
-        ) : null}
+        )}
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
         </div>

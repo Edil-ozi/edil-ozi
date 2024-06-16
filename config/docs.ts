@@ -49,9 +49,13 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Checkboxes",
+          href: "/docs/components/checkboxes",
+          items: [],
+        },
+        {
           title: "Toggle Inputs",
           href: "/docs/components/toggle-inputs",
-          label: "New",
           items: [],
         },
       ],
@@ -68,16 +72,10 @@ export const docsConfig: DocsConfig = {
           title: "Drawer",
           href: "/docs/components/drawer",
           items: [],
-          label: "New",
         },
         {
           title: "Login Form",
           href: "/docs/components/login-form",
-          items: [],
-        },
-        {
-          title: "Magic Card",
-          href: "/docs/components/magic-card",
           items: [],
         },
         {
@@ -89,7 +87,6 @@ export const docsConfig: DocsConfig = {
           title: "Logo Carousel",
           href: "/docs/components/logo-carousel",
           items: [],
-          label: "New",
         },
         {
           title: "Tabs",
@@ -116,9 +113,23 @@ export const docsConfig: DocsConfig = {
           label: "New",
         },
         {
+          title: "Perspective Grid",
+          href: "/docs/components/perspective-grid",
+          items: [],
+          label: "New",
+        },
+
+        {
           title: "Horizontal Scroll",
           href: "/docs/components/horizontal-scroll",
           items: [],
+        },
+
+        {
+          title: "Two way parallax",
+          href: "/docs/components/two-way-parallax",
+          items: [],
+          label: "New",
         },
 
         {
@@ -149,7 +160,7 @@ export const docsConfig: DocsConfig = {
     //   title: "React Hooks",
     //   items: [
     //     {
-    //       title: "Magic-card",
+    //       title: "Some usefull hook",
     //       href: "/docs/components/mag2ic-card",
     //       items: [],
     //     },
