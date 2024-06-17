@@ -12,7 +12,7 @@ export default function Home() {
     <div className="container relative">
       <PageHeader>
         {/* <Announcement /> */}
-        <PageHeaderHeading className="text-balance bg-gradient-to-br from-black from-30% to-black/60 bg-clip-text py-6 font-semibold leading-none tracking-tighter text-transparent dark:from-white dark:to-white/40">
+        <PageHeaderHeading className="text-balance bg-gradient-to-br from-black from-30% to-black/60 bg-clip-text py-6 font-bold leading-none tracking-tighter text-transparent dark:from-white dark:to-white/40">
           Embrace efficiency in development.
         </PageHeaderHeading>
         <PageHeaderDescription>
