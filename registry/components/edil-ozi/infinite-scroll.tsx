@@ -11,7 +11,7 @@ const images = [
 ];
 
 const InfiniteScroll = () => {
-  const container = useRef<any>(null)
+  const container = useRef<any>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -19,7 +19,7 @@ const InfiniteScroll = () => {
       smoothWheel: true,
       infinite: true,
       wrapper: container.current!,
-      content: container.current!.querySelector('.scroll-content')
+      content: container.current!.querySelector('.scroll-content'),
     });
 
     function raf(time: number) {
@@ -32,18 +32,17 @@ const InfiniteScroll = () => {
   }, []);
 
   return (
-
-    <section ref={container} className="scroll-area relative flex w-full flex-col z-10 gap-6 p-8 max-h-[700px] overflow-auto">
-      <div className="scroll-content h-[1000px] overflow-y-scroll">
-        {[...images, ...images].map(src => (
-          React.cloneElement(
-            <div key={Math.random()} className="w-full max-w-[800px] mx-auto h-[600px] relative">
-              <Image src={src} objectFit="cover" fill={true} alt="img" />
-            </div>
-          )
+    <section ref={container} className="relative scroll-auto w-full z-10 p-8 h-screen overflow-hidden">
+      {/* adjust  gap using `vh` unit for your case */}
+      <div data-scroll className="scroll-content grid grid-cols-3 gap-[5vh]">
+        {[...images, ...images, ...images, ...images].map((src, index) => (
+          // adjust  height using `vh` unit for your case
+          <div key={index} className="w-full mx-auto h-[43vh] relative">
+            <Image src={src} objectFit="cover" fill={true} alt={`img-${index}`} />
+          </div>
         ))}
       </div>
     </section>
-  )
+  );
 };
 export default InfiniteScroll

@@ -19,3 +19,12 @@ components/edil-ozi/infinite-scroll.tsx
 <ComponentSource name="infinite-scroll" />
 
 </Steps>
+
+### Note
+ Adjust `gap` and `height` using `vh` unit for your case.
+
+ For fullscreen sections, consider using the following formula to get the values you need
+ ```js
+  gap = 4vh
+  height = (100 / 2) - (gap / 2) //= 48vh
+  So the result will be `gap = 4vh` and `height = 48vh` 
