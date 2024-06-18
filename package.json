@@ -51,7 +51,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "mdast-util-toc": "^6.1.1",
-    "postcss": "^8",
+    "postcss": "8.4.32",
     "prettier": "^3.3.0",
     "prettier-plugin-tailwindcss": "^0.6.1",
     "rehype-autolink-headings": "^6.1.1",
