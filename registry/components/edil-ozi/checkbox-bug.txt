@@ -1,0 +1,18 @@
+// {
+    //   name: "With animation",
+    //   component: (
+    //     <label className="relative block cursor-pointer select-none rounded-full text-2xl outline-2 outline-offset-1 outline-[#0b6e4f] has-[:checked]:rounded-md has-[:focus]:outline">
+
+    //       <input
+    //         type="checkbox"
+    //         className="peer absolute h-0 w-0 opacity-0"
+    //       />
+            ***начало
+    //       <div className="relative left-0 top-0 h-[1.5rem] w-[1.5rem] rounded-[50%] bg-slate-200 transition duration-300 after:absolute after:left-[0.5rem] after:top-1 after:hidden after:h-[0.8rem] after:w-[0.5rem] after:rotate-45 after:border-b-[0.2rem] after:border-r-[0.2rem] after:content-[''] focus:outline-[#0b6e4f] peer-checked:animate-pulse peer-checked:rounded-lg peer-checked:bg-[#0b6e4f] peer-checked:after:block"></div>
+            ***конец
+    //     </label>
+    //   ),
+    //   extra: ` theme: { extend:{ keyframes: { "pulse": { "0%": { boxShadow: "0 0 0 #0B6E4F90", rotate: "{20deg}", }, "50%": { rotate: "-20deg", }, "75%": { boxShadow: "0 0 0 10px #0B6E4F60", }, "100%": { boxShadow: "0 0 0 13px #0B6E4F30", rotate: "0", }, } } "animation": { "pulse": "pulse 500ms ease-in-out", }, } }`,
+// },
+
+в стилях этого компонента есть нестыковки которые не дают билдить продукт. я покапался, узнал где именно, но до конца не смог решить проблему... Обозначил участок ***начало и ***конец внутри которого стили мешают билду. Поробуй исправить, может у тебя получится...

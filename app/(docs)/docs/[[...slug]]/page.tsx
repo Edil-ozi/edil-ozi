@@ -57,13 +57,13 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
         },
       ],
     },
-    // twitter: {
-    //   card: "summary_large_image",
-    //   title: doc.title,
-    //   description: doc.description,
-    //   images: [doc.image],
-    //   creator: "@dillionverma",
-    // },
+    twitter: {
+      card: "summary_large_image",
+      title: doc.title,
+      description: doc.description,
+      images: [doc.image],
+      creator: "@dillionverma",
+    },
   };
 }
 
