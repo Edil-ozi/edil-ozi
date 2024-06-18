@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
@@ -19,7 +19,7 @@ const InfiniteScroll = () => {
       smoothWheel: true,
       infinite: true,
       wrapper: container.current!,
-      content: container.current!.querySelector('.scroll-content'),
+      content: container.current!.querySelector(".scroll-content"),
     });
 
     function raf(time: number) {
@@ -32,17 +32,31 @@ const InfiniteScroll = () => {
   }, []);
 
   return (
-    <section ref={container} className="relative scroll-auto w-full z-10 p-8 h-screen overflow-hidden">
+    <section
+      ref={container}
+      className="relative z-10 h-screen w-full overflow-hidden scroll-auto p-8"
+    >
       {/* adjust  gap using `vh` unit for your case */}
-      <div data-scroll className="scroll-content grid grid-cols-3 gap-[5vh]">
+      <div
+        data-scroll
+        className="scroll-content grid grid-cols-3 gap-[5vh]"
+      >
         {[...images, ...images, ...images, ...images].map((src, index) => (
           // adjust  height using `vh` unit for your case
-          <div key={index} className="w-full mx-auto h-[43vh] relative">
-            <Image src={src} objectFit="cover" fill={true} alt={`img-${index}`} />
+          <div
+            key={index}
+            className="relative mx-auto h-[43vh] w-full"
+          >
+            <Image
+              src={src}
+              objectFit="cover"
+              fill={true}
+              alt={`img-${index}`}
+            />
           </div>
         ))}
       </div>
     </section>
   );
 };
-export default InfiniteScroll
+export default InfiniteScroll;

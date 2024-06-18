@@ -1,6 +1,6 @@
 import InfiniteScroll from "@/registry/components/edil-ozi/infinite-scroll";
 
 const InfiniteScrollDemo = () => {
-  return <InfiniteScroll />
+  return <InfiniteScroll />;
 };
-export default InfiniteScrollDemo
+export default InfiniteScrollDemo;

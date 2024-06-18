@@ -33,9 +33,7 @@ async function getDocFromParams({ params }: DocPageProps) {
   return doc;
 }
 
-export async function generateMetadata({
-  params,
-}: DocPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
   const doc = await getDocFromParams({ params });
 
   if (!doc) {
@@ -58,7 +56,6 @@ export async function generateMetadata({
           alt: siteConfig.name,
         },
       ],
-
     },
     // twitter: {
     //   card: "summary_large_image",
