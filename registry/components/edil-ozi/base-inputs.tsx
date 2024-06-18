@@ -3,7 +3,6 @@ import { FC } from "react";
 import useCopyToClipboard from "@/hooks/useCopyToClipboard";
 
 import CardWrapper from "@/components/card-wrapper";
-import { Toaster } from "sonner";
 
 interface Props {}
 

@@ -7,12 +7,14 @@ import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import Balancer from "react-wrap-balancer";
 
 import { getTableOfContents } from "@/lib/toc";
-import { cn } from "@/lib/utils";
+import { absoluteUrl, cn } from "@/lib/utils";
 import { badgeVariants } from "@/components/ui/badge";
 import { Mdx } from "@/components/mdx-components";
 import { DocPager } from "@/components/pager";
 import { ScrollArea } from "@/components/scroll-area";
 import { DashboardTableOfContents } from "@/components/toc";
+import { Metadata } from "next";
+import { siteConfig } from "@/config/site";
 
 interface DocPageProps {
   params: {
@@ -29,6 +31,43 @@ async function getDocFromParams({ params }: DocPageProps) {
   }
 
   return doc;
+}
+
+export async function generateMetadata({
+  params,
+}: DocPageProps): Promise<Metadata> {
+  const doc = await getDocFromParams({ params });
+
+  if (!doc) {
+    return {};
+  }
+
+  return {
+    title: `${doc.title} | Edil Ozi`,
+    description: doc.description,
+    openGraph: {
+      title: doc.title,
+      description: doc.description,
+      type: "article",
+      url: absoluteUrl(doc.slug),
+      images: [
+        {
+          url: doc.image,
+          width: 1200,
+          height: 630,
+          alt: siteConfig.name,
+        },
+      ],
+
+    },
+    // twitter: {
+    //   card: "summary_large_image",
+    //   title: doc.title,
+    //   description: doc.description,
+    //   images: [doc.image],
+    //   creator: "@dillionverma",
+    // },
+  };
 }
 
 export async function generateStaticParams(): Promise<DocPageProps["params"][]> {
