@@ -4,10 +4,10 @@ type IconProps = React.HTMLAttributes<SVGElement>;
 export const Icons = {
   logo: (props: IconProps) => (
     <svg width="100" height="100" viewBox="0 0 100 100" fill="red" {...props} xmlns="http://www.w3.org/2000/svg">
-      <line x1="86.5" y1="16" x2="86.5" y2="84" stroke="currentColor" stroke-width="5" />
-      <line x1="69" y1="16" x2="69" y2="84" stroke="currentColor" stroke-width="4" />
-      <line x1="51.5" y1="16" x2="51.5" y2="84" stroke="currentColor" stroke-width="3" />
-      <line x1="34" y1="16" x2="34" y2="84" stroke="currentColor" stroke-width="2" />
+      <line x1="86.5" y1="16" x2="86.5" y2="84" stroke="currentColor" strokeWidth="5" />
+      <line x1="69" y1="16" x2="69" y2="84" stroke="currentColor" strokeWidth="4" />
+      <line x1="51.5" y1="16" x2="51.5" y2="84" stroke="currentColor" strokeWidth="3" />
+      <line x1="34" y1="16" x2="34" y2="84" stroke="currentColor" strokeWidth="2" />
       <line x1="16.5" y1="16" x2="16.5" y2="84" stroke="currentColor" />
       <circle cx="78" cy="22" r="6" transform="rotate(-180 78 22)" fill="currentColor" />
       <circle cx="62" cy="33" r="5" transform="rotate(-180 62 33)" fill="currentColor" />

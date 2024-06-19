@@ -129,12 +129,12 @@ const BaseInputs: FC<Props> = () => {
       ),
     },
     {
-      name: "Enter text...",
+      name: "Shiny Border",
       component: (
         <input
           type="text"
           placeholder="Enter text..."
-          className="h-10 w-full rounded-sm border-2 border-gray-400 bg-gray-100 px-3 text-black focus:border-blue-500 focus:shadow-[0_0_0_0.2rem_rgba(0,123,255,0.30)] focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-600 dark:focus:shadow-[0_0_0_0.2rem_rgba(0,111,200,0.45)]"
+          className="h-10 w-full rounded-sm border-2 border-gray-400 bg-gray-100 px-3 text-black focus:border-blue-400 focus:shadow-[0_0_0_0.2rem_rgba(0,123,255,0.30)] focus:outline-none dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:border-blue-700 dark:focus:shadow-[0_0_0_0.2rem_rgba(0,111,200,0.35)]"
         />
       ),
     },

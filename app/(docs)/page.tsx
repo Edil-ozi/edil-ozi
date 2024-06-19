@@ -12,12 +12,11 @@ export default function Home() {
     <div className="container relative">
       <PageHeader>
         {/* <Announcement /> */}
-        <PageHeaderHeading className="text-balance bg-gradient-to-br from-black from-30% to-black/60 bg-clip-text py-6 font-bold leading-none tracking-tighter text-transparent dark:from-white dark:to-white/40">
-          Embrace efficiency in development.
+        <PageHeaderHeading className="text-balance bg-gradient-to-br from-black from-30% to-black/60 bg-clip-text font-bold leading-none tracking-tighter text-transparent dark:from-white dark:to-white/40 text-5xl md:text-6xl py-4">
+          UI Library For React Developers.
         </PageHeaderHeading>
-        <PageHeaderDescription>
-          Choose our seamlessly integrated components for a customizable and accessible user experience. Trust in our
-          code for a seamless design that matches your brand aesthetic.
+        <PageHeaderDescription className="text-xl">
+          Choose our seamlessly integrated components for a customizable and accessible user experience.  Embrace efficiency in development.
         </PageHeaderDescription>
         <PageActions>
           <Link

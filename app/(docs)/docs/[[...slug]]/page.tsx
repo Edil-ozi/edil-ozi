@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
       url: absoluteUrl(doc.slug),
       images: [
         {
-          url: doc.image,
+          url: siteConfig.ogImage,
           width: 1200,
           height: 630,
           alt: siteConfig.name,
@@ -62,7 +62,6 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
       title: doc.title,
       description: doc.description,
       images: [doc.image],
-      creator: "@dillionverma",
     },
   };
 }

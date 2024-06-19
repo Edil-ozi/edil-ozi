@@ -12,7 +12,7 @@ export default function SiteFooter() {
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            Edil-Ozi
+            Edilozi
           </a>{" "}
           on top of{" "}
           <a
