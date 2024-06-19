@@ -46,7 +46,7 @@ export default function Drawer({ open, setOpen, children, anchor = "left" }: Pro
       <div
         data-visible={isVisible ? "true" : "false"}
         onClick={closeDrawer}
-        className="fixed left-0 top-0 z-[100] flex h-[100dvh] w-screen bg-zinc-900/20 backdrop-blur-sm transition-all duration-200 data-[visible=true]:visible data-[visible=false]:invisible data-[visible=false]:opacity-0 data-[visible=true]:opacity-100"
+        className="fixed left-0 top-0 z-[100] flex h-[100dvh] w-screen bg-zinc-900/20  transition-all duration-200 data-[visible=true]:visible data-[visible=false]:invisible data-[visible=false]:opacity-0 data-[visible=true]:opacity-100"
       />
       <div
         data-visible={isVisible ? "true" : "false"}
