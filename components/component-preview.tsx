@@ -32,7 +32,7 @@ export function ComponentPreview({ name, children, className, align = "center", 
     }
 
     return <Component />;
-  }, [name, key]);
+  }, [name]);
 
   return (
     <div
