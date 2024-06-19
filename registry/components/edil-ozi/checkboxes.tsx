@@ -1,7 +1,7 @@
 import CardWrapper from "@/components/card-wrapper";
 import useCopyToClipboard from "@/hooks/useCopyToClipboard";
 
-function Checkboxes() {
+const Checkboxes = () => {
   const { copy } = useCopyToClipboard();
   const checkboxes = [
     {
