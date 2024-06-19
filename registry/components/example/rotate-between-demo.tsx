@@ -4,7 +4,7 @@ const RotateBetweenWords = () => {
   const words = ["CREATE", "LEARN", "ENJOY", "IMPRESS"];
 
   return (
-    <div className="w-full bg-slate-200 dark:bg-slate-800 px-4 my-4 rounded-lg ">
+    <div className="w-full bg-zinc-200 dark:bg-zinc-900 px-4 my-4 rounded-lg z-10">
       <div className="px-2 flex text-4xl h-20 items-center justify-start font-normal text-neutral-800 dark:text-gray-300 space-x-1">
         <p>Contribute us to</p>
         <RotateBetween
