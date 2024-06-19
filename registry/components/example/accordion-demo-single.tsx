@@ -4,7 +4,7 @@ type Accordion = {
   title: string;
   text: string;
 };
-export default function AccordionDemo() {
+const AccordionDemo = () => {
   const accordions: Accordion[] = [
     {
       title: "Why we?",
@@ -29,3 +29,5 @@ export default function AccordionDemo() {
     </div>
   );
 }
+
+export default AccordionDemo

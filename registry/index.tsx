@@ -73,6 +73,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/text-reveal.tsx"],
   },
+  "rotate-between": {
+    name: "rotate-between",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/rotate-between.tsx"],
+  },
 
   //On scroll animations
   "swipe-grid": {
@@ -216,6 +221,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/text-reveal-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/text-reveal-demo")),
+  },
+  "rotate-between-demo": {
+    name: "rotate-between-demo",
+    type: "components:example",
+    files: ["registry/components/example/rotate-between-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/rotate-between-demo")),
   },
 
   //On scroll animations

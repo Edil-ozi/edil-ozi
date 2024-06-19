@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { Dispatch, useCallback, useEffect, useState } from "react";
+import { Dispatch, FC, useCallback, useEffect, useState } from "react";
 
 type Anchor = "left" | "right" | "top" | "bottom";
 
@@ -16,8 +16,7 @@ const styles = {
   top: "top-0 w-full flex-col h-fit data-[visible=false]:translate-y-[-100%] data-[visible=true]:translate-y-0",
   bottom: "bottom-0 w-full flex-col h-fit data-[visible=false]:translate-y-[100%] data-[visible=true]:translate-y-0",
 };
-
-export default function Drawer({ open, setOpen, children, anchor = "left" }: Props) {
+const Drawer: FC<Props> = ({ open, setOpen, children, anchor = "left" }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const closeDrawer = useCallback(() => {
@@ -58,3 +57,5 @@ export default function Drawer({ open, setOpen, children, anchor = "left" }: Pro
     document.body as HTMLElement,
   );
 }
+
+export default Drawer

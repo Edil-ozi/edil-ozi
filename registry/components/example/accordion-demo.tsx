@@ -1,11 +1,11 @@
-import { Accordion, AccordionItem, AccordionSummary, AccordionDetails } from "../edil-ozi/accordion";
+import { Accordion, AccordionItem, AccordionSummary, AccordionDetails } from "@/registry/components/edil-ozi/accordion";
 
 type Accordion = {
   title: string;
   text: string;
   defaultExpanded?: boolean;
 };
-export default function AccordionDemo() {
+const AccordionDemo = () => {
   const accordions: Accordion[] = [
     {
       title: "Why we?",
@@ -31,3 +31,5 @@ export default function AccordionDemo() {
     </div>
   );
 }
+
+export default AccordionDemo

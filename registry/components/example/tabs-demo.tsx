@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { Tabs, Tab, TabContainer, TabPanel } from "@/registry/components/edil-ozi/tabs";
 
 const tabs = [
@@ -25,7 +23,7 @@ const tabs = [
   },
 ];
 
-export default function TabsDemo() {
+const TabsDemo = () => {
   return (
     <div className="z-10 w-full p-3">
       <TabContainer>
@@ -52,3 +50,5 @@ export default function TabsDemo() {
     </div>
   );
 }
+
+export default TabsDemo

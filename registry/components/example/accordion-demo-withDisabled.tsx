@@ -5,7 +5,7 @@ type Accordion = {
   text: string;
   disabled?: boolean;
 };
-export default function AccordionDemo() {
+const AccordionDemoDisabled = () => {
   const accordions: Accordion[] = [
     {
       title: "Why we?",
@@ -33,3 +33,6 @@ export default function AccordionDemo() {
     </div>
   );
 }
+
+
+export default AccordionDemoDisabled

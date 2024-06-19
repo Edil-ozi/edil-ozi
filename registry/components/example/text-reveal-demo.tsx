@@ -1,6 +1,6 @@
 import TextReveal from "@/registry/components/edil-ozi/text-reveal";
 
-export default function InfiniteTextDemo() {
+const InfiniteTextDemo = () => {
   const paragraph = "Edil ozi will change the way you design.";
 
   return (
@@ -9,3 +9,5 @@ export default function InfiniteTextDemo() {
     </div>
   );
 }
+
+export default InfiniteTextDemo

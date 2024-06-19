@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Tabs, Tab, TabContainer, TabPanel } from "@/registry/components/edil-ozi/tabs";
 import PricingCard from "../edil-ozi/pricing-card";
 
-export default function TabsDemo() {
+const TabsDemoControlled = () => {
   const [selected, setSelected] = useState("Manual");
 
   const tabs = ["Monthly", "Annual"];
@@ -75,3 +75,5 @@ export default function TabsDemo() {
     </div>
   );
 }
+
+export default TabsDemoControlled
