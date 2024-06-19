@@ -161,6 +161,11 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Rotate Between Words",
+          href: "/docs/components/rotate-between",
+          items: [],
+        },
+        {
           title: "Text Reveal",
           href: "/docs/components/text-reveal",
           items: [],

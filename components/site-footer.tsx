@@ -13,8 +13,8 @@ export default function SiteFooter() {
             className="font-medium underline underline-offset-4"
           >
             Edil-Ozi
-          </a>
-          {" "} on top of  {" "}
+          </a>{" "}
+          on top of{" "}
           <a
             href={"https://ui.shadcn.com/"}
             target="_blank"
