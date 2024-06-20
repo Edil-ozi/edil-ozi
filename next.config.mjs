@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: "/components",
-        destination: "/docs/components/animated-beam",
+        destination: "/docs/components/swipe-grid",
         permanent: true,
       },
       {
