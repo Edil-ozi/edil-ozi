@@ -1,10 +1,11 @@
 "use client";
-import { useEffect } from "react";
 
-import { renderCanvas } from "@/hooks/CanvasCursor";
+import useCanvasCursor from "@/hooks/CanvasCursor";
 
 const CanvasCursor = () => {
-  useEffect(() => renderCanvas(), []);
+
+  useCanvasCursor()
+
   return (
     <canvas
       className="pointer-events-none fixed inset-0"
