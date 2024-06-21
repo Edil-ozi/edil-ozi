@@ -17,7 +17,7 @@ const TwoWayParallaxDemo = () => {
     "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=640",
   ];
   return (
-    <section className="w-full pb-[30vh]">
+    <section className="w-full pb-[10vh]">
       <div className="pb-[30vh] text-center text-2xl font-medium">Scroll Down</div>
       <TwoWayParallax images={images} />
     </section>

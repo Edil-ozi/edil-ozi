@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FC, useRef } from "react";
-
+import { FC, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -12,47 +11,50 @@ interface Props {
 }
 
 const InfiniteText: FC<Props> = ({ text, speed = 0.1 }) => {
-  const firstText = useRef(null);
-  const secondText = useRef(null);
-  const slider = useRef(null);
+  const firstText = useRef<HTMLParagraphElement>(null);
+  const secondText = useRef<HTMLParagraphElement>(null);
+  const slider = useRef<HTMLDivElement>(null);
   let xPercent = 0;
   let direction = -1;
 
-  const animate2 = () => {
+  const { contextSafe } = useGSAP();
+
+  const animate = contextSafe(() => {
     if (xPercent < -100) xPercent = 0;
     if (xPercent > 0) xPercent = -100;
 
-    gsap.set(firstText.current, { xPercent });
-    gsap.set(secondText.current, { xPercent });
-    requestAnimationFrame(() => animate2());
-    xPercent += speed * direction;
-  };
+    if (firstText.current && secondText.current) {
+      gsap.set(firstText.current, { xPercent });
+      gsap.set(secondText.current, { xPercent });
+    }
 
-  useGSAP((context) => {
+    xPercent += speed * direction;
+    requestAnimationFrame(animate);
+  });
+
+  useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: 0,
-        // end: window.innerHeight,
-        scrub: 0.35,
-        onUpdate: (e) => (direction = e.direction * -1),
-      },
-      x: "-=300px",
-    });
+    if (slider.current) {
+      gsap.to(slider.current, {
+        scrollTrigger: {
+          trigger: document.documentElement,
+          start: 0,
+          scrub: 0.35,
+          onUpdate: (e) => (direction = e.direction * -1),
+        },
+        x: "-=300px",
+      });
+    }
 
-    context.add(() => requestAnimationFrame(animate2));
-  });
+    requestAnimationFrame(animate);
+  }, [animate]);
+
+  console.log('rerender');
+
   return (
     <div className="z-[10] h-[320px] w-full">
-      <div className="relative flex h-full items-center overflow-hidden rounded-lg">
-        <Image
-          src="https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2029"
-          objectFit="cover"
-          fill={true}
-          alt="bg"
-        />
+      <div className="relative flex h-full items-center overflow-hidden rounded-lg bg-gradient-to-br from-zinc-200 to-zinc-400 dark:from-zinc-800 from-30% dark:to-zinc-900">
         <div className="absolute">
           <div
             ref={slider}
@@ -60,13 +62,13 @@ const InfiniteText: FC<Props> = ({ text, speed = 0.1 }) => {
           >
             <p
               ref={firstText}
-              className="m-0 mr-3 text-4xl font-medium text-white md:text-6xl lg:text-7xl"
+              className="m-0 mr-3 text-4xl font-medium text-gray-700 dark:text-white md:text-6xl lg:text-7xl"
             >
               {text}
             </p>
             <p
               ref={secondText}
-              className="m-0 text-4xl font-medium text-white md:text-6xl lg:text-7xl"
+              className="m-0 text-4xl font-medium text-gray-700 dark:text-white md:text-6xl lg:text-7xl"
             >
               {text}
             </p>

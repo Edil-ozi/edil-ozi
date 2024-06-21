@@ -8,11 +8,16 @@ type Accordion = {
 const AccordionDemo = () => {
   const accordions: Accordion[] = [
     {
-      title: "Why we?",
-      text: "We made new future, new design, new abilities. very very very very very very very very very very very very very very very very very very very very very very very very very very very long text",
+      title: "Try light/dark modes",
+      text: "Our components provide the best user experience in both dark and light modes."
     },
-    { title: "Is it animated ?", text: "Just a little bit." },
-    { title: "How do I access documentation?", text: "There is below documentation about this API." },
+    {
+      title: "Implementing Responsive Design",
+      text: "To ensure our website looks great on all devices, we utilized a responsive design approach with CSS media queries and flexible grid layouts.",
+    },
+    {
+      title: "Optimizing Performance", text: "By lazy-loading images and leveraging browser caching, we significantly improved the performance and loading speed of our web application."
+    },
   ];
   return (
     <div className="z-10 w-full">

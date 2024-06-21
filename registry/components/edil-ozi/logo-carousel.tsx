@@ -8,7 +8,7 @@ interface Props {
   shadows?: boolean;
 }
 
-const LogoCarousel: FC<Props> = ({ logos, animate = true, shadows = true }) => {
+const LogoCarousel: FC<Props> = ({ logos, animate = true, shadows = false }) => {
   return (
     <div
       className="flex space-x-6 overflow-hidden"
@@ -29,7 +29,9 @@ const LogoCarousel: FC<Props> = ({ logos, animate = true, shadows = true }) => {
               className="h-10 w-28 px-2 brightness-0 dark:invert"
               alt={title}
             />
+            // <p>{title}</p>
           ))}
+
         </div>
       ))}
     </div>

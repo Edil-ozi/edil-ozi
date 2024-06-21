@@ -9,14 +9,14 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import useLenis from "@/hooks/useLenis";
 
 const images = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=40&w=640",
-  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=40&w=640",
-  "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=40&w=640",
-  "https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?q=80&w=640",
-  "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=640",
-  "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=640",
-  "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=640",
-  "https://images.unsplash.com/photo-1489365091240-6a18fc761ec2?q=40&w=640",
+  "https://images.unsplash.com/photo-1576831371356-d6e9411ae501?q=40&w=640",
+  "https://images.unsplash.com/photo-1454117096348-e4abbeba002c?q=80&w=640",
+  "https://images.unsplash.com/photo-1572756317709-fe9c15ced298?q=80&w=640",
+  "https://images.unsplash.com/photo-1595839072560-bac90c191b40?q=80&w=640",
+  "https://images.unsplash.com/photo-1588594276800-2de0522b3b73?q=80&w=640",
+  "https://images.unsplash.com/photo-1572756317709-fe9c15ced298?q=80&w=640",
+  "https://images.unsplash.com/photo-1482053450283-3e0b78b09a70?q=80&w=640",
+  "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?q=80&w=640",
 ];
 
 const SwipeGrid = () => {
@@ -58,22 +58,14 @@ const SwipeGrid = () => {
       })
       .fromTo(
         gridItems,
-        {
-          xPercent: () => gsap.utils.random(-1000, -500),
-        },
-        {
-          xPercent: () => gsap.utils.random(500, 1000),
-        },
+        { xPercent: () => gsap.utils.random(-1000, -500) },
+        { xPercent: () => gsap.utils.random(500, 1000) },
         0,
       )
       .fromTo(
         gridItemsInner,
-        {
-          scale: 2,
-        },
-        {
-          scale: 0.5,
-        },
+        { scale: 2 },
+        { scale: 0.5 },
         0,
       );
   };
@@ -109,7 +101,7 @@ const SwipeGrid = () => {
               .map((src, index) => (
                 <div
                   key={index}
-                  className="grid__item relative grid aspect-[1.5] h-auto w-full place-items-center overflow-hidden rounded-md ring-1 ring-slate-600 ring-offset-2 ring-offset-slate-200 dark:ring-slate-400 dark:ring-offset-slate-900"
+                  className="grid__item relative grid aspect-[1.5] h-auto w-full place-items-center overflow-hidden rounded-md ring-1"
                 >
                   <Image
                     objectFit="cover"

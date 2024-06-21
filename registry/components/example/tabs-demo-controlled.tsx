@@ -19,8 +19,8 @@ const TabsDemoControlled = () => {
     {
       heading: "Professional",
       description: "For Professional Usage",
-      price: selected === "Monthly" ? 9 : 94,
-      discount: 12,
+      price: selected === "Monthly" ? 15 : 149,
+      discount: 20,
       list: ["30+ Components", "10+ Animations", "With beautiful view", "Open Source", "Light Weight"],
       buttonText: "Book now!",
       className: "",
@@ -28,8 +28,8 @@ const TabsDemoControlled = () => {
     {
       heading: "Enterprise",
       description: "For Teams & Enterprises",
-      price: selected === "Monthly" ? 29 : 298,
-      discount: 18,
+      price: selected === "Monthly" ? 29 : 299,
+      discount: 30,
       list: ["Dedicated Support", "Everything in Professional plan", "With beautiful view", "training sessions"],
       buttonText: "Book now!",
       className: "",
@@ -48,7 +48,7 @@ const TabsDemoControlled = () => {
       >
         <Tabs
           className="flex justify-center bg-transparent shadow-none dark:bg-transparent"
-          activeClassName="bg-gradient-to-br from-indigo-700 to-purple-700 rounded-md shadow-md"
+          activeClassName="bg-gradient-to-br from-slate-600 to-slate-800 rounded-md shadow-md"
         >
           {tabs.map((title) => (
             <Tab

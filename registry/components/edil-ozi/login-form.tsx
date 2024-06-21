@@ -6,8 +6,7 @@ interface Props {
 }
 
 const LoginForm: FC<Props> = ({ classes }) => {
-  const [form, setForm] = useState({ email: "", password: "" });
-
+  const [form, setForm] = useState({ email: "", password: "", rememberMe: false });
   const inputs = [
     {
       title: "Email",
@@ -60,7 +59,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
                     //name must be equal to form key
                     name={title}
                     id={title}
-                    className={`block w-full rounded-md border border-gray-300 bg-gray-100 p-2.5 text-black outline-none focus:ring focus:ring-stone-400 sm:text-sm ${classes}`}
+                    className={`block w-full rounded-md border border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-400 placeholder:text-black/40 p-2.5 text-black outline-none focus:ring focus:ring-stone-400 sm:text-sm ${classes}`}
                     placeholder={placeholder}
                   />
                 </div>
@@ -70,9 +69,11 @@ const LoginForm: FC<Props> = ({ classes }) => {
                   <div className="flex h-5 items-center">
                     <input
                       id="remember"
+                      checked={form.rememberMe}
                       aria-describedby="remember"
+                      onChange={() => setForm((prev) => ({ ...prev, 'rememberMe': !form.rememberMe }))}
                       type="checkbox"
-                      className="h-4 w-4 rounded border bg-gray-100 outline-none focus:ring focus:ring-stone-400"
+                      className="h-4 w-4 rounded border  outline-none focus:ring focus:ring-stone-400"
                     />
                   </div>
                   <div className="ml-3 text-sm">
@@ -88,7 +89,7 @@ const LoginForm: FC<Props> = ({ classes }) => {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-md bg-green-500 px-5 py-2.5 text-center text-sm font-medium text-black outline-none focus:ring focus:ring-gray-200"
+                className="w-full rounded-md bg-emerald-400 dark:bg-emerald-600 px-5 py-2.5 text-center text-sm font-medium text-black outline-none focus:ring focus:ring-gray-200"
               >
                 Sign in
               </button>

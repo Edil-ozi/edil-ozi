@@ -123,7 +123,7 @@ const Tab: FC<TabProps> = ({ children, className, value }) => {
 
 const TabPanel: FC<TabProps> = ({ children, value, className }) => {
   const { active } = useTabsContext();
-  if (!(value === active.item)) return;
+  if (value !== active.item) return;
   return (
     <div className={cn("mt-2 rounded-md bg-slate-100 px-6 py-4 shadow-md dark:bg-zinc-900", className)}>{children}</div>
   );

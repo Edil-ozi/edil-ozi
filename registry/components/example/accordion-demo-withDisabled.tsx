@@ -7,13 +7,19 @@ type Accordion = {
 };
 const AccordionDemoDisabled = () => {
   const accordions: Accordion[] = [
-    {
-      title: "Why we?",
-      text: "We made new future, new design, new abilities. very very very very very very very very very very very very very very very very very very very very very very very very very very very long text",
+    { 
+      title: "How do I access documentation?",
+      text: "There is below documentation about this API."
     },
-    { title: "Is it animated ?", text: "Just a little bit." },
-    { title: "Disabled accordion", text: "How did you open it?", disabled: true },
-    { title: "How do I access documentation?", text: "There is below documentation about this API." },
+    {
+      title: "Form Validation Techniques",
+      text: "Implementing client-side form validation with JavaScript improved data integrity and provided immediate feedback to users on input errors.",
+    },
+    {
+      title: "Disabled accordion",
+      text: "How did you open it?",
+      disabled: true
+    },
   ];
   return (
     <div className="z-10 w-full">

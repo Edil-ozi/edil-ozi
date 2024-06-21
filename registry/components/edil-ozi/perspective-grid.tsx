@@ -10,14 +10,14 @@ import { useGSAP } from "@gsap/react";
 import useLenis from "@/hooks/useLenis";
 
 const images = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=40&w=640",
-  "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=40&w=640",
-  "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=40&w=640",
-  "https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?q=80&w=640",
-  "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=640",
-  "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?q=80&w=640",
-  "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=640",
-  "https://images.unsplash.com/photo-1489365091240-6a18fc761ec2?q=40&w=640",
+  "https://images.unsplash.com/photo-1576831371356-d6e9411ae501?q=40&w=640",
+  "https://images.unsplash.com/photo-1454117096348-e4abbeba002c?q=80&w=640",
+  "https://images.unsplash.com/photo-1572756317709-fe9c15ced298?q=80&w=640",
+  "https://images.unsplash.com/photo-1595839072560-bac90c191b40?q=80&w=640",
+  "https://images.unsplash.com/photo-1588594276800-2de0522b3b73?q=80&w=640",
+  "https://images.unsplash.com/photo-1572756317709-fe9c15ced298?q=80&w=640",
+  "https://images.unsplash.com/photo-1482053450283-3e0b78b09a70?q=80&w=640",
+  "https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?q=80&w=640",
 ];
 
 const PerspectiveGrid = () => {
@@ -80,7 +80,6 @@ const PerspectiveGrid = () => {
 
   useLenis();
 
-  console.log("rerender");
   useGSAP(
     () => {
       // Register Scroll Triggren
@@ -93,7 +92,7 @@ const PerspectiveGrid = () => {
 
   return (
     <div className="z-10 w-full overflow-hidden bg-stone-200 dark:bg-stone-900">
-      <h1 className="h-[50%] pb-10 pt-20 text-center text-4xl">Scroll Down</h1>
+      <h1 className="h-[30%] pb-10 pt-20 text-center text-4xl">Scroll Down</h1>
       <div className="relative w-full py-[20vh]">
         <div
           ref={grid}
@@ -115,7 +114,7 @@ const PerspectiveGrid = () => {
                 >
                   <Image
                     objectFit="cover"
-                    quality={40}
+                    quality={60}
                     src={src}
                     fill={true}
                     className="grid_item-inner relative h-auto min-w-[300px]"

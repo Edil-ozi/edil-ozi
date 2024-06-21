@@ -2,6 +2,9 @@
 title: Infinite text
 date: 2024-05-31
 description: Infinite text component using gsap motion library
+
+tools:
+  - Gsap
 ---
 
 <ComponentPreview name="infinite-text-demo" />
@@ -9,6 +12,12 @@ description: Infinite text component using gsap motion library
 <Steps>
 
 ### Installation
+
+Install additional dependencies 
+
+```bash
+pnpm i gsap @gsap/react
+```
 
 Copy and paste the following code into your project.
 
@@ -27,10 +36,10 @@ components/edil-ozi/infinite-text.tsx
 | text      | string | -       | Infinite text to render    |
 | speed     | number | 0.1     | The speed of infinite text |
 
-### Note
+### Notes
 
 Make sure your text length fits screen width to work as expected. In case if dont, you may try to increase font-size
 
 ## Credits
 
-This component is inspired by [Olivier Larose](https://blog.olivierlarose.com/tutorials/infinite-text-move-on-scroll)
+This component is inspired by [Olivier Larose](https://blog.olivierlarose.com)
