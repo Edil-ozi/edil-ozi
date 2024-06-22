@@ -45,7 +45,11 @@ export function constructMetadata({
       description,
       images: [siteConfig.ogImage],
     },
-    icons: "/favicon.ico",
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon-16x16.png",
+      apple: "/apple-touch-icon.png",
+    },
     metadataBase: new URL("https://edilozi.pro"),
     ...props,
   };

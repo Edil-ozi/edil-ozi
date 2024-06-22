@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { ThemeProvider } from "./_providers";
-import { absoluteUrl, cn, constructMetadata } from "@/lib/utils";
+import { cn, constructMetadata } from "@/lib/utils";
 import { fontSans } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/sonner";
 import { siteConfig } from "@/config/site";
@@ -16,6 +16,7 @@ export const metadata: Metadata = constructMetadata({
   title: siteConfig.name,
   description: siteConfig.description,
   image: siteConfig.ogImage
+
 });
 
 export default function RootLayout({ children }: RootLayoutProps) {
