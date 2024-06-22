@@ -18,4 +18,4 @@ Please read the [guide to contribute](https://github.com/Edil-ozi/edil-ozi/edit/
 
 ## License
 
-Licensed under the [MIT license](https://github.com/edil-ozi/magicui/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/edil-ozi/edil-ozi/blob/main/LICENSE.md).

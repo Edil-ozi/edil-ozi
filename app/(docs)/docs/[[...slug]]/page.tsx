@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
       card: "summary_large_image",
       title: doc.title,
       description: doc.description,
-      images: [doc.image],
+      images: [siteConfig.ogImage],
     },
   };
 }
@@ -75,7 +75,7 @@ export async function generateStaticParams(): Promise<DocPageProps["params"][]> 
 export default async function DocPage({ params }: DocPageProps) {
   const doc = await getDocFromParams({ params });
 
-  if (!doc) {
+  if (!doc || !doc.published) {
     notFound();
   }
 

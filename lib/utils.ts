@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import { clsx, type ClassValue } from "clsx";
 import { Metadata } from "next";
 import { twMerge } from "tailwind-merge";
@@ -42,7 +43,7 @@ export function constructMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [image],
+      images: [siteConfig.ogImage],
     },
     icons: "/favicon.ico",
     metadataBase: new URL("https://edilozi.pro"),

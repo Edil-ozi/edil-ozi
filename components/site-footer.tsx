@@ -7,7 +7,7 @@ export default function SiteFooter() {
         <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
           Built by{" "}
           <a
-            href={siteConfig.links.edilozi}
+            href={siteConfig.links.github}
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"

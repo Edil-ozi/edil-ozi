@@ -4,7 +4,7 @@ export const siteConfig = {
   ogImage: "https://edilozi.pro/og.png",
   description: "Open Source components for React.js that you can seamlessly integrate into your projects",
   links: {
-    edilozi: "https://edilozi.com",
+    edilozi: "https://edilozi.pro",
     github: "https://github.com/Edil-ozi/edil-ozi",
   },
 };
