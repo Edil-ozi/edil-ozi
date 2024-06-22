@@ -26,15 +26,12 @@ const RotateBetween: FC<Props> = ({ words, className }) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
-        className={cn(
-          "font-display font-bold tracking-[-0.02em] drop-shadow-sm ",
-          className,
-        )}
+        className={cn("font-display font-bold tracking-[-0.02em] drop-shadow-sm", className)}
       >
         {words[index]}
       </motion.p>
     </AnimatePresence>
   );
-}
+};
 
-export default RotateBetween
+export default RotateBetween;

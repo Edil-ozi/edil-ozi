@@ -31,7 +31,6 @@ const LogoCarousel: FC<Props> = ({ logos, animate = true, shadows = false }) => 
             />
             // <p>{title}</p>
           ))}
-
         </div>
       ))}
     </div>

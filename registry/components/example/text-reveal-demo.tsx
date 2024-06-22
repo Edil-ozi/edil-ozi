@@ -8,6 +8,6 @@ const InfiniteTextDemo = () => {
       <TextReveal paragraph={paragraph} />
     </div>
   );
-}
+};
 
-export default InfiniteTextDemo
+export default InfiniteTextDemo;

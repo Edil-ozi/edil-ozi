@@ -41,17 +41,13 @@ const Checkboxes = () => {
   ];
   return (
     <div className="w-full px-4 pb-40">
-
       <div className="mx-auto grid w-full max-w-7xl grid-cols-2 gap-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
         {checkboxes.map((checkbox) => (
           <CardWrapper
             key={checkbox.name}
             onClick={() => copy(checkbox)}
           >
-
             <div className="flex flex-col items-center gap-4 p-1 text-center xl:gap-8">
-
               {checkbox.component} {checkbox.name}
             </div>
           </CardWrapper>
@@ -59,5 +55,5 @@ const Checkboxes = () => {
       </div>
     </div>
   );
-}
+};
 export default Checkboxes;

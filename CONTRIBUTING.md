@@ -6,8 +6,8 @@ Thank you for your interest in contributing to Edil Ozi! We value your assistanc
 
 Once done, open a pull request from your forked repo to the main repo [here](https://github.com/edil-ozi/edil-ozi/compare).
 
-  - [Fork and Clone the Repository](#fork-and-clone-the-repository)
-  - [Adding a New Component](#adding-a-new-component)
+- [Fork and Clone the Repository](#fork-and-clone-the-repository)
+- [Adding a New Component](#adding-a-new-component)
 
 ## Getting Started
 
@@ -16,34 +16,39 @@ Once done, open a pull request from your forked repo to the main repo [here](htt
 1. **Fork this repository**  
    Click [here](https://github.com/edil-ozi/edil-ozi/fork) to fork the repository.
 
-2. **Clone your forked repository to your local machine**  
+2. **Clone your forked repository to your local machine**
+
    ```bash
    git clone https://github.com/<YOUR_USERNAME>/edil-ozi.git
    ```
 
-3. **Navigate to the project directory**  
+3. **Navigate to the project directory**
+
    ```bash
    cd edil-ozi
    ```
 
-4. **Create a new branch for your changes**  
+4. **Create a new branch for your changes**
+
    ```bash
    git switch -c my-new-branch
    ```
 
-5. **Install dependencies**  
+5. **Install dependencies**
+
    ```bash
    pnpm i
    ```
 
-6. **Create a `.env` file**  
+6. **Create a `.env` file**
+
    ```bash
    touch .env.local && echo "NEXT_PUBLIC_APP_URL=http://localhost:3200" > .env.local
    ```
 
    > **note that port is 3200**
 
-7. **Run the project**  
+7. **Run the project**
    ```bash
    pnpm dev
    ```
@@ -111,18 +116,18 @@ export default ExampleComponentDemo;
 
 Create an MDX file for documenting your component.
 
-~~~md
+````md
 ---
 title: Example Component
 date: 2024-06-01
-description: Some short description 
+description: Some short description
 author: Olivierlarose
 published: true
 ---
 
 <ComponentPreview name="example-component-demo" />
 
-<Steps> 
+<Steps>
 
 ### Installation
 
@@ -138,15 +143,14 @@ components/ediz-ozi/example-component.tsx
 
 ## Props
 
-| Prop                      | Type                      | Description                    | Default   |
-| ------------------------- | ------------------------- | -------------------------------| --------  |
-| text                      | String                    | Text to animate                | "Animated"|
+| Prop | Type   | Description     | Default    |
+| ---- | ------ | --------------- | ---------- |
+| text | String | Text to animate | "Animated" |
 
 ## Credits
 
 - Credit to [Olivier Larose](https://blog.olivierlarose.com)
-~~~
-
+````
 
 ### 5. Add Registry Export
 
@@ -157,12 +161,12 @@ Export your component and example in the registry.
 ```typescript
 const ui: Registry = {
   // other components
-    "example-component": {
+  "example-component": {
     name: "example-component",
     type: "components:ui",
     files: ["registry/components/edil-ozi/example-component.tsx"],
   },
-}
+};
 
 const example: Registry = {
   // other examples
@@ -170,11 +174,9 @@ const example: Registry = {
     name: "example-component",
     type: "components:example",
     files: ["registry/components/example/example-component-demo.tsx"],
-    component: React.lazy(
-      () => import("@/registry/components/example/example-component-demo"),
-    ),
+    component: React.lazy(() => import("@/registry/components/example/example-component-demo")),
   },
-}
+};
 ```
 
 ## Ask for Help
