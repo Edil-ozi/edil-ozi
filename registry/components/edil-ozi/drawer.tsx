@@ -45,7 +45,7 @@ const Drawer: FC<Props> = ({ open, setOpen, children, anchor = "left" }) => {
       <div
         data-visible={isVisible ? "true" : "false"}
         onClick={closeDrawer}
-        className="fixed left-0 top-0 z-[100] flex h-[100dvh] w-screen bg-zinc-900/50  transition-all duration-200 data-[visible=true]:visible data-[visible=false]:invisible data-[visible=false]:opacity-0 data-[visible=true]:opacity-100"
+        className="fixed left-0 top-0 z-[100] flex h-[100dvh] w-screen bg-zinc-900/50 transition-all duration-200 data-[visible=true]:visible data-[visible=false]:invisible data-[visible=false]:opacity-0 data-[visible=true]:opacity-100"
       />
       <div
         data-visible={isVisible ? "true" : "false"}
@@ -56,6 +56,6 @@ const Drawer: FC<Props> = ({ open, setOpen, children, anchor = "left" }) => {
     </>,
     document.body as HTMLElement,
   );
-}
+};
 
-export default Drawer
+export default Drawer;

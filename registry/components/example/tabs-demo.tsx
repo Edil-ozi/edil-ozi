@@ -49,6 +49,6 @@ const TabsDemo = () => {
       </TabContainer>
     </div>
   );
-}
+};
 
-export default TabsDemo
+export default TabsDemo;

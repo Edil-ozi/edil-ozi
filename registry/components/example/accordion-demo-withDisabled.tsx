@@ -7,9 +7,9 @@ type Accordion = {
 };
 const AccordionDemoDisabled = () => {
   const accordions: Accordion[] = [
-    { 
+    {
       title: "How do I access documentation?",
-      text: "There is below documentation about this API."
+      text: "There is below documentation about this API.",
     },
     {
       title: "Form Validation Techniques",
@@ -18,7 +18,7 @@ const AccordionDemoDisabled = () => {
     {
       title: "Disabled accordion",
       text: "How did you open it?",
-      disabled: true
+      disabled: true,
     },
   ];
   return (
@@ -38,7 +38,6 @@ const AccordionDemoDisabled = () => {
       </Accordion>
     </div>
   );
-}
+};
 
-
-export default AccordionDemoDisabled
+export default AccordionDemoDisabled;

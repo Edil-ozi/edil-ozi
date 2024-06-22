@@ -9,7 +9,6 @@ const CardWrapper = ({
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
-
 }) => {
   return (
     <div

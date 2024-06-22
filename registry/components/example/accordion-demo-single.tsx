@@ -12,11 +12,11 @@ const AccordionDemo = () => {
     },
     {
       title: "Implementing Dark Mode",
-      text: "We added a dark mode toggle to our website, allowing users to switch between light and dark themes based on their preferences."
+      text: "We added a dark mode toggle to our website, allowing users to switch between light and dark themes based on their preferences.",
     },
     {
       title: "Single Page Applications (SPA)",
-      text: "Developing our site as a single page application (SPA) with Vue.js improved the user experience by reducing page reloads and increasing responsiveness."
+      text: "Developing our site as a single page application (SPA) with Vue.js improved the user experience by reducing page reloads and increasing responsiveness.",
     },
   ];
   return (
@@ -34,6 +34,6 @@ const AccordionDemo = () => {
       </Accordion>
     </div>
   );
-}
+};
 
-export default AccordionDemo
+export default AccordionDemo;

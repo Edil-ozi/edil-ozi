@@ -35,13 +35,24 @@ const InfiniteScroll = () => {
   }, []);
 
   return (
-    <section ref={container} className="relative scroll-auto w-full z-10 p-8 h-[70vh] overflow-hidden">
+    <section
+      ref={container}
+      className="relative z-10 h-[70vh] w-full overflow-hidden scroll-auto p-8"
+    >
       {/* adjust  gap using `vh` unit for your case */}
       <div className="scroll-content grid grid-cols-3 gap-[2vh]">
-        {[...images, ...images,].map((src, index) => (
+        {[...images, ...images].map((src, index) => (
           // adjust  height using `vh` unit for your case
-          <div key={index} className="w-full mx-auto h-[31vh] relative">
-            <Image src={src} objectFit="cover" fill={true} alt={`img-${index}`} />
+          <div
+            key={index}
+            className="relative mx-auto h-[31vh] w-full"
+          >
+            <Image
+              src={src}
+              objectFit="cover"
+              fill={true}
+              alt={`img-${index}`}
+            />
           </div>
         ))}
       </div>

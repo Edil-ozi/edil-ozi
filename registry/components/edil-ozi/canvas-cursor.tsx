@@ -3,8 +3,7 @@
 import useCanvasCursor from "@/hooks/useCanvasCursor";
 
 const CanvasCursor = () => {
-
-  useCanvasCursor()
+  useCanvasCursor();
 
   return (
     <canvas

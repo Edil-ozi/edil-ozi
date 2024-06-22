@@ -9,14 +9,15 @@ const AccordionDemo = () => {
   const accordions: Accordion[] = [
     {
       title: "Try light/dark modes",
-      text: "Our components provide the best user experience in both dark and light modes."
+      text: "Our components provide the best user experience in both dark and light modes.",
     },
     {
       title: "Implementing Responsive Design",
       text: "To ensure our website looks great on all devices, we utilized a responsive design approach with CSS media queries and flexible grid layouts.",
     },
     {
-      title: "Optimizing Performance", text: "By lazy-loading images and leveraging browser caching, we significantly improved the performance and loading speed of our web application."
+      title: "Optimizing Performance",
+      text: "By lazy-loading images and leveraging browser caching, we significantly improved the performance and loading speed of our web application.",
     },
   ];
   return (
@@ -35,6 +36,6 @@ const AccordionDemo = () => {
       </Accordion>
     </div>
   );
-}
+};
 
-export default AccordionDemo
+export default AccordionDemo;

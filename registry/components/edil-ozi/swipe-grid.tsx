@@ -62,12 +62,7 @@ const SwipeGrid = () => {
         { xPercent: () => gsap.utils.random(500, 1000) },
         0,
       )
-      .fromTo(
-        gridItemsInner,
-        { scale: 2 },
-        { scale: 0.5 },
-        0,
-      );
+      .fromTo(gridItemsInner, { scale: 2 }, { scale: 0.5 }, 0);
   };
 
   useLenis();
