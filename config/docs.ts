@@ -88,12 +88,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/pricing-card",
           items: [],
         },
-        // {
-        //   title: "Logo Carousel",
-        //   href: "/docs/components/logo-carousel",
-        //   items: [],
-        //   icon: "gitHub",
-        // },
+        {
+          title: "Logo Carousel",
+          href: "/docs/components/logo-carousel",
+          items: [],
+          icon: "gitHub",
+        },
         {
           title: "Tabs",
           href: "/docs/components/tabs",

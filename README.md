@@ -8,7 +8,7 @@ Visit https://www.edilozi.pro/docs to view the documentation.
 
 ## Contributing
 
-Please read the [guide to contribute](https://github.com/Edil-ozi/edil-ozi/edit/main/README.md)
+Please read the [guide to contribute](https://github.com/Edil-ozi/edil-ozi/blob/main/CONTRIBUTING.md)
 
 ## Authors
 
