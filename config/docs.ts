@@ -92,7 +92,7 @@ export const docsConfig: DocsConfig = {
           title: "Logo Carousel",
           href: "/docs/components/logo-carousel",
           items: [],
-          icon: "gitHub",
+          disabled: true,
         },
         {
           title: "Tabs",
