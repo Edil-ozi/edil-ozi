@@ -15,7 +15,7 @@ interface RootLayoutProps {
 export const metadata: Metadata = constructMetadata({
   title: siteConfig.name,
   description: siteConfig.description,
-  image: absoluteUrl("/og.png"),
+  image: absoluteUrl("/og.jpg"),
 });
 
 export default function RootLayout({ children }: RootLayoutProps) {

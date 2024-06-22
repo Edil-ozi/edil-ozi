@@ -13,7 +13,7 @@ export default function Home() {
       <PageHeader>
         {/* <Announcement /> */}
         <PageHeaderHeading className="text-balance bg-gradient-to-br from-black from-30% to-black/60 bg-clip-text font-bold leading-none tracking-tighter text-transparent dark:from-white dark:to-white/40 text-5xl md:text-6xl py-4">
-          Component Library For Developers.
+          Component Library for Developers.
         </PageHeaderHeading>
         <PageHeaderDescription className="text-xl">
           Choose our seamlessly integrated components for a customizable and accessible user experience.  Embrace efficiency in development.

@@ -1,6 +1,6 @@
 
 # Edil Ozi
-<p>Component Library For Developers</p>
+<p>Component Library for Developers</p>
 
 ## Documentation
 
