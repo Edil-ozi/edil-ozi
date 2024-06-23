@@ -82,7 +82,7 @@ const BaseInputs: FC<Props> = () => {
           <button
             tabIndex={-1}
             type="button"
-            className="mr-1 border-none bg-none text-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-600 dark:focus:ring-lime-500"
+            className="mr-1 border-none bg-none text-gray-500"
           >
             <svg
               width="16"

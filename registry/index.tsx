@@ -201,7 +201,7 @@ const example: Registry = {
     component: React.lazy(() => import("@/registry/components/example/accordion-demo-withDisabled")),
   },
 
-  //Fance
+  //Fancy
   "canvas-cursor-demo": {
     name: "canvas-cursor-demo",
     type: "components:example",
