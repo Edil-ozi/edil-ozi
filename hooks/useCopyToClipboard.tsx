@@ -25,8 +25,9 @@ const useCopyToClipboard = () => {
     try {
       await navigator.clipboard.writeText(text + "\n" + extraMessage);
       toast.success(message || "Copied!");
-    } catch (err) {
+    } catch (err: any) {
       console.log("Error copy", err);
+      toast.error(err.message || "Something went wrong 😶");
     }
   }
   return { copy };

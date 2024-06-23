@@ -13,6 +13,9 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        isHoverSupport: { raw: "(hover: hover)" },
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
