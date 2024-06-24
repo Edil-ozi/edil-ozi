@@ -1,4 +1,4 @@
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 type TechComponentType = {
@@ -134,6 +134,7 @@ const techComponents: TechComponents = {
 export default function TechStack({ technologies, className }: { technologies: string[]; className?: string }) {
   return (
     <div className={cn("not-prose flex flex-row gap-2", className)}>
+      <TooltipProvider>
       {technologies.map((tech) => (
         <Tooltip key={tech}>
           <TooltipTrigger>{techComponents[tech].icon}</TooltipTrigger>
@@ -142,6 +143,7 @@ export default function TechStack({ technologies, className }: { technologies: s
           </TooltipContent>
         </Tooltip>
       ))}
+      </TooltipProvider>
     </div>
   );
 }

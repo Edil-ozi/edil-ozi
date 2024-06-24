@@ -1,5 +1,7 @@
 import { Icons } from "@/components/icons";
+import PageDemos from "@/components/page-demos";
 import { PageActions, PageHeader, PageHeaderDescription, PageHeaderHeading } from "@/components/page-header";
+import TechStack from "@/components/tech-stack";
 import { buttonVariants } from "@/components/ui/button";
 
 import { siteConfig } from "@/config/site";
@@ -36,7 +38,21 @@ export default function Home() {
             Star on Github
           </Link>
         </PageActions>
+        <div className="relative mx-auto flex w-full max-w-[16rem] items-center justify-center">
+          <TechStack
+            className="mx-auto flex w-full items-center justify-between"
+            technologies={[
+              "nextjs",
+              "react",
+              "typescript",
+              "tailwindcss",
+              "framermotion",
+              // "shadcn",
+            ]}
+          />
+        </div>
       </PageHeader>
+      {/* <PageDemos /> */}
       <CanvasCursor />
     </div>
   );
