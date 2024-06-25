@@ -56,7 +56,7 @@ export default function ScrollVelocityParallaxDemo() {
       <h2 className="text-center text-2xl md:text-3xl">Scroll To See Effect</h2>
       <div className="flex flex-col space-y-5 py-10">
         {movable.map(({velocity}, index) =>
-          <ScrollVelocityParallax key={index} velocity={velocity}>
+          <ScrollVelocityParallax key={index} velocity={velocity} movable={false}>
             {images.map(({title, thumbnail}) =>
               <div key={title} className="relative h-[7rem] w-[10rem] md:h-[12rem] md:w-[15rem] xl:h-[22rem] xl:w-[25rem]">
                 <Image
@@ -68,7 +68,7 @@ export default function ScrollVelocityParallaxDemo() {
             )}
           </ScrollVelocityParallax>
         )}
-        <ScrollVelocityParallax velocity={5}>
+        <ScrollVelocityParallax velocity={5} movable={false}>
           You can also use a text!
         </ScrollVelocityParallax>
       </div>

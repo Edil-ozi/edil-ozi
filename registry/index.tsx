@@ -277,6 +277,12 @@ const example: Registry = {
     files: ["registry/components/example/scroll-velocity-parallax-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/scroll-velocity-parallax-demo")),
   },
+  "scroll-velocity-parallax-noscroll-demo": {
+    name: "scroll-velocity-parallax-noscroll-demo",
+    type: "components:example",
+    files: ["registry/components/example/scroll-velocity-parallax-noscroll-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/scroll-velocity-parallax-noscroll-demo")),
+  },
 };
 
 export const registry: Registry = {

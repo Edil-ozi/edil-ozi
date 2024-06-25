@@ -60,7 +60,7 @@ export default function ScrollVelocityParallax({ children, velocity = 5, movable
 
   return (
     <div className="overflow-hidden tracking-[-2px] leading-[0.8] whitespace-nowrap flex flex-nowrap m-0 relative">
-      <motion.div className="font-semibold uppercase text-4xl whitespace-nowrap flex flex-row flex-nowrap *:mr-6 *:block" style={{ x }}>
+      <motion.div className="font-semibold uppercase text-xl md:text-2xl xl:text-4xl whitespace-nowrap flex flex-row flex-nowrap *:mr-6 *:block" style={{ x }}>
         {typeof(children) === "string" ?
           <>
             <span>{children}</span>
