@@ -152,14 +152,18 @@ components/ediz-ozi/example-component.tsx
 - Credit to [Olivier Larose](https://blog.olivierlarose.com)
 ````
 
-### 5. Add Registry Export
+### 5. Add Registry Exports
 
-**File:** `registry/index.tsx`
+Export your component.
 
-Export your component and example in the registry.
+**File:** `registry/components-ui.ts`
+
+or
+
+**File:** `registry/sections-ui.ts`
 
 ```typescript
-const ui: Registry = {
+const componentsUi: Registry = {
   // other components
   "example-component": {
     name: "example-component",
@@ -167,8 +171,16 @@ const ui: Registry = {
     files: ["registry/components/edil-ozi/example-component.tsx"],
   },
 };
+```
 
-const example: Registry = {
+and example in the registry
+
+**File:** `registry/components-example.ts.ts`
+
+> depending on what you gonna implement - section or component
+
+```typescript
+const componentsExample: Registry = {
   // other examples
   "example-component-demo": {
     name: "example-component",

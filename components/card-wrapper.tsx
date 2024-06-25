@@ -23,7 +23,7 @@ const CardWrapper = ({
         type="button"
         tabIndex={-1}
       >
-        <CopyIcon className="absolute right-2 top-2 isHoverSupport:hidden h-4 w-4 text-neutral-300 transition duration-200 group-hover/btn:block group-focus:hidden" />
+        <CopyIcon className="absolute right-2 top-2 h-4 w-4 text-neutral-300 transition duration-200 group-hover/btn:block group-focus:hidden isHoverSupport:hidden" />
         <Check className="absolute right-2 top-2 hidden h-4 w-4 stroke-green-500 text-neutral-300 transition duration-200 group-hover/btn:hidden group-focus:block" />
       </button>
       <div className="relative z-40">{children}</div>
