@@ -115,7 +115,7 @@ export const docsConfig: DocsConfig = {
     },
 
     {
-      title: "On scroll animations",
+      title: "On Scroll Animations",
       items: [
         {
           title: "Swipe Grid",
@@ -144,7 +144,14 @@ export const docsConfig: DocsConfig = {
         },
 
         {
-          title: "Two way parallax",
+          title: "Scroll Velocity Parallax",
+          href: "/docs/components/scroll-velocity-parallax",
+          items: [],
+          label: "New",
+        },
+
+        {
+          title: "Two Way Y Parallax",
           href: "/docs/components/two-way-parallax",
           items: [],
           label: "New",

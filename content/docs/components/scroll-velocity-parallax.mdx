@@ -1,0 +1,35 @@
+---
+title: Scrroll Velocity Parallax
+date: 2024-06-14
+description: Scrroll velocity parallax effect.
+tools:
+  - Lenis (optional)
+---
+
+<ComponentPreview name="scroll-velocity-parallax-demo" />
+
+<Steps>
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```text
+components/edil-ozi/scroll-velocity-parallax.tsx
+```
+
+<ComponentSource name="scroll-velocity-parallax" />
+
+</Steps>
+
+### Notes
+
+This component uses **Lenis** for smooth scrolling effect. Read more about it [here](https://github.com/darkroomengineering/lenis/blob/main/packages/react/README.md)
+
+## Props
+
+| Prop      | Type   | Description                                  | Default |
+| --------- | ------ | -------------------------------------------- | ------- |
+| children  | Node   | Text or image, whatever you want it to move  | Required|
+| velocity  | number | Velocity spped, use negative number to change direction  | 5 |
+| movable   | boolean| Enable or disable moving animation           | true    |

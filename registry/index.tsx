@@ -110,6 +110,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/two-way-parallax.tsx"],
   },
+  "scroll-velocity-parallax": {
+    name: "scroll-velocity-parallax",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/scroll-velocity-parallax.tsx"],
+  },
 };
 
 const example: Registry = {
@@ -265,6 +270,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/two-way-parallax-demo.tsx"],
     component: React.lazy(() => import("@/registry/components/example/two-way-parallax-demo")),
+  },
+  "scroll-velocity-parallax-demo": {
+    name: "scroll-velocity-parallax-demo",
+    type: "components:example",
+    files: ["registry/components/example/scroll-velocity-parallax-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/scroll-velocity-parallax-demo")),
   },
 };
 
