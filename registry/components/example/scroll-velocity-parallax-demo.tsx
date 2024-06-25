@@ -24,6 +24,26 @@ const images = [
     title: "Editrix AI",
     thumbnail: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=640",
   },
+  {
+    title: "Moonbeam 2",
+    thumbnail: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=40&w=640",
+  },
+  {
+    title: "Cursor 2",
+    thumbnail: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=40&w=640",
+  },
+  {
+    title: "Rogue 2",
+    thumbnail: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=40&w=640",
+  },
+  {
+    title: "Editorially 2",
+    thumbnail: "https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?q=80&w=640",
+  },
+  {
+    title: "Editrix AI 2",
+    thumbnail: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=640",
+  },
 ];
 const movable =[
   {movable: true, velocity: 5},

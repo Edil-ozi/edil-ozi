@@ -71,7 +71,7 @@ export default function ScrollVelocityParallax({ children, velocity = 5, movable
             <span>{children}</span>
           </>
           :
-          [...children, ...children]
+          children
       }
       </motion.div>
     </div>
