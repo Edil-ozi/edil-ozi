@@ -1,0 +1,45 @@
+---
+title: Scroll Velocity
+date: 2024-06-14
+description: Scroll velocity effect.
+tools:
+  - Lenis (optional)
+---
+
+<ComponentPreview name="scroll-velocity-demo" />
+
+<Steps>
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```text
+components/edil-ozi/scroll-velocity.tsx
+```
+
+<ComponentSource name="scroll-velocity" />
+
+</Steps>
+
+### Example
+
+#### You can make it scrollable only while scrolling by using [mutable] prop
+
+<ComponentPreview name="scroll-velocity-noscroll-demo" />
+
+
+### Notes
+
+If you use images, then send duplicate of it like in example.
+
+This component uses **Lenis** for smooth scrolling effect. Read more about it [here](https://github.com/darkroomengineering/lenis/blob/main/packages/react/README.md)
+
+## Props
+
+| Prop      | Type   | Description                                  | Default |
+| --------- | ------ | -------------------------------------------- | ------- |
+| children  | Node   | Text or image, whatever you want it to move  | Required|
+| velocity  | number | Velocity spped, use negative number to change direction  | 5 |
+| movable   | boolean| Enable or disable moving animation           | true    |
+| clamp     | boolean| If `false`, when scrolling, changes scroll way from `y` to `-y` | false    |

@@ -109,25 +109,22 @@ export const docsConfig: DocsConfig = {
           title: "Canvas Cursor",
           href: "/docs/components/canvas-cursor",
           items: [],
-          label: "New",
         },
       ],
     },
 
     {
-      title: "On scroll animations",
+      title: "On Scroll Animations",
       items: [
         {
           title: "Swipe Grid",
           href: "/docs/components/swipe-grid",
           items: [],
-          label: "New",
         },
         {
           title: "Perspective Grid",
           href: "/docs/components/perspective-grid",
           items: [],
-          label: "New",
         },
 
         {
@@ -140,14 +137,19 @@ export const docsConfig: DocsConfig = {
           title: "Infinite Scroll",
           href: "/docs/components/infinite-scroll",
           items: [],
+        },
+
+        {
+          title: "Scroll Velocity",
+          href: "/docs/components/scroll-velocity",
+          items: [],
           label: "New",
         },
 
         {
-          title: "Two way parallax",
+          title: "Two Way Y Parallax",
           href: "/docs/components/two-way-parallax",
           items: [],
-          label: "New",
         },
 
         {
