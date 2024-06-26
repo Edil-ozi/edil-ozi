@@ -55,6 +55,11 @@ const ui: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/logo-carousel.tsx"],
   },
+  "dropdown": {
+    name: "dropdown",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/dropdown.tsx"],
+  },
   //Fancy
   "canvas-cursor": {
     name: "canvas-cursor",
@@ -199,6 +204,12 @@ const example: Registry = {
     type: "components:example",
     files: ["registry/components/example/accordion-demo-withDisabled.tsx"],
     component: React.lazy(() => import("@/registry/components/example/accordion-demo-withDisabled")),
+  },
+  "dropdown-demo": {
+    name: "dropdown-demo",
+    type: "components:example",
+    files: ["registry/components/example/dropdown-demo.tsx"],
+    component: React.lazy(() => import("@/registry/components/example/dropdown-demo")),
   },
 
   //Fancy

@@ -99,6 +99,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/tabs",
           items: [],
         },
+        {
+          title: "Dropdown",
+          href: "/docs/components/dropdown",
+          items: [],
+        },
       ],
     },
 
