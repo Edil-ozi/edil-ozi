@@ -140,8 +140,8 @@ export const docsConfig: DocsConfig = {
         },
 
         {
-          title: "Scroll Velocity Parallax",
-          href: "/docs/components/scroll-velocity-parallax",
+          title: "Scroll Velocity",
+          href: "/docs/components/scroll-velocity",
           items: [],
           label: "New",
         },

@@ -10,14 +10,14 @@ import {
   wrap
 } from "framer-motion";
 
-interface ParallaxProps {
+interface Props {
   children: ReactNode[] | string;
   velocity: number;
   movable?: boolean;
   clamp?: boolean;
 }
 
-export default function ScrollVelocityParallax({ children, velocity = 5, movable = true, clamp = false }: ParallaxProps) {
+export default function ScrollVelocity({ children, velocity = 5, movable = true, clamp = false }: Props) {
   const baseX = useMotionValue(0);
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);

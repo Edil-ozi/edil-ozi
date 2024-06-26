@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import ScrollVelocityParallax from "../edil-ozi/scroll-velocity-parallax";
+import ScrollVelocity from "../edil-ozi/scroll-velocity";
 import Image from "next/image";
 
 const images = [
@@ -47,13 +47,13 @@ const images = [
 ];
 const velocity = [12, -12]
 
-export default function ScrollVelocityParallaxDemo() {
+export default function ScrollVelocityNoscrollDemo() {
   return (
     <div className="w-full">
       <h2 className="text-center text-2xl md:text-3xl">Scroll To See Effect</h2>
       <div className="flex flex-col space-y-5 py-10">
         {velocity.map((v, index) =>
-          <ScrollVelocityParallax key={index} velocity={v} movable={false}>
+          <ScrollVelocity key={index} velocity={v} movable={false}>
             {images.map(({title, thumbnail}) =>
               <div key={title} className="relative h-[6rem] w-[9rem] md:h-[8rem] md:w-[12rem] xl:h-[12rem] xl:w-[18rem]">
                 <Image
@@ -63,7 +63,7 @@ export default function ScrollVelocityParallaxDemo() {
                   className="object-cover object-center h-full w-full"/>
               </div>
             )}
-          </ScrollVelocityParallax>
+          </ScrollVelocity>
         )}
       </div>
     </div>
