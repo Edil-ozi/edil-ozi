@@ -110,9 +110,49 @@ export const Doc = defineDocumentType(() => ({
   computedFields,
 }));
 
+export const Sections = defineDocumentType(() => ({
+  name: "Sections",
+  filePathPattern: `sections/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+      required: true,
+    },
+    date: { type: "date", required: false },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+    links: {
+      type: "nested",
+      of: LinksProperties,
+    },
+    featured: {
+      type: "boolean",
+      default: false,
+      required: false,
+    },
+    tools: {
+      type: "list",
+      of: { type: "string" },
+      required: false,
+    },
+    toc: { type: "boolean", default: true, required: false },
+    author: { type: "string", required: false },
+    video: { type: "string", required: false },
+  },
+  // @ts-ignore
+  computedFields,
+}));
+
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Page, Doc],
+  documentTypes: [Sections, Doc],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

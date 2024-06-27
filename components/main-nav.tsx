@@ -42,6 +42,15 @@ export default function MainNav() {
           Components
         </Link>
         <Link
+          href="/sections"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname?.startsWith("/sections") ? "text-foreground" : "text-foreground/60",
+          )}
+        >
+          Sections
+        </Link>
+        <Link
           href={siteConfig.links.github}
           target="_blank"
           className={cn("hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block")}

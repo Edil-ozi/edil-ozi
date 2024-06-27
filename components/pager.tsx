@@ -1,4 +1,4 @@
-import { Doc } from "contentlayer/generated";
+import { Doc, Sections } from "contentlayer/generated";
 import { buttonVariants } from "@/components/ui/button";
 import { docsConfig } from "@/config/docs";
 import { cn } from "@/lib/utils";
@@ -7,11 +7,12 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 interface DocsPagerProps {
-  doc: Doc;
+  doc: Doc | Sections;
+  isSections: boolean
 }
 
-export function DocPager({ doc }: DocsPagerProps) {
-  const pager = getPagerForDoc(doc);
+export function DocPager({ doc, isSections = false }: DocsPagerProps) {
+  const pager = getPagerForDoc(doc, isSections);
 
   if (!pager) {
     return null;
@@ -41,8 +42,8 @@ export function DocPager({ doc }: DocsPagerProps) {
   );
 }
 
-export function getPagerForDoc(doc: Doc) {
-  const flattenedLinks = [null, ...flatten(docsConfig.sidebarNav), null];
+export function getPagerForDoc(doc: Doc | Sections, isSections: boolean) {
+  const flattenedLinks = [null, ...flatten(isSections ? docsConfig.sectionsNav : docsConfig.sidebarNav), null];
   const activeIndex = flattenedLinks.findIndex((link) => doc.slug === link?.href);
   const prev = activeIndex !== 0 ? flattenedLinks[activeIndex - 1] : null;
   const next = activeIndex !== flattenedLinks.length - 1 ? flattenedLinks[activeIndex + 1] : null;

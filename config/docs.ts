@@ -3,6 +3,7 @@ import { MainNavItem, SidebarNavItem } from "@/types/nav";
 interface DocsConfig {
   mainNav: MainNavItem[];
   sidebarNav: SidebarNavItem[];
+  sectionsNav: SidebarNavItem[];
 }
 
 export const docsConfig: DocsConfig = {
@@ -15,14 +16,6 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       href: "/docs/components/accordion",
     },
-    // {
-    //   title: "Themes",
-    //   href: "/themes",
-    // },
-    // {
-    //   title: "Examples",
-    //   href: "/examples",
-    // },
   ],
   sidebarNav: [
     {
@@ -191,5 +184,35 @@ export const docsConfig: DocsConfig = {
     //     },
     //   ],
     // },
+  ],
+
+  sectionsNav: [
+    {
+      title: "Sections Introduction",
+      items: [
+        {
+          title: "Introduction",
+          href: "/sections",
+          items: [],
+        },
+        {
+          title: "Installation",
+          // href: "/sections/installation",
+          href: "/sections",
+          items: [],
+        },
+      ],
+    },
+
+    {
+      title: "Page Sections",
+      items: [
+        {
+          title: "Header",
+          href: "/sections/header",
+          items: [],
+        },
+      ],
+    },
   ],
 };
