@@ -8,7 +8,7 @@ import Link from "next/link";
 
 interface DocsPagerProps {
   doc: Doc | Sections;
-  isSections: boolean
+  isSections?: boolean
 }
 
 export function DocPager({ doc, isSections = false }: DocsPagerProps) {
