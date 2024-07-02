@@ -89,7 +89,7 @@ const config: Config = {
         from: { opacity: "0" },
         to: { opacity: "100" },
       },
-      "pulse": {
+      pulse: {
         "0%": {
           boxShadow: "0 0 0 #0B6E4F90",
           rotate: "20deg",
@@ -118,9 +118,9 @@ const config: Config = {
       "accordion-up": "accordion-up 0.2s ease-out",
       "caret-blink": "caret-blink 1.25s ease-out infinite",
       shimmer: "shimmer 2s linear infinite",
-      "logo-carousel": "logo-carousel 16s linear infinite",
+      "logo-carousel": "logo-carousel 12s linear infinite",
       fadeIn: "fadeIn 0.2s ease-in-out forwards",
-      "pulse": "pulse 500ms ease-in-out",
+      pulse: "pulse 500ms ease-in-out",
       wave: "wave 300ms ease",
       like: "like 400ms ease",
       dislike: "dislike 400ms ease",

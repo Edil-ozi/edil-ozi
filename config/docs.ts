@@ -85,7 +85,6 @@ export const docsConfig: DocsConfig = {
           title: "Logo Carousel",
           href: "/docs/components/logo-carousel",
           items: [],
-          disabled: true,
         },
         {
           title: "Tabs",

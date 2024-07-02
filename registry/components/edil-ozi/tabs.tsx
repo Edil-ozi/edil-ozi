@@ -1,3 +1,5 @@
+'use Client'
+
 import { createContext, FC, ReactNode, useContext, useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
