@@ -9,7 +9,7 @@ interface Props {
 const LogoCarousel: FC<Props> = ({ items, animate = true, shadows = false }) => {
   return (
     <div
-      className="flex  overflow-hidden"
+      className="flex overflow-hidden"
       style={{
         maskImage: `${shadows && "linear-gradient(to left, transparent 0%, black 20%, black 80%, transparent 95%)"}`,
       }}
@@ -21,7 +21,12 @@ const LogoCarousel: FC<Props> = ({ items, animate = true, shadows = false }) => 
           className={`flex shrink-0 ${animate && "animate-logo-carousel"}`}
         >
           {items.map(({ text, classes }) => (
-            <p key={text} className={`text-4xl ml-4 rounded-sm font-bold tracking-tight leading-[5rem] px-[0.8rem] ${classes}`}>{text}</p>
+            <p
+              key={text}
+              className={`ml-4 rounded-sm px-[0.8rem] text-4xl font-bold leading-[5rem] tracking-tight ${classes}`}
+            >
+              {text}
+            </p>
           ))}
         </div>
       ))}

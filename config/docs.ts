@@ -211,6 +211,12 @@ export const docsConfig: DocsConfig = {
           href: "/sections/header",
           items: [],
         },
+
+        {
+          title: "Hero",
+          href: "/sections/hero",
+          items: [],
+        },
       ],
     },
   ],

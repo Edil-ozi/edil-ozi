@@ -74,7 +74,7 @@ export async function generateStaticParams(): Promise<DocPageProps["params"][]> 
 export default async function SectionPage({ params }: DocPageProps) {
   const doc = await getDocFromParams({ params });
 
-  console.log('doc', doc);
+  console.log("doc", doc);
 
   if (!doc || !doc.published) {
     notFound();
@@ -140,7 +140,10 @@ export default async function SectionPage({ params }: DocPageProps) {
         <div className="pb-12 pt-8">
           <Mdx code={doc.body.code} />
         </div>
-        <DocPager doc={doc} isSections={true} />
+        <DocPager
+          doc={doc}
+          isSections={true}
+        />
       </div>
       {/* {doc.toc && (
         <div className="hidden text-sm xl:block">

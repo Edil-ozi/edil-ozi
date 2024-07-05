@@ -158,6 +158,19 @@ const Buttons: FC<Props> = () => {
         </button>
       ),
     },
+
+    {
+      name: "Submit",
+
+      component: (
+        <button
+          type="button"
+          className="mt-6 rounded-full bg-cyan-600 px-16 py-4 text-lg font-medium ring-4 ring-cyan-600/50 transition duration-300 hover:scale-105 hover:shadow-xl"
+        >
+          Join for free
+        </button>
+      ),
+    },
   ];
 
   return (

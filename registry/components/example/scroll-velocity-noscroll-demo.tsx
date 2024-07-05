@@ -45,27 +45,36 @@ const images = [
     thumbnail: "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=640",
   },
 ];
-const velocity = [12, -12]
+const velocity = [12, -12];
 
 export default function ScrollVelocityNoscrollDemo() {
   return (
     <div className="w-full">
       <h2 className="text-center text-2xl md:text-3xl">Scroll To See Effect</h2>
       <div className="flex flex-col space-y-5 py-10">
-        {velocity.map((v, index) =>
-          <ScrollVelocity key={index} velocity={v} movable={false}>
-            {images.map(({title, thumbnail}) =>
-              <div key={title} className="relative h-[6rem] w-[9rem] md:h-[8rem] md:w-[12rem] xl:h-[12rem] xl:w-[18rem]">
+        {velocity.map((v, index) => (
+          <ScrollVelocity
+            key={index}
+            velocity={v}
+            movable={false}
+          >
+            {images.map(({ title, thumbnail }) => (
+              <div
+                key={title}
+                className="relative h-[6rem] w-[9rem] md:h-[8rem] md:w-[12rem] xl:h-[12rem] xl:w-[18rem]"
+              >
                 <Image
-                  src={thumbnail} alt={title} 
+                  src={thumbnail}
+                  alt={title}
                   height={360}
                   width={360}
-                  className="object-cover object-center h-full w-full"/>
+                  className="h-full w-full object-cover object-center"
+                />
               </div>
-            )}
+            ))}
           </ScrollVelocity>
-        )}
+        ))}
       </div>
     </div>
-  )
+  );
 }
