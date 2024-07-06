@@ -15,7 +15,7 @@ const sectionsUi: Registry = {
   "hero-1": {
     name: "hero-1",
     type: "components:component",
-    files: ["registry/sections/header/hero-1.tsx"],
+    files: ["registry/sections/hero/hero-1.tsx"],
     component: lazy(() => import("@/registry/sections/hero/hero-1")),
   },
 };
