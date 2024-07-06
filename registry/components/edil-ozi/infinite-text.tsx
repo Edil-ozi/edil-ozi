@@ -49,8 +49,6 @@ const InfiniteText: FC<Props> = ({ text, speed = 0.1 }) => {
     requestAnimationFrame(animate);
   }, [animate]);
 
-  console.log("rerender");
-
   return (
     <div className="z-[10] h-[320px] w-full">
       <div className="relative flex h-full items-center overflow-hidden rounded-lg bg-gradient-to-br from-zinc-200 from-30% to-zinc-400 dark:from-zinc-800 dark:to-zinc-900">

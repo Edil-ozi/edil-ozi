@@ -10,7 +10,6 @@ interface TocProps {
 }
 
 export function DashboardTableOfContents({ toc }: TocProps) {
-  console.log("toctoctoc", toc);
   const itemIds: string[] = useMemo(
     () =>
       toc.items
