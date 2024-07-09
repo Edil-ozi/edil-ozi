@@ -18,6 +18,12 @@ const sectionsUi: Registry = {
     files: ["registry/sections/hero/hero-1.tsx"],
     component: lazy(() => import("@/registry/sections/hero/hero-1")),
   },
+  "hero-2": {
+    name: "hero-2",
+    type: "components:component",
+    files: ["registry/sections/hero/hero-2.tsx"],
+    component: lazy(() => import("@/registry/sections/hero/hero-2")),
+  },
 };
 
 export default sectionsUi;

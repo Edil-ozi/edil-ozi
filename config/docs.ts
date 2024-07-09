@@ -207,14 +207,13 @@ export const docsConfig: DocsConfig = {
       title: "Page Sections",
       items: [
         {
-          title: "Header",
-          href: "/sections/header",
-          items: [],
-        },
-
-        {
           title: "Hero",
           href: "/sections/hero",
+          items: [],
+        },
+        {
+          title: "Header",
+          href: "/sections/header",
           items: [],
         },
       ],

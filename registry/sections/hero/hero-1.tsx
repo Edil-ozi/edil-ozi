@@ -22,7 +22,7 @@ const Index: FC<Props> = () => {
   };
 
   return (
-    <section className="relative z-10 w-full bg-slate-200 dark:bg-slate-300 py-20 px-6 xl:px-10">
+    <section className="relative z-10 w-full bg-gradient-to-b from-cyan-600/35 to-cyan-900/70 dark:bg-slate-300 py-20 px-6 xl:px-10">
       <h1 className="text-center text-3xl md:text-3xl xl:text-5xl font-bold text-cyan-900">Explore Our Innovations Today</h1>
       <div className="mx-auto text-center text-sm md:text-lg">
         <p className="mt-4 w-full text-balance leading-5 md:leading-7 text-cyan-900/70">
