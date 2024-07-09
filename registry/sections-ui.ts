@@ -10,6 +10,12 @@ const sectionsUi: Registry = {
     files: ["registry/sections/header/header-1.tsx"],
     component: lazy(() => import("@/registry/sections/header/header-1")),
   },
+  "header-2": {
+    name: "header-2",
+    type: "components:component",
+    files: ["registry/sections/header/header-2.tsx"],
+    component: lazy(() => import("@/registry/sections/header/header-2")),
+  },
 
   //hero
   "hero-1": {

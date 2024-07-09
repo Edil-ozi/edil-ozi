@@ -11,14 +11,12 @@ const links = [
 ];
 
 const Index = () => {
-
   const [open, setOpen] = useState(false);
 
-
   return (
-    <section className="h-[800px] w-full z-10 bg-blue-600 relative">
+    <section className="relative z-10 h-[800px] w-full bg-blue-600">
       <header className="flex h-20 w-full items-center justify-between px-4 lg:px-6 xl:px-10">
-        <div className="mb-4 z-40 text-sm md:text-base text-white lg:mb-0">Logo</div>
+        <div className="z-40 mb-4 text-sm text-white md:text-base lg:mb-0">Logo</div>
         <button
           onClick={() => setOpen(!open)}
           type="button"
@@ -49,7 +47,7 @@ const Index = () => {
           )}
         </button>
         <nav
-          className={`absolute text-white right-0 top-0 z-[102] mx-0 flex h-full w-[240px] flex-col items-center justify-start space-y-6 bg-neutral-950 py-10 text-lg transition-all duration-200  lg:relative lg:h-auto lg:w-auto lg:flex-row lg:justify-between lg:space-x-4 lg:space-y-0 lg:bg-transparent lg:py-0 lg:text-base xl:text-lg ${open ? "pointer-events-auto visible translate-x-[0%] select-auto opacity-100" : "pointer-events-none invisible translate-x-[100%] select-none opacity-0 lg:pointer-events-auto lg:visible lg:translate-x-[0%] lg:select-auto lg:opacity-100"}`}
+          className={`absolute right-0 top-0 z-[102] mx-0 flex h-full w-[240px] flex-col items-center justify-start space-y-6 bg-neutral-950 py-10 text-lg text-white transition-all duration-200 lg:relative lg:h-auto lg:w-auto lg:flex-row lg:justify-between lg:space-x-4 lg:space-y-0 lg:bg-transparent lg:py-0 lg:text-base xl:text-lg ${open ? "pointer-events-auto visible translate-x-[0%] select-auto opacity-100" : "pointer-events-none invisible translate-x-[100%] select-none opacity-0 lg:pointer-events-auto lg:visible lg:translate-x-[0%] lg:select-auto lg:opacity-100"}`}
         >
           <ul className="flex flex-col items-start gap-2 *:cursor-pointer lg:flex-row lg:items-center lg:space-x-6">
             {links.map(({ title, href }) => (
@@ -65,18 +63,27 @@ const Index = () => {
         </nav>
         <div
           onClick={() => setOpen(!open)}
-          className={`${open ? "absolute" : "hidden"} z-[101] left-0 top-0 h-full w-full dark:bg-black/50 lg:hidden`}
+          className={`${open ? "absolute" : "hidden"} left-0 top-0 z-[101] h-full w-full dark:bg-black/50 lg:hidden`}
         ></div>
       </header>
 
-      <Image src="https://images.unsplash.com/photo-1534104646695-370d0e9abfa0?q=80" className="object-cover object-top" fill={true} objectFit="cover" alt="mountains view" />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/90 to-black/60 z-20"></div>
+      <Image
+        src="https://images.unsplash.com/photo-1534104646695-370d0e9abfa0?q=80"
+        className="object-cover object-top"
+        fill={true}
+        objectFit="cover"
+        alt="mountains view"
+      />
+      <div className="absolute left-0 top-0 z-20 h-full w-full bg-gradient-to-b from-black/90 to-black/60"></div>
 
-      <div className="z-[100] relative flex pt-48 justify-center h-full  text-white">
-        <div className=" max-w-[90%] lg:max-w-[75%] text-center items-center font-medium">
-          <p className="text-xl lg:text-2xl leading-[1]">The Balance of Life</p>
-          <h1 className="text-4xl lg:text-5xl font-black my-2.5 lg:my-4">Cooperation in Wildlife</h1>
-          <p className="text-balance text-base lg:text-xl mt-2.5 leading-[150%]">Focusing on sustainable land management practices that promote positive-sum outcomes by balancing the needs of humans, wildlife, and the environment.</p>
+      <div className="relative z-[100] flex h-full justify-center pt-48 text-white">
+        <div className="max-w-[90%] items-center text-center font-medium lg:max-w-[75%]">
+          <p className="text-xl leading-[1] lg:text-2xl">The Balance of Life</p>
+          <h1 className="my-2.5 text-4xl font-black lg:my-4 lg:text-5xl">Cooperation in Wildlife</h1>
+          <p className="mt-2.5 text-balance text-base leading-[150%] lg:text-xl">
+            Focusing on sustainable land management practices that promote positive-sum outcomes by balancing the needs
+            of humans, wildlife, and the environment.
+          </p>
         </div>
       </div>
     </section>
