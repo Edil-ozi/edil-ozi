@@ -2,7 +2,7 @@
 
 import { ChevronDown } from 'lucide-react'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface Props {
   items: { name: string; link: string }[],
@@ -10,6 +10,17 @@ interface Props {
 }
 export default function Dropdown({ items, text, }: Props) {
   const [isActiveDropdown, setIsActiveDropdown] = useState(false)
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function close(e: any) {
+        setIsActiveDropdown(false)
+    }
+
+    document.addEventListener("click", close);
+
+    return () => document.removeEventListener("click", close)
+  })
 
   return (
     <div
@@ -19,13 +30,10 @@ export default function Dropdown({ items, text, }: Props) {
       <button
         aria-haspopup="listbox"
         aria-expanded={isActiveDropdown}
-        onBlur={() => {
-          setIsActiveDropdown(false)
-        }}
         onClick={() => {
-          setIsActiveDropdown(!isActiveDropdown)
+          setIsActiveDropdown(!isActiveDropdown);
         }}
-        className="flex w-fit cursor-pointer items-center justify-center rounded-sm bg-slate-100 dark:bg-zinc-900 border-2 border-slate-200 dark:border-zinc-800 px-7 py-3 hover:bg-slate-200 dark:hover:bg-zinc-800"
+        className="peer flex w-fit cursor-pointer items-center justify-center rounded-sm bg-slate-100 dark:bg-zinc-900 border-2 border-slate-200 dark:border-zinc-800 px-7 py-3 hover:bg-slate-200 dark:hover:bg-zinc-800"
       >
           <span className='ml-1'>
             {text}
@@ -37,6 +45,7 @@ export default function Dropdown({ items, text, }: Props) {
           />
       </button>
       <div
+        ref={ref}
         role="listbox"
         className="absolute bg-slate-100 dark:bg-zinc-900 left-1/2 w-fit -translate-x-1/2 group-data-[state=open]:top-16 group-data-[state=open]:opacity-100 group-data-[state=closed]:invisible group-data-[state=closed]:top-[50px] group-data-[state=closed]:opacity-0 group-data-[state=open]:visible rounded-sm overflow-hidden text-center font-base shadow-light dark:shadow-dark transition-all"
       >
