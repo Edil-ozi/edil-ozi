@@ -6,12 +6,12 @@ const items = [
     link: 'https://github.com/Edil-ozi/edil-ozi',
   },
   {
-    name: 'Facebook',
-    link: 'https://www.facebook.com',
+    name: 'Twitter',
+    link: 'https://x.com/shatlyk1415',
   },
   {
-    name: 'Google',
-    link: 'https://www.google.com',
+    name: 'Facebook',
+    link: 'https://www.facebook.com',
   },
 ]
 
