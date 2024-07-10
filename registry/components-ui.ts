@@ -33,6 +33,18 @@ const componentsUi: Registry = {
     files: ["registry/components/edil-ozi/accordion.tsx"],
   },
 
+  drawer: {
+    name: "drawer",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/drawer.tsx"],
+  },
+
+  dropdown: {
+    name: "dropdown",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/dropdown.tsx"],
+  },
+
   "login-form": {
     name: "login-form",
     type: "components:ui",
@@ -43,12 +55,6 @@ const componentsUi: Registry = {
     name: "pricing-card",
     type: "components:ui",
     files: ["registry/components/edil-ozi/pricing-card.tsx"],
-  },
-
-  drawer: {
-    name: "drawer",
-    type: "components:ui",
-    files: ["registry/components/edil-ozi/drawer.tsx"],
   },
 
   tabs: {

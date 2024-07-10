@@ -31,9 +31,11 @@ interface AccordionSummary extends Children {
   isExpanded?: boolean;
   handleClick?: () => void;
   setHeights?: (prev: {}) => void;
+  className?: string;
 }
 interface AccordionDetails extends Children {
   setHeights?: (prev: {}) => void;
+  className?: string;
 }
 interface AccordionContextType {
   activeItem: string;
@@ -65,7 +67,14 @@ const Accordion: FC<AccordionProps> = ({ children, multiple = true }) => {
   );
 };
 
-const AccordionSummary: FC<AccordionSummary> = ({ children, isExpanded, handleClick, setHeights, expandIcon }) => {
+const AccordionSummary: FC<AccordionSummary> = ({
+  children,
+  isExpanded,
+  handleClick,
+  setHeights,
+  expandIcon,
+  className,
+}) => {
   const ref = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -77,10 +86,10 @@ const AccordionSummary: FC<AccordionSummary> = ({ children, isExpanded, handleCl
   return (
     <button
       ref={ref}
-      className="flex w-full cursor-pointer items-center justify-between p-4 font-medium"
+      className={cn("flex w-full cursor-pointer items-center justify-between p-4 font-medium", className)}
       onClick={handleClick}
     >
-      <span>{children}</span>
+      <span className="text-start">{children}</span>
       <span className={`transition ${isExpanded && "rotate-180"}`}>
         {!expandIcon ? (
           <svg
@@ -104,7 +113,7 @@ const AccordionSummary: FC<AccordionSummary> = ({ children, isExpanded, handleCl
   );
 };
 
-const AccordionDetails: FC<AccordionDetails> = ({ children, setHeights }) => {
+const AccordionDetails: FC<AccordionDetails> = ({ children, setHeights, className }) => {
   const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (ref.current !== null) {
@@ -114,7 +123,7 @@ const AccordionDetails: FC<AccordionDetails> = ({ children, setHeights }) => {
   return (
     <div
       ref={ref}
-      className={`px-4 pb-5 pt-1 text-neutral-900 dark:text-neutral-300`}
+      className={cn(`px-4 pb-5 pt-1 text-neutral-900 dark:text-neutral-300`, className)}
     >
       {children}
     </div>

@@ -52,6 +52,12 @@ const componentsExample: Registry = {
     files: ["registry/components/example/drawer-demo.tsx"],
     component: lazy(() => import("@/registry/components/example/drawer-demo")),
   },
+  "dropdown-demo": {
+    name: "dropdown-demo",
+    type: "components:example",
+    files: ["registry/components/example/dropdown-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/dropdown-demo")),
+  },
 
   "drawer-demo-anchors": {
     name: "drawer-demo-anchors",
