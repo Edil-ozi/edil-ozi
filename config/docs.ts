@@ -67,6 +67,12 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
+          title: "Background Grid",
+          href: "/docs/components/background-grid",
+          items: [],
+          label: "New",
+        },
+        {
           title: "Drawer",
           href: "/docs/components/drawer",
           items: [],

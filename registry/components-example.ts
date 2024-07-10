@@ -32,6 +32,20 @@ const componentsExample: Registry = {
   },
 
   //Clean Components
+  "accordion-demo": {
+    name: "accordion-demo",
+    type: "components:example",
+    files: ["registry/components/example/accordion-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/accordion-demo")),
+  },
+
+  "background-grid-demo": {
+    name: "background-grid-demo",
+    type: "components:example",
+    files: ["registry/components/example/background-grid-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/background-grid-demo")),
+  },
+
   "login-form-demo": {
     name: "login-form-demo",
     type: "components:example",
@@ -71,13 +85,6 @@ const componentsExample: Registry = {
     type: "components:example",
     files: ["registry/components/example/logo-carousel-demo.tsx"],
     component: lazy(() => import("@/registry/components/example/logo-carousel-demo")),
-  },
-
-  "accordion-demo": {
-    name: "accordion-demo",
-    type: "components:example",
-    files: ["registry/components/example/accordion-demo.tsx"],
-    component: lazy(() => import("@/registry/components/example/accordion-demo")),
   },
 
   "tabs-demo": {
