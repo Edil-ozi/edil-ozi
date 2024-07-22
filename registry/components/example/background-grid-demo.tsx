@@ -3,7 +3,7 @@ import BackgroundGrid from "@/registry/components/edil-ozi/background-grid";
 const BackgroundGridDemo = () => {
   return (
     <section className="w-full z-10 h-[420px] bg-white dark:bg-black relative">
-      <BackgroundGrid classes="text-red-400" />
+      <BackgroundGrid />
 
       <div className="relative z-[100] flex h-full justify-center pt-36 ">
         <div className="max-w-[90%] items-center text-center font-medium lg:max-w-[75%]">

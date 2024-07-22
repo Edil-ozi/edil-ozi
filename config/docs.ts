@@ -101,7 +101,6 @@ export const docsConfig: DocsConfig = {
           title: "Dropdown",
           href: "/docs/components/dropdown",
           items: [],
-          label: "New",
         },
       ],
     },
@@ -147,7 +146,6 @@ export const docsConfig: DocsConfig = {
           title: "Scroll Velocity",
           href: "/docs/components/scroll-velocity",
           items: [],
-          label: "New",
         },
 
         {
@@ -184,17 +182,6 @@ export const docsConfig: DocsConfig = {
         },
       ],
     },
-
-    // {
-    //   title: "React Hooks",
-    //   items: [
-    //     {
-    //       title: "Some usefull hook",
-    //       href: "/docs/components/mag2ic-card",
-    //       items: [],
-    //     },
-    //   ],
-    // },
   ],
 
   sectionsNav: [
@@ -208,8 +195,7 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Installation",
-          // href: "/sections/installation",
-          href: "/sections",
+          href: "/sections/installation",
           items: [],
         },
       ],
@@ -222,11 +208,13 @@ export const docsConfig: DocsConfig = {
           title: "Hero",
           href: "/sections/hero",
           items: [],
+          label: "new",
         },
         {
           title: "Header",
           href: "/sections/header",
           items: [],
+          label: "new",
         },
       ],
     },
