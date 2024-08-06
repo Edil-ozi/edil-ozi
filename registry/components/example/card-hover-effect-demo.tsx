@@ -1,10 +1,9 @@
-import CardHoverEffect from '@/registry/components/edil-ozi/card-hover-effect'
+import CardHoverEffect from "@/registry/components/edil-ozi/card-hover-effect";
 
 const items = [
   {
     title: "Edil Ozi",
-    description:
-      "Explore the principles of minimalist design, where simplicity and functionality converge.",
+    description: "Explore the principles of minimalist design, where simplicity and functionality converge.",
   },
   {
     title: "Color Psychology in UI/UX Design",
@@ -35,9 +34,9 @@ const items = [
 
 const Index = () => {
   return (
-    <div className='bg-stone-100 dark:bg-stone-900 z-10 px-10 py-8 rounded-xl'>
+    <div className="z-10 rounded-xl bg-stone-100 px-10 py-8 dark:bg-stone-900">
       <CardHoverEffect items={items} />
     </div>
-  )
+  );
 };
-export default Index
+export default Index;

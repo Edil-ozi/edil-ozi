@@ -44,12 +44,13 @@ export default function MainNav() {
         <Link
           href="/sections"
           className={cn(
-            "transition-colors hover:text-foreground/80 relative",
+            "relative transition-colors hover:text-foreground/80",
             pathname?.startsWith("/sections") ? "text-foreground" : "text-foreground/60",
           )}
         >
-
-          <p className="absolute top-[-10px] px-1.5 py-0.5 rotate-[15deg] leading-[1] text-[11px] font-medium rounded-lg right-[-20px] bg-primary text-primary-foreground">New</p>
+          <p className="absolute right-[-20px] top-[-10px] rotate-[15deg] rounded-lg bg-primary px-1.5 py-0.5 text-[11px] font-medium leading-[1] text-primary-foreground">
+            New
+          </p>
           Sections
         </Link>
         <Link

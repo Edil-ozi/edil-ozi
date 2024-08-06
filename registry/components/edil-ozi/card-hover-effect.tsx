@@ -1,13 +1,13 @@
-import { FC, useState } from 'react';
+import { FC, useState } from "react";
 
-import { cn } from '@/lib/utils';
-import { AnimatePresence, motion } from 'framer-motion';
+import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface Props {
-  items: { title: string; description: string }[]
-  wrapperClasses?: string
-  itemClasses?: string
-};
+  items: { title: string; description: string }[];
+  wrapperClasses?: string;
+  itemClasses?: string;
+}
 
 const Index: FC<Props> = ({ items, itemClasses, wrapperClasses }) => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
@@ -26,7 +26,7 @@ const Index: FC<Props> = ({ items, itemClasses, wrapperClasses }) => {
               <motion.span
                 className={cn(
                   "absolute inset-0 z-0 block h-full w-full rounded-xl bg-stone-200 dark:bg-stone-800",
-                  wrapperClasses
+                  wrapperClasses,
                 )}
                 layoutId="cardHoverEffect"
                 initial={{ opacity: 0 }}
@@ -48,8 +48,6 @@ const Index: FC<Props> = ({ items, itemClasses, wrapperClasses }) => {
         </div>
       ))}
     </div>
-
-  )
+  );
 };
-export default Index
-
+export default Index;

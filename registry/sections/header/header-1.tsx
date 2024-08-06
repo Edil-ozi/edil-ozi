@@ -20,7 +20,7 @@ const Index: FC<Props> = () => {
   return (
     <div className="relative z-10 h-[420px] w-full overflow-hidden bg-sky-50 dark:bg-sky-100">
       <header className="flex w-full items-center justify-between bg-sky-200 px-4 py-4 dark:bg-sky-200 lg:px-6 xl:px-10 xl:py-6">
-        <div className="text-sm md:text-base lg:mb-0 text-black">Logo</div>
+        <div className="text-sm text-black md:text-base lg:mb-0">Logo</div>
         <button
           onClick={() => setOpen(!open)}
           type="button"
@@ -40,7 +40,7 @@ const Index: FC<Props> = () => {
           ) : (
             <svg
               focusable="false"
-                className="fill-black"
+              className="fill-black"
               width={24}
               height={24}
               aria-hidden="true"
@@ -51,7 +51,7 @@ const Index: FC<Props> = () => {
           )}
         </button>
         <nav
-          className={`absolute right-0 top-0 z-30 mx-0 flex h-full w-[240px] flex-col items-center justify-start space-y-6  py-10 text-lg transition-all duration-200 bg-sky-300 text-black lg:relative lg:h-auto lg:w-auto lg:flex-row lg:justify-between lg:space-x-4 lg:space-y-0 lg:bg-transparent lg:py-0 lg:text-base xl:text-lg ${open ? "pointer-events-auto visible translate-x-[0%] select-auto opacity-100" : "pointer-events-none invisible translate-x-[100%] select-none opacity-0 lg:pointer-events-auto lg:visible lg:translate-x-[0%] lg:select-auto lg:opacity-100"}`}
+          className={`absolute right-0 top-0 z-30 mx-0 flex h-full w-[240px] flex-col items-center justify-start space-y-6 bg-sky-300 py-10 text-lg text-black transition-all duration-200 lg:relative lg:h-auto lg:w-auto lg:flex-row lg:justify-between lg:space-x-4 lg:space-y-0 lg:bg-transparent lg:py-0 lg:text-base xl:text-lg ${open ? "pointer-events-auto visible translate-x-[0%] select-auto opacity-100" : "pointer-events-none invisible translate-x-[100%] select-none opacity-0 lg:pointer-events-auto lg:visible lg:translate-x-[0%] lg:select-auto lg:opacity-100"}`}
         >
           <ul className="flex flex-col items-start gap-2 *:cursor-pointer lg:flex-row lg:items-center lg:space-x-6">
             {links.map(({ title, href }) => (
@@ -65,9 +65,7 @@ const Index: FC<Props> = () => {
             ))}
           </ul>
 
-          <button className="rounded-full bg-sky-400 px-7 py-2 text-black ">
-            Sign In
-          </button>
+          <button className="rounded-full bg-sky-400 px-7 py-2 text-black">Sign In</button>
         </nav>
         {/* bg - cover */}
         <div
