@@ -109,6 +109,12 @@ export const docsConfig: DocsConfig = {
       title: "Fancy Components",
       items: [
         {
+          title: "Card Hover Effect",
+          href: "/docs/components/card-hover-effect",
+          label: "New",
+          items: [],
+        },
+        {
           title: "Canvas Cursor",
           href: "/docs/components/canvas-cursor",
           items: [],

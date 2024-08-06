@@ -130,6 +130,12 @@ const componentsExample: Registry = {
     files: ["registry/components/example/infinite-text-demo.tsx"],
     component: lazy(() => import("@/registry/components/example/infinite-text-demo")),
   },
+  "card-hover-effect-demo": {
+    name: "card-hover-effect-demo",
+    type: "components:example",
+    files: ["registry/components/example/card-hover-effect-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/card-hover-effect-demo")),
+  },
 
   "text-reveal-demo": {
     name: "text-reveal-demo",

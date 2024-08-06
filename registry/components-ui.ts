@@ -75,6 +75,11 @@ const componentsUi: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/canvas-cursor.tsx"],
   },
+  "card-hover-effect": {
+    name: "card-hover-effect",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/card-hover-effect.tsx"],
+  },
 
   //Text animations
   "infinite-text": {
