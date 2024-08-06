@@ -41,7 +41,7 @@ const Index: FC<Props> = ({ items, itemClasses, wrapperClasses }) => {
               />
             )}
           </AnimatePresence>
-          <div className="z-1 space-y-3">
+          <div className="z-[1] space-y-3">
             <h1 className="font-medium">{title}</h1>
             <p className="text-neutral-900 dark:text-neutral-400">{description}</p>
           </div>
