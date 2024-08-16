@@ -15,7 +15,7 @@ const InViewDemo1 = () => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           <div>
-            <h1 className="mb-4 text-center text-2xl font-bold text-emerald-900 dark:text-emerald-400 md:text-3xl xl:text-4xl">
+            <h1 className="mb-4 text-center text-2xl font-bold text-gray-900 dark:text-gray-200 md:text-3xl xl:text-4xl">
               Crafting Digital Experiences
             </h1>
             <p className="text-balance text-center text-lg leading-[1.5] text-gray-900 dark:text-gray-300 md:text-xl xl:text-2xl">

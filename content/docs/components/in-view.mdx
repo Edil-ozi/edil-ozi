@@ -22,14 +22,15 @@ components/edil-ozi/in-view.tsx
 
 ## Examples
 
-### lorem ipsum
-
-hello world description
+### Slide example
 
 <ComponentPreview name="in-view-demo-2" />
 
 ## Props
 
-| Prop name | Type     | Default | Description   |
-| --------- | -------- | ------- | ------------- |
-| images    | string[] | -       | Array of urls |
+| Prop name   | Type                                     | Default                                              | Description          |
+| ---------   | --------                                 | -------                                              | -------------        |
+| children    | ReactNode                                | -                                                    | Children component   |
+| variants    | `{ hidden: Variant; visible: Variant; }` | `{ hidden: { opacity: 0 }, visible: { opacity: 1 } }`| Animation variants   |
+| transition  | Transition                               | -                                                    | Animation Transition |
+| viewOptions | UseInViewOptions                         | -                                                    | In view behavior     |
