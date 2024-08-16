@@ -70,7 +70,6 @@ export const docsConfig: DocsConfig = {
           title: "Background Grid",
           href: "/docs/components/background-grid",
           items: [],
-          label: "New",
         },
         {
           title: "Drawer",
@@ -129,6 +128,12 @@ export const docsConfig: DocsConfig = {
           title: "Swipe Grid",
           href: "/docs/components/swipe-grid",
           items: [],
+        },
+        {
+          title: "In View",
+          href: "/docs/components/in-view",
+          items: [],
+          label: "New",
         },
         {
           title: "Perspective Grid",
@@ -214,13 +219,11 @@ export const docsConfig: DocsConfig = {
           title: "Hero",
           href: "/sections/hero",
           items: [],
-          label: "new",
         },
         {
           title: "Header",
           href: "/sections/header",
           items: [],
-          label: "new",
         },
       ],
     },

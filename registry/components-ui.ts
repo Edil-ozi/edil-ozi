@@ -107,6 +107,12 @@ const componentsUi: Registry = {
     files: ["registry/components/edil-ozi/swipe-grid.tsx"],
   },
 
+  "in-view": {
+    name: "in-view",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/in-view.tsx"],
+  },
+
   "perspective-grid": {
     name: "perspective-grid",
     type: "components:ui",

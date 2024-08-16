@@ -158,16 +158,6 @@ const Buttons: FC<Props> = () => {
         </button>
       ),
     },
-
-    {
-      name: "Join free",
-
-      component: (
-        <button className="mt-6 rounded-full bg-cyan-200 px-12 py-4 text-base font-medium tracking-normal ring-4 ring-cyan-600/50 transition duration-300 hover:scale-105 hover:shadow-xl hover:ring-cyan-600/60 focus:outline-none focus:ring-cyan-300 focus:ring-offset-transparent focus-visible:ring-2 focus-visible:ring-offset-4 dark:bg-cyan-600 dark:ring-cyan-600/70 dark:hover:text-white dark:focus:ring-cyan-800">
-          Join for free
-        </button>
-      ),
-    },
   ];
 
   return (

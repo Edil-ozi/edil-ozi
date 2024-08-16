@@ -159,6 +159,20 @@ const componentsExample: Registry = {
     component: lazy(() => import("@/registry/components/example/swipe-grid-demo")),
   },
 
+  "in-view-demo-1": {
+    name: "in-view-demo-1",
+    type: "components:example",
+    files: ["registry/components/example/in-view-demo-1.tsx"],
+    component: lazy(() => import("@/registry/components/example/in-view-demo-1")),
+  },
+
+  "in-view-demo-2": {
+    name: "in-view-demo-2",
+    type: "components:example",
+    files: ["registry/components/example/in-view-demo-2.tsx"],
+    component: lazy(() => import("@/registry/components/example/in-view-demo-2")),
+  },
+
   "perspective-grid-demo": {
     name: "perspective-grid-demo",
     type: "components:example",
