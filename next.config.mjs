@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: "/components",
-        destination: "/docs/components/swipe-grid",
+        destination: "/docs/components/accordion",
         permanent: true,
       },
       {
