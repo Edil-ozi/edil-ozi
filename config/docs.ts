@@ -110,7 +110,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Card Hover Effect",
           href: "/docs/components/card-hover-effect",
-          label: "New",
           items: [],
         },
         {
@@ -133,7 +132,6 @@ export const docsConfig: DocsConfig = {
           title: "In View",
           href: "/docs/components/in-view",
           items: [],
-          label: "New",
         },
         {
           title: "Perspective Grid",
@@ -190,6 +188,12 @@ export const docsConfig: DocsConfig = {
           title: "Text Reveal",
           href: "/docs/components/text-reveal",
           items: [],
+        },
+        {
+          title: "Text Glitch",
+          href: "/docs/components/text-glitch",
+          items: [],
+          label: "New",
         },
       ],
     },

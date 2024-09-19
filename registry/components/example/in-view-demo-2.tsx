@@ -20,13 +20,14 @@ const InViewDemo1 = () => {
           transition={{ duration: 0.3, ease: "easeInOut" }}
           viewOptions={{ margin: "0px 0px -350px 0px" }}
         >
-          <div className="max-w-2xl bg-emerald-100 dark:bg-emerald-800 px-6 py-6 shadow-lg rounded-md">
+          <div className="max-w-2xl rounded-md bg-emerald-100 px-6 py-6 shadow-lg dark:bg-emerald-800">
             <p className="text-xl text-gray-600 dark:text-gray-200">
-              <strong className="text-gray-700 dark:text-gray-100">Design</strong> - is the art of communication. It speaks volumes through visuals,
-              layouts, and typography, creating a symphony of messages that captivate and engage audiences. Among the
-              myriad elements that contribute to the beauty of design, none is perhaps as impactful as the thoughtful
-              combination of text and headings. This article delves into the nuances of selecting and implementing fonts
-              for headings, offering insights into how to elevate your design projects through typography.
+              <strong className="text-gray-700 dark:text-gray-100">Design</strong> - is the art of communication. It
+              speaks volumes through visuals, layouts, and typography, creating a symphony of messages that captivate
+              and engage audiences. Among the myriad elements that contribute to the beauty of design, none is perhaps
+              as impactful as the thoughtful combination of text and headings. This article delves into the nuances of
+              selecting and implementing fonts for headings, offering insights into how to elevate your design projects
+              through typography.
             </p>
           </div>
         </InView>

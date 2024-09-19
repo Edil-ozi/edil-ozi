@@ -100,6 +100,12 @@ const componentsUi: Registry = {
     files: ["registry/components/edil-ozi/rotate-between.tsx"],
   },
 
+  "text-glitch": {
+    name: "text-glitch",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/text-glitch.tsx"],
+  },
+
   //On scroll animations
   "swipe-grid": {
     name: "swipe-grid",

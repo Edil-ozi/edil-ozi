@@ -136,6 +136,12 @@ const componentsExample: Registry = {
     files: ["registry/components/example/card-hover-effect-demo.tsx"],
     component: lazy(() => import("@/registry/components/example/card-hover-effect-demo")),
   },
+  "text-glitch-demo": {
+    name: "text-glitch-demo",
+    type: "components:example",
+    files: ["registry/components/example/text-glitch-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/text-glitch-demo")),
+  },
 
   "text-reveal-demo": {
     name: "text-reveal-demo",
