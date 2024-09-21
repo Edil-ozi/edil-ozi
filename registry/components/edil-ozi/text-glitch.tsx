@@ -5,7 +5,7 @@ interface Props {
   text: string;
 }
 
-const InView: FC<Props> = ({ text }) => {
+const TextGlitch: FC<Props> = ({ text }) => {
   text;
   return (
     <div className="group relative inline-block overflow-hidden">
@@ -20,4 +20,4 @@ const InView: FC<Props> = ({ text }) => {
   );
 };
 
-export default InView;
+export default TextGlitch;

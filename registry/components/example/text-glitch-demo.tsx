@@ -2,7 +2,7 @@
 
 import TextGlitch from "@/registry/components/edil-ozi/text-glitch";
 
-const InView = () => {
+const TextGlitchDemo = () => {
   return (
     <div className="z-10 w-full bg-gray-200 py-10 text-center dark:bg-zinc-900">
       <TextGlitch text="Hover Me" />
@@ -10,4 +10,4 @@ const InView = () => {
   );
 };
 
-export default InView;
+export default TextGlitchDemo;
