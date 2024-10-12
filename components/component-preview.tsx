@@ -36,7 +36,7 @@ export function ComponentPreview({ name, children, className, align = "center", 
 
   return (
     <div
-      className={cn("relative my-4 flex w-full flex-col space-y-2", className)}
+      className={cn("relative my-4 flex w-full flex-col space-y-2 z-20", className)}
       {...props}
     >
       <Tabs
@@ -53,7 +53,7 @@ export function ComponentPreview({ name, children, className, align = "center", 
             </TabsTrigger>
             <TabsTrigger
               value="code"
-              className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground data-[state=active]:shadow-none"
+              className="relative h-9 rounded-none border-b-2 border-b-transparent bg-transparent px-4 pb-3 pt-2 font-semibold text-muted-foreground shadow-none transition-none data-[state=active]:border-b-primary data-[state=active]:text-foreground z-10 data-[state=active]:shadow-none"
             >
               Code
             </TabsTrigger>

@@ -6,7 +6,7 @@ const FluidCursorDemo = () => {
 
   return (
     <>
-      <div className='bg-zinc-100 dark:bg-zinc-900 w-full flex items-center justify-center text-center h-[350px] z-[-2]'>
+      <div className='bg-zinc-100 dark:bg-zinc-900 w-full flex items-center justify-center text-center h-[350px] z-10'>
         Try it on the whole page
       </div>
       <FluidCursor />
