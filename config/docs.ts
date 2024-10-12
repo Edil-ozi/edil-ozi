@@ -117,6 +117,12 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/canvas-cursor",
           items: [],
         },
+        {
+          title: "Fluid Cursor",
+          href: "/docs/components/fluid-cursor",
+          label: "New",
+          items: [],
+        },
       ],
     },
 

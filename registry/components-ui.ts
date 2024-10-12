@@ -70,15 +70,20 @@ const componentsUi: Registry = {
   },
 
   //Fancy
+  "card-hover-effect": {
+    name: "card-hover-effect",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/card-hover-effect.tsx"],
+  },
   "canvas-cursor": {
     name: "canvas-cursor",
     type: "components:ui",
     files: ["registry/components/edil-ozi/canvas-cursor.tsx"],
   },
-  "card-hover-effect": {
-    name: "card-hover-effect",
+  "fluid-cursor": {
+    name: "fluid-cursor",
     type: "components:ui",
-    files: ["registry/components/edil-ozi/card-hover-effect.tsx"],
+    files: ["registry/components/edil-ozi/fluid-cursor.tsx"],
   },
 
   //Text animations

@@ -122,6 +122,12 @@ const componentsExample: Registry = {
     files: ["registry/components/example/canvas-cursor-demo.tsx"],
     component: lazy(() => import("@/registry/components/example/canvas-cursor-demo")),
   },
+  "fluid-cursor-demo": {
+    name: "fluid-cursor-demo",
+    type: "components:example",
+    files: ["registry/components/example/fluid-cursor-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/fluid-cursor-demo")),
+  },
 
   //Text animations
   "infinite-text-demo": {
