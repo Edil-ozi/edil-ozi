@@ -120,6 +120,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Fluid Cursor",
           href: "/docs/components/fluid-cursor",
+          items: [],
+        },
+        {
+          title: "Ink Cursor",
+          href: "/docs/components/ink-cursor",
           label: "New",
           items: [],
         },
@@ -199,7 +204,6 @@ export const docsConfig: DocsConfig = {
           title: "Text Glitch",
           href: "/docs/components/text-glitch",
           items: [],
-          label: "New",
         },
       ],
     },

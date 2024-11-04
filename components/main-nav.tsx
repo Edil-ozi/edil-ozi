@@ -48,8 +48,8 @@ export default function MainNav() {
             pathname?.startsWith("/sections") ? "text-foreground" : "text-foreground/60",
           )}
         >
-          <p className="absolute right-[-20px] top-[-10px] rotate-[15deg] rounded-lg bg-primary px-1.5 py-0.5 text-[11px] font-medium leading-[1] text-primary-foreground">
-            New
+          <p className="absolute right-[-25px] top-[-8px] rotate-[25deg] rounded-lg dark:bg-zinc-300 bg-zinc-700 px-1.5 py-0.5 text-[10px] font-medium leading-[1] text-primary-foreground">
+            Demo
           </p>
           Sections
         </Link>

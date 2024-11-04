@@ -36,8 +36,8 @@ export function CodeBlockWrapper({ expandButtonTitle = "View Code", className, c
         </CollapsibleContent>
         <div
           className={cn(
-            "absolute flex items-center justify-center bg-gradient-to-b from-black/10 to-black to-90% p-2",
-            isOpened ? "inset-x-0 bottom-0 h-12 from-gray-900/30" : "inset-0",
+            "absolute z-[21] flex items-center justify-center bg-gradient-to-b from-black/10 to-black to-90% p-2",
+            isOpened ? "inset-x-0 bottom-0 h-12 from-gray-900/30 " : "inset-0",
           )}
         >
           <CollapsibleTrigger asChild>
