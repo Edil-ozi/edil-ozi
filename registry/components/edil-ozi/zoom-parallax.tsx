@@ -23,37 +23,37 @@ const ZoomParallax: FC<Props> = ({ classes }) => {
 
   const pictures = [
     {
-      src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1528",
+      src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=40&w=640",
       scale: scale1,
       classes: "relative w-[25%] h-[25%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1492288991661-058aa541ff43?q=80&w=1887",
+      src: "https://images.unsplash.com/photo-1492288991661-058aa541ff43?q=40&w=640",
       scale: scale2,
       classes: "relative top-[-30%] left-[5%] w-[35%] h-[30%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1887",
+      src: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=40&w=640",
       scale: scale3,
       classes: "relative top-[-29%] left-[-25%] w-[20%] h-[28%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1974",
+      src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=40&w=640",
       scale: scale2,
       classes: "relative left-[27.5%] w-[25%] h-[25%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1526510747491-58f928ec870f?q=80&w=1974",
+      src: "https://images.unsplash.com/photo-1526510747491-58f928ec870f?q=40&w=640",
       scale: scale3,
       classes: "relative left-[-27.5%] w-[25%] h-[25%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=80&w=2071",
+      src: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?q=40&w=640",
       scale: scale4,
       classes: "relative top-[27.5%] left-[5%] w-[20%] h-[25%]",
     },
     {
-      src: "https://images.unsplash.com/photo-1463453091185-61582044d556?q=80&w=2070",
+      src: "https://images.unsplash.com/photo-1508186225823-0963cf9ab0de?q=40&w=640",
       scale: scale5,
       classes: "relative top-[22.5%] left-[25%] w-[15%] h-[15%]",
     },
@@ -72,12 +72,12 @@ const ZoomParallax: FC<Props> = ({ classes }) => {
               style={{ scale }}
               className="absolute top-0 flex h-full w-full items-center justify-center"
             >
-              <div className={classes}>
+              <div className={` bg-zinc-200 dark:bg-zinc-800 ${classes}`}>
                 <Image
                   src={src}
                   fill
                   objectFit="cover"
-                  alt="image"
+                  alt="image of beautiful person"
                 />
               </div>
             </motion.div>

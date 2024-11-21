@@ -5,9 +5,24 @@ import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 import CanvasCursor from "@/registry/components/edil-ozi/canvas-cursor";
+import { Star } from "lucide-react";
 import Link from "next/link";
 
-export default function Home() {
+async function getRepoStarCount() {
+  const res = await fetch("https://api.github.com/repos/Edil-ozi/edil-ozi");
+  const data = await res.json();
+  const starCount = data.stargazers_count;
+
+  if (starCount > 999) {
+    return (starCount / 1000).toFixed(1) + "K";
+  }
+
+  return starCount;
+}
+
+export default async function Home() {
+  const starCount = await getRepoStarCount();
+
   return (
     <div className="container relative">
       <PageHeader>
@@ -33,7 +48,7 @@ export default function Home() {
             className={cn(buttonVariants({ variant: "outline" }))}
           >
             <Icons.gitHub className="mr-2 h-4 w-4" />
-            Star on Github
+            Star on Github <Star className="w-4 fill-primary text-primary stroke-current h-4 mr-0.5 ml-2" /> {starCount} 
           </Link>
         </PageActions>
       </PageHeader>

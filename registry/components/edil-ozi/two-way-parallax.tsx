@@ -45,22 +45,22 @@ const TwoWayParallax: FC<Props> = ({ images }) => {
       className="box-content flex h-[180vh] gap-4 overflow-hidden bg-slate-500 p-4 py-10"
     >
       <Column
-        images={[images[0], images[2], images[4]]}
+        images={[images[0], images[1], images[2]]}
         y={y1}
         classes="top-[-45%]"
       />
       <Column
-        images={[images[5], images[6], images[3]]}
+        images={[images[3], images[4], images[5]]}
         y={y2}
         classes="top-[-95%]"
       />
       <Column
-        images={[images[5], images[3], images[2]]}
+        images={[images[6], images[7], images[8]]}
         y={y3}
         classes="top-[-65%] hidden lg:flex"
       />
       <Column
-        images={[images[2], images[0], images[3]]}
+        images={[images[9], images[10], images[11]]}
         y={y4}
         classes="hidden xl:flex top-[-75%]"
       />
@@ -80,14 +80,9 @@ const Column = ({ images, y = 0, classes }: Column) => {
       {images.map((src, idx) => (
         <div
           key={idx}
-          className="relative h-full w-full overflow-hidden rounded-md"
+          className="relative h-full w-full overflow-hidden rounded-md border border-slate-600 bg-slate-600"
         >
-          <Image
-            src={src}
-            objectFit="cover"
-            fill
-            alt="img"
-          />
+          <Image src={src} objectFit="cover" fill alt="img" />
         </div>
       ))}
     </motion.div>
