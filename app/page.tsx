@@ -27,7 +27,7 @@ export default async function Home() {
     <div className="container relative">
       <PageHeader>
         {/* <Announcement /> */}
-        <PageHeaderHeading className="text-balance bg-gradient-to-br from-black from-30% to-black/60 bg-clip-text py-4 text-5xl font-bold leading-none tracking-tighter text-transparent dark:from-white dark:to-white/40 md:text-6xl">
+        <PageHeaderHeading className="text-balance py-4 text-5xl font-bold leading-none tracking-tighter text-transparent text-zinc-700 dark:text-zinc-200 md:text-6xl">
           Component Library for Developers.
         </PageHeaderHeading>
         <PageHeaderDescription className="text-xl">
