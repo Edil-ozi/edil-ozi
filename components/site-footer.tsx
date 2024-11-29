@@ -7,12 +7,12 @@ export default function SiteFooter() {
         <p className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
           Built by{" "}
           <a
-            href={siteConfig.links.github}
+            href="https://github.com/shatlyk1011"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            Edilozi
+            Shatlyk
           </a>{" "}
           on top of{" "}
           <a
