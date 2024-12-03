@@ -134,6 +134,12 @@ const componentsExample: Registry = {
     files: ["registry/components/example/ink-cursor-demo.tsx"],
     component: lazy(() => import("@/registry/components/example/ink-cursor-demo")),
   },
+  "fancy-click-effect-demo": {
+    name: "fancy-click-effect-demo",
+    type: "components:example",
+    files: ["registry/components/example/fancy-click-effect-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/fancy-click-effect-demo")),
+  },
 
   //Text animations
   "infinite-text-demo": {

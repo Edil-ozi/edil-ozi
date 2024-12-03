@@ -69,10 +69,6 @@ const config: Config = {
         from: { height: "var(--radix-accordion-content-height)" },
         to: { height: "0" },
       },
-      "caret-blink": {
-        "0%,70%,100%": { opacity: "1" },
-        "20%,50%": { opacity: "0" },
-      },
       shimmer: {
         from: {
           backgroundPosition: "0 0",
@@ -84,10 +80,6 @@ const config: Config = {
       "logo-carousel": {
         from: { transform: "translateX(0)" },
         to: { transform: "translateX(calc(-100% - 2rem))" },
-      },
-      fadeIn: {
-        from: { opacity: "0" },
-        to: { opacity: "100" },
       },
       pulse: {
         "0%": {
@@ -112,21 +104,27 @@ const config: Config = {
           transform: "scale(0.9)",
         },
       },
+      "fade-out": {
+        "0%": {
+          backgroundColor: "inherit",
+          outline: "1px solid currentColor",
+        },
+
+        "30%": {
+          background: "transparent",
+        },
+        "100%": {
+          outline: "1px solid transparent",
+        },
+      },
     },
     animation: {
       "accordion-down": "accordion-down 0.5s ease-in-out forwards",
       "accordion-up": "accordion-up 0.2s ease-out",
-      "caret-blink": "caret-blink 1.25s ease-out infinite",
       shimmer: "shimmer 2s linear infinite",
       "logo-carousel": "logo-carousel 12s linear infinite",
-      fadeIn: "fadeIn 0.2s ease-in-out forwards",
       pulse: "pulse 500ms ease-in-out",
-      wave: "wave 300ms ease",
-      like: "like 400ms ease",
-      dislike: "dislike 400ms ease",
-      bookmark: "bookmark 300ms ease",
-      circle: "circle 300ms ",
-      circles: "circles 300ms",
+      "fade-out": "fade-out 0.8s ease",
     },
   },
   plugins: [require("tailwindcss-animate")],

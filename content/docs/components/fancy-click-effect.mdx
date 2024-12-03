@@ -1,0 +1,53 @@
+---
+title: Fancy Click Effect
+date: 2024-03-12
+description: Small, reusable Youtube alike video click effect using tailwind. 
+---
+
+<ComponentPreview name="fancy-click-effect-demo" />
+
+<Steps>
+
+### Add new keyframe animation to your tailwind config
+
+```js
+keyframes: {
+ "fade-out": {
+    "0%": {
+      backgroundColor: "inherit",
+      outline: "1px solid currentColor",
+    },
+
+    "30%": {
+      background: "transparent",
+    },
+    "100%": {
+      outline: "1px solid transparent",
+    },
+  },
+}
+
+animation: {
+  "fade-out": "fade-out 0.8s ease",
+}
+```
+
+
+### Installation
+
+Copy and paste the following code into your project.
+
+```text
+components/edil-ozi/fancy-click-effect.tsx
+```
+
+<ComponentSource name="fancy-click-effect" />
+
+</Steps>
+
+## Props
+
+| Prop name | Type      | Default | Description                |
+| --------- | ------    | ------- | -------------------------- |
+| children  | ReactNode | -       | Children component         |
+

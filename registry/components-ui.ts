@@ -85,6 +85,11 @@ const componentsUi: Registry = {
     type: "components:ui",
     files: ["registry/components/edil-ozi/fluid-cursor.tsx"],
   },
+  "fancy-click-effect": {
+    name: "fancy-click-effect",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/fancy-click-effect.tsx"],
+  },
 
   //Text animations
   "infinite-text": {

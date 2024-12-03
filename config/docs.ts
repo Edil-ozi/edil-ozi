@@ -125,6 +125,11 @@ export const docsConfig: DocsConfig = {
         {
           title: "Ink Cursor",
           href: "/docs/components/ink-cursor",
+          items: [],
+        },
+        {
+          title: "Fancy Click Effect",
+          href: "/docs/components/fancy-click-effect",
           label: "New",
           items: [],
         },
