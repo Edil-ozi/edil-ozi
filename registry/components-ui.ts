@@ -116,6 +116,12 @@ const componentsUi: Registry = {
     files: ["registry/components/edil-ozi/text-glitch.tsx"],
   },
 
+  "text-scramble": {
+    name: "text-scramble",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/text-scramble.tsx"],
+  },
+
   //On scroll animations
   "swipe-grid": {
     name: "swipe-grid",

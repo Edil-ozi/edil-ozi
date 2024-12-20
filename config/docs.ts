@@ -210,6 +210,11 @@ export const docsConfig: DocsConfig = {
           href: "/docs/components/text-glitch",
           items: [],
         },
+        {
+          title: "Text scramble",
+          href: "/docs/components/text-scramble",
+          items: [],
+        },
       ],
     },
   ],

@@ -116,6 +116,12 @@ const componentsExample: Registry = {
   },
 
   //Fancy
+  "card-hover-effect-demo": {
+    name: "card-hover-effect-demo",
+    type: "components:example",
+    files: ["registry/components/example/card-hover-effect-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/card-hover-effect-demo")),
+  },
   "canvas-cursor-demo": {
     name: "canvas-cursor-demo",
     type: "components:example",
@@ -148,17 +154,12 @@ const componentsExample: Registry = {
     files: ["registry/components/example/infinite-text-demo.tsx"],
     component: lazy(() => import("@/registry/components/example/infinite-text-demo")),
   },
-  "card-hover-effect-demo": {
-    name: "card-hover-effect-demo",
+
+  "rotate-between-demo": {
+    name: "rotate-between-demo",
     type: "components:example",
-    files: ["registry/components/example/card-hover-effect-demo.tsx"],
-    component: lazy(() => import("@/registry/components/example/card-hover-effect-demo")),
-  },
-  "text-glitch-demo": {
-    name: "text-glitch-demo",
-    type: "components:example",
-    files: ["registry/components/example/text-glitch-demo.tsx"],
-    component: lazy(() => import("@/registry/components/example/text-glitch-demo")),
+    files: ["registry/components/example/rotate-between-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/rotate-between-demo")),
   },
 
   "text-reveal-demo": {
@@ -168,11 +169,18 @@ const componentsExample: Registry = {
     component: lazy(() => import("@/registry/components/example/text-reveal-demo")),
   },
 
-  "rotate-between-demo": {
-    name: "rotate-between-demo",
+  "text-glitch-demo": {
+    name: "text-glitch-demo",
     type: "components:example",
-    files: ["registry/components/example/rotate-between-demo.tsx"],
-    component: lazy(() => import("@/registry/components/example/rotate-between-demo")),
+    files: ["registry/components/example/text-glitch-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/text-glitch-demo")),
+  },
+
+  "text-scramble-demo": {
+    name: "text-scramble-demo",
+    type: "components:example",
+    files: ["registry/components/example/text-scramble-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/text-scramble-demo")),
   },
 
   //On scroll animations
