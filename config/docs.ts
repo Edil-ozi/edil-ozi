@@ -130,7 +130,6 @@ export const docsConfig: DocsConfig = {
         {
           title: "Fancy Click Effect",
           href: "/docs/components/fancy-click-effect",
-          label: "New",
           items: [],
         },
       ],
@@ -165,6 +164,13 @@ export const docsConfig: DocsConfig = {
           title: "Infinite Scroll",
           href: "/docs/components/infinite-scroll",
           items: [],
+        },
+
+        {
+          title: "Dynamic Theme Change",
+          href: "/docs/components/dynamic-theme",
+          items: [],
+          label: "New",
         },
 
         {

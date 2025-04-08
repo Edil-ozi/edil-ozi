@@ -225,6 +225,13 @@ const componentsExample: Registry = {
     component: lazy(() => import("@/registry/components/example/infinite-scroll-demo")),
   },
 
+  "dynamic-theme-demo": {
+    name: "dynamic-theme-demo",
+    type: "components:example",
+    files: ["registry/components/example/dynamic-theme-demo.tsx"],
+    component: lazy(() => import("@/registry/components/example/dynamic-theme-demo")),
+  },
+
   "scroll-velocity-demo": {
     name: "scroll-velocity-demo",
     type: "components:example",

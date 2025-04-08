@@ -153,6 +153,12 @@ const componentsUi: Registry = {
     files: ["registry/components/edil-ozi/infinite-scroll.tsx"],
   },
 
+  "dynamic-theme": {
+    name: "dynamic-theme",
+    type: "components:ui",
+    files: ["registry/components/edil-ozi/dynamic-theme.tsx"],
+  },
+
   "scroll-velocity": {
     name: "scroll-velocity",
     type: "components:ui",
