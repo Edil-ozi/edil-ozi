@@ -5,7 +5,7 @@ const FancyClickEffectDemo = () => {
   return (
     <div className='w-full h-[420px] bg-zinc-50 dark:bg-zinc-950 z-10 flex justify-center items-center'>
       <FancyClickEffect>
-        <div className='max-w-80 w-full aspect-video cursor-pointer'>
+        <div className='max-w-80 w-full cursor-pointer'>
           <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=60&w=800" alt="background image" />
           <div className='px-3 py-1.5'>
             <h4 className='text-base'>Click me.</h4>
