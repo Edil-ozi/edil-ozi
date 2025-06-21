@@ -1,5 +1,7 @@
 # Edil Ozi
 
+>The domain for this project has been updated from **edilozi.pro** to [edil-ozi.pro](http://edil-ozi.pro/).
+
 <p>Component Library for Developers</p>
 
 ## Documentation
