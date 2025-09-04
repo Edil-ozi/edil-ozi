@@ -17,92 +17,91 @@ const useInkCursor = () => {
   });
 
   useEffect(() => {
-      pointerRef.current = {
-        x: 0.5 * window.innerWidth,
-        y: 0.5 * window.innerHeight,
-      };
-      const canvas = canvasRef.current;
-      const ctx = canvas.getContext("2d");
-      ctxRef.current = ctx;
+    pointerRef.current = {
+      x: 0.5 * window.innerWidth,
+      y: 0.5 * window.innerHeight,
+    };
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    ctxRef.current = ctx;
 
-      // Initialize trail array
-      const trail = new Array(paramsRef.current.pointsNumber).fill(null).map(() => ({
-        x: pointerRef.current.x,
-        y: pointerRef.current.y,
-        dx: 0,
-        dy: 0,
-      }));
-      trailRef.current = trail;
+    // Initialize trail array
+    const trail = new Array(paramsRef.current.pointsNumber).fill(null).map(() => ({
+      x: pointerRef.current.x,
+      y: pointerRef.current.y,
+      dx: 0,
+      dy: 0,
+    }));
+    trailRef.current = trail;
 
-      const updateMousePosition = (x, y) => {
-        pointerRef.current.x = x;
-        pointerRef.current.y = y;
-      };
+    const updateMousePosition = (x, y) => {
+      pointerRef.current.x = x;
+      pointerRef.current.y = y;
+    };
 
-      const handleMouseMove = (e) => {
-        updateMousePosition(e.clientX, e.clientY);
-      };
+    const handleMouseMove = (e) => {
+      updateMousePosition(e.clientX, e.clientY);
+    };
 
-      const handleTouchMove = (e) => {
-        updateMousePosition(e.targetTouches[0].clientX, e.targetTouches[0].clientY);
-      };
+    const handleTouchMove = (e) => {
+      updateMousePosition(e.targetTouches[0].clientX, e.targetTouches[0].clientY);
+    };
 
-      const setupCanvas = () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-      };
+    const setupCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
-      const update = (t) => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const update = (t) => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-        gradient.addColorStop(0, "#833ab4");
-        gradient.addColorStop(1, "#fd1d1d");
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, "#833ab4");
+      gradient.addColorStop(1, "#fd1d1d");
 
-        ctx.strokeStyle = gradient;
+      ctx.strokeStyle = gradient;
 
-        trailRef.current.forEach((p, pIdx) => {
-          const prev = pIdx === 0 ? pointerRef.current : trailRef.current[pIdx - 1];
-          const spring = pIdx === 0 ? 0.4 * paramsRef.current.spring : paramsRef.current.spring;
-          p.dx += (prev.x - p.x) * spring;
-          p.dy += (prev.y - p.y) * spring;
-          p.dx *= paramsRef.current.friction;
-          p.dy *= paramsRef.current.friction;
-          p.x += p.dx;
-          p.y += p.dy;
-        });
+      trailRef.current.forEach((p, pIdx) => {
+        const prev = pIdx === 0 ? pointerRef.current : trailRef.current[pIdx - 1];
+        const spring = pIdx === 0 ? 0.4 * paramsRef.current.spring : paramsRef.current.spring;
+        p.dx += (prev.x - p.x) * spring;
+        p.dy += (prev.y - p.y) * spring;
+        p.dx *= paramsRef.current.friction;
+        p.dy *= paramsRef.current.friction;
+        p.x += p.dx;
+        p.y += p.dy;
+      });
 
-        ctx.lineCap = "round";
-        ctx.beginPath();
-        ctx.moveTo(trailRef.current[0].x, trailRef.current[0].y);
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(trailRef.current[0].x, trailRef.current[0].y);
 
-        for (let i = 1; i < trailRef.current.length - 1; i++) {
-          const xc = 0.5 * (trailRef.current[i].x + trailRef.current[i + 1].x);
-          const yc = 0.5 * (trailRef.current[i].y + trailRef.current[i + 1].y);
+      for (let i = 1; i < trailRef.current.length - 1; i++) {
+        const xc = 0.5 * (trailRef.current[i].x + trailRef.current[i + 1].x);
+        const yc = 0.5 * (trailRef.current[i].y + trailRef.current[i + 1].y);
 
-          ctx.quadraticCurveTo(trailRef.current[i].x, trailRef.current[i].y, xc, yc);
-          ctx.lineWidth = paramsRef.current.widthFactor * (paramsRef.current.pointsNumber - i);
-          ctx.stroke();
-        }
-        ctx.lineTo(trailRef.current[trailRef.current.length - 1].x, trailRef.current[trailRef.current.length - 1].y);
+        ctx.quadraticCurveTo(trailRef.current[i].x, trailRef.current[i].y, xc, yc);
+        ctx.lineWidth = paramsRef.current.widthFactor * (paramsRef.current.pointsNumber - i);
         ctx.stroke();
+      }
+      ctx.lineTo(trailRef.current[trailRef.current.length - 1].x, trailRef.current[trailRef.current.length - 1].y);
+      ctx.stroke();
 
-        window.requestAnimationFrame(update);
-      };
+      window.requestAnimationFrame(update);
+    };
 
-      setupCanvas();
-      update(0);
+    setupCanvas();
+    update(0);
 
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("touchmove", handleTouchMove);
-      window.addEventListener("resize", setupCanvas);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("resize", setupCanvas);
 
-      return () => {
-        window.removeEventListener("mousemove", handleMouseMove);
-        window.removeEventListener("touchmove", handleTouchMove);
-        window.removeEventListener("resize", setupCanvas);
-      };
-
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("resize", setupCanvas);
+    };
   }, []);
 
   return (

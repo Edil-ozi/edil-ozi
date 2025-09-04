@@ -82,7 +82,12 @@ const Column = ({ images, y = 0, classes }: Column) => {
           key={idx}
           className="relative h-full w-full overflow-hidden rounded-md border border-slate-600 bg-slate-600"
         >
-          <Image src={src} objectFit="cover" fill alt="img" />
+          <Image
+            src={src}
+            objectFit="cover"
+            fill
+            alt="img"
+          />
         </div>
       ))}
     </motion.div>

@@ -4,15 +4,16 @@ import { useEffect } from "react";
 import fluidCursor from "@/hooks/fluidCursor";
 
 const FluidCursor = () => {
-
   useEffect(() => {
     fluidCursor();
-  }, [])
-
+  }, []);
 
   return (
-    <div className='fixed top-0 left-0 z-2'>
-      <canvas id="fluid" className='w-screen h-screen' />
+    <div className="z-2 fixed left-0 top-0">
+      <canvas
+        id="fluid"
+        className="h-screen w-screen"
+      />
     </div>
   );
 };

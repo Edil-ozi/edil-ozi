@@ -7,16 +7,16 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 export default function ModeToggle() {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   const { setTheme, resolvedTheme } = useTheme();
 
   // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), [])
+  useEffect(() => setMounted(true), []);
 
   const handleToggle = () => {
-    setTheme(mounted ? resolvedTheme === 'dark' ? "light" : "dark" : "")
-  }
+    setTheme(mounted ? (resolvedTheme === "dark" ? "light" : "dark") : "");
+  };
 
   return (
     <Button

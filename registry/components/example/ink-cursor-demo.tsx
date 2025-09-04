@@ -1,20 +1,17 @@
-'use client'
+"use client";
 
-import useInkCursor from '@/hooks/inkCursor'
+import useInkCursor from "@/hooks/inkCursor";
 
 const InkCursor = () => {
-
   const inkCursorComponent = useInkCursor();
 
   return (
     <>
-      <div className='bg-zinc-100 dark:bg-zinc-900 w-full flex items-center justify-center text-center h-[350px] z-[10]'>
+      <div className="z-[10] flex h-[350px] w-full items-center justify-center bg-zinc-100 text-center dark:bg-zinc-900">
         Try it on the whole page
       </div>
-      <div className='fixed top-0 left-0 z-[9]'>
-        {inkCursorComponent}
-      </div>
+      <div className="fixed left-0 top-0 z-[9]">{inkCursorComponent}</div>
     </>
-  )
+  );
 };
-export default InkCursor
+export default InkCursor;

@@ -19,7 +19,7 @@ export function DocPager({ doc, isSections = false }: DocsPagerProps) {
   }
 
   return (
-    <div className="flex flex-row items-center justify-between z-20">
+    <div className="z-20 flex flex-row items-center justify-between">
       {pager?.prev?.href && (
         <Link
           href={pager.prev.href}

@@ -3,10 +3,9 @@
 import FluidCursor from "@/registry/components/edil-ozi/fluid-cursor";
 
 const FluidCursorDemo = () => {
-
   return (
     <>
-      <div className='bg-zinc-100 dark:bg-zinc-900 w-full flex items-center justify-center text-center h-[350px] z-10'>
+      <div className="z-10 flex h-[350px] w-full items-center justify-center bg-zinc-100 text-center dark:bg-zinc-900">
         Try it on the whole page
       </div>
       <FluidCursor />

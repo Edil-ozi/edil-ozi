@@ -48,7 +48,7 @@ export default async function Home() {
             className={cn(buttonVariants({ variant: "outline" }))}
           >
             <Icons.gitHub className="mr-2 h-4 w-4" />
-            Star on Github <Star className="w-4 fill-primary text-primary stroke-current h-4 mr-0.5 ml-2" /> {starCount} 
+            Star on Github <Star className="ml-2 mr-0.5 h-4 w-4 fill-primary stroke-current text-primary" /> {starCount}
           </Link>
         </PageActions>
       </PageHeader>
