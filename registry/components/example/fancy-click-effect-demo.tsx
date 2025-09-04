@@ -4,7 +4,7 @@ const FancyClickEffectDemo = () => {
   return (
     <div className="z-10 flex h-[420px] w-full items-center justify-center bg-zinc-50 dark:bg-zinc-950">
       <FancyClickEffect>
-        <div className="aspect-video w-full max-w-80 cursor-pointer">
+        <div className="w-full max-w-80 cursor-pointer">
           <img
             src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?q=60&w=800"
             alt="background image"
