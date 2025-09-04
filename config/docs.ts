@@ -170,7 +170,6 @@ export const docsConfig: DocsConfig = {
           title: "Dynamic Theme Change",
           href: "/docs/components/dynamic-theme",
           items: [],
-          label: "New",
         },
 
         {
