@@ -9,7 +9,7 @@ import { Star } from "lucide-react";
 import Link from "next/link";
 
 async function getRepoStarCount() {
-  const res = await fetch("https://api.github.com/repos/Edil-ozi/edil-ozi");
+  const res = await fetch("https://api.github.com/repos/Edil-ozi/edil-ozi", { cache: 'no-cache' });
   const data = await res.json();
   const starCount = data.stargazers_count;
 
