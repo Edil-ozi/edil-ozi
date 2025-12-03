@@ -50,7 +50,7 @@ export function constructMetadata({
       shortcut: "/favicon-16x16.png",
       apple: "/apple-touch-icon.png",
     },
-    metadataBase: new URL("https://edilozi.pro"),
+    metadataBase: new URL(siteConfig.url),
     ...props,
   };
 }

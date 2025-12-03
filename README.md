@@ -6,7 +6,7 @@
 
 ## Documentation
 
-Visit https://www.edilozi.pro/docs to view the documentation.
+Visit https://www.edil-ozi.pro/docs to view the documentation.
 
 ## Contributing
 
