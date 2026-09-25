@@ -1,6 +1,6 @@
 # Edil Ozi
 > [!IMPORTANT]
->The domain for this project has been updated from **edilozi.pro** to [edil-ozi.pro](http://edil-ozi.pro/).
+>The domain for this project has been updated from **edilozi.pro** to [edil-ozi.vercel.app](https://edil-ozi.vercel.app/).
 
 <p>Component Library for Developers</p>
 
